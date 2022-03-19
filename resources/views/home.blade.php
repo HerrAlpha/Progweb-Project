@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>UKlise - Home</title>
-    <script defer src="js/bootstrap.bundle.js"></script>
-    <link rel="stylesheet" href="css/bootstrap-grid.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <script defer src="/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
     <style>
         #navbar{
         width= 100%;
@@ -20,6 +20,7 @@
     .navbar-nav{
         alignment: center;
     }
+    </style>
 </head>
 <body>
     <h2>UKlise</h2>
