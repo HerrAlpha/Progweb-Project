@@ -28,3 +28,6 @@ Route::get('/app', function () {
 Route::get('/about', function () {
     return view('about');
 });
+Route::fallback(function () {
+    return view('error');
+});
