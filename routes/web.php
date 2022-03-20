@@ -21,7 +21,7 @@ Route::get('/templates', function () {
 });
 Route::get('/web', function () {
     return view('web');
-});
+})->name('web');
 Route::get('/app', function () {
     return view('app');
 });
