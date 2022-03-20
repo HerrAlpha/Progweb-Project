@@ -1,5 +1,5 @@
 @extends('layout.master')
-@section('title','Apps Template')
+@section('title','Apps Templates')
 
 
 @section('content')

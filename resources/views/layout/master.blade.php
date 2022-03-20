@@ -48,19 +48,19 @@
           <div class="collapse navbar-collapse" id="navbarNav" style="text-align: right;">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">Home</a>
+                <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" aria-current="page" href="/">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{route('template')}}">Templates</a>
+                <a class="nav-link {{ Request::is('templates') ? 'active' : '' }}" href="{{route('template')}}">Templates</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{route('web')}}">Web</a>
+                <a class="nav-link {{ Request::is('web') ? 'active' : '' }}" href="{{route('web')}}">Web</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{route('app')}}">Apps</a>
+                <a class="nav-link {{ Request::is('app') ? 'active' : '' }}" href="{{route('app')}}">Apps</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{route('about')}}">About</a>
+                <a class="nav-link {{ Request::is('about') ? 'active' : '' }}" href="{{route('about')}}">About</a>
               </li>
             </ul>
           </div>
