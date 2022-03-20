@@ -15,19 +15,19 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 Route::get('/templates', function () {
     return view('template');
-});
+})->name('template');
 Route::get('/web', function () {
     return view('web');
 })->name('web');
 Route::get('/app', function () {
     return view('app');
-});
+})->name('app');
 Route::get('/about', function () {
     return view('about');
-});
+})->name('about');
 Route::fallback(function () {
     return view('error');
 });
