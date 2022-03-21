@@ -88,7 +88,7 @@
     <br>
     <br>
     <footer>
-      <div class="card bg-primary" style="padding: 3%; height:300px;">
+      <div class="card bg-primary" style="padding: 3%; height:auto;">
         <div class="col-md" style="padding: 3%;">
           <div class="row g-3">
             <div class="col-md-4">
@@ -129,13 +129,11 @@
                    <a href="#" class="w u">Stakeholders</a><br>
                    <a href="https://laravel.com/" class="w u">Laravel</a><br>
                    <a href="https://flutter.dev/" class="w u">Flutter</a></p>
-              </div>
+              
               <div class="col-md-3">
                 
               </div>
-            <div class="col-md-3">
-
-            </div>
+            
           </div>
           
           
