@@ -70,19 +70,22 @@
     <h1 class="text-center">Most Popular Website Template</h1>
     <div class="row mt-5 border-ku">
         <div class="col-sm-4">
-            @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'22'])
+            @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'26.5'])
             Technology
             @endcomponent
+            <a href="#" class="btn btn-primary d-block">Go somewhere</a>
         </div>
         <div class="col-sm-4">
-            @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'22'])
+            @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'26.5'])
             Technology
             @endcomponent
+            <a href="#" class="btn btn-primary  d-block">Go somewhere</a>
         </div>
         <div class="col-sm-4">
-            @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'22'])
+            @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'26.5'])
             Technology
             @endcomponent
+            <a href="#" class="btn btn-primary  d-block">Go somewhere</a>
         </div>
         </div>
     </div>
