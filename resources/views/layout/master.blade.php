@@ -97,20 +97,9 @@
               Create by Aurum Team and Support from MAR Media<br>
               Malang City, East Java, Indonesia
               </p>
-    <div class="card bg-primary" style="padding: 3%; height:300px;">
-      <div class="col-md" style="padding: 3%;">
-        <div class="row g-3">
-          <div class="col-md-4">
-            <h3 class="w">UKlise</h3>
-            <p class="w">App and Web Templates<br>
-            Create by Aurum Team and Support from MAR Media<br>
-            Malang City, East Java, Indonesia
-            </p>
+    
           </div>
-          <div class="col-md-4">
-            <div class="col-md-3">
-
-            </div>
+          
             <div class="col-md-4">
               <div class="col-md-3">
                 
@@ -148,23 +137,7 @@
 
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="col-md-3">
-
-            </div>
-            <div class="col-md-6">
-              <p class="w">
-                Others <br>
-                <a href="#" class="w u">MAR Media</a><br>
-                 <a href="#" class="w u">Carrier</a><br>
-                 <a href="#" class="w u">Stakeholders</a><br>
-                 <a href="https://laravel.com/" class="w u">Laravel</a><br>
-                 <a href="https://flutter.dev/" class="w u">Flutter</a></p>
-            </div>
-            <div class="col-md-3">
-
-            </div>
-          </div>
+          
           
         </div>
     </div>
