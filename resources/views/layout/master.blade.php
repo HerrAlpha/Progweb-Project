@@ -8,6 +8,7 @@
     <script defer src="/js/bootstrap.bundle.js"></script>
     <link rel="stylesheet" href="/css/bootstrap-grid.css">
     <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/@yield('css')">
     <style>
         .navbar{
         width= 100%;
@@ -78,7 +79,7 @@
     <div  style="padding: 5%;">
       @yield('content')
     </div>
-    
+
     <br>
     <br>
     <div class="card bg-primary" style="padding: 3%; height:300px;">
