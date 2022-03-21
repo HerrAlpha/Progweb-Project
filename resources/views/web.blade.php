@@ -1,5 +1,5 @@
 @extends('layout.master')
-@section('title','Web')
+@section('title','Web Templates')
 
 
 @section('content')
