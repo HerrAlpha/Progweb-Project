@@ -33,32 +33,32 @@
 
     <h1 class="m-5">Website Template Category</h1>
     <div class="row">
-        <div class="col-sm-2">
+        <div class="col">
             @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15'])
             Technology
             @endcomponent
         </div>
-        <div class="col-sm-2">
+        <div class="col">
             @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15'])
             Technology
             @endcomponent
         </div>
-        <div class="col-sm-2">
+        <div class="col-sm">
             @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15'])
             Technology
             @endcomponent
         </div>
-        <div class="col-sm-2">
+        <div class="col-sm">
             @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15'])
             Technology
             @endcomponent
         </div>
-        <div class="col-sm-2">
+        <div class="col-sm">
             @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15'])
             Technology
             @endcomponent
         </div>
-        <div class="col-sm-2">
+        <div class="col-sm">
             @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15'])
             Technology
             @endcomponent
@@ -68,20 +68,20 @@
 </div>
 <div class="row mt-5">
     <h1 class="text-center">Most Popular Website Template</h1>
-    <div class="row mt-5 border-ku">
-        <div class="col-sm-4">
-            @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'26.5'])
+    <div class="row mt-5 border-ku text-center">
+        <div class="col">
+             @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'26.5'])
             Technology
             @endcomponent
             <a href="#" class="btn btn-primary d-block">Go somewhere</a>
         </div>
-        <div class="col-sm-4">
+        <div class="col">
             @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'26.5'])
             Technology
             @endcomponent
             <a href="#" class="btn btn-primary  d-block">Go somewhere</a>
         </div>
-        <div class="col-sm-4">
+        <div class="col">
             @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'26.5'])
             Technology
             @endcomponent
