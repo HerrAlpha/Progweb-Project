@@ -12,7 +12,8 @@
     <style>
         .navbar{
         width= 100%;
-        background-color: rgb(10, 132, 255);
+        background-color: #f2f2f7;
+        /* rgb(10, 132, 255) */
     }
     body{
         font-family: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -26,7 +27,8 @@
         color: rgb(209, 209, 214);
     }
     .active{
-        color: rgb(229, 229, 234);
+        /* color: rgb(229, 229, 234); */
+        color: rgb(209, 209, 214);
     }
     .navbar-nav{
         alignment: center;
@@ -98,12 +100,12 @@
               Create by Aurum Team and Support from MAR Media<br>
               Malang City, East Java, Indonesia
               </p>
-    
+
           </div>
-          
+
             <div class="col-md-4">
               <div class="col-md-3">
-                
+
               </div>
               <div class="col-md-6">
                 <p class="w">
@@ -115,12 +117,12 @@
                    <a href="{{route('about')}}" class="w u">About</a></p>
               </div>
               <div class="col-md-3">
-                
+
               </div>
             </div>
             <div class="col-md-4">
               <div class="col-md-3">
-                
+
               </div>
               <div class="col-md-6">
                 <p class="w">
@@ -130,14 +132,14 @@
                    <a href="#" class="w u">Stakeholders</a><br>
                    <a href="https://laravel.com/" class="w u">Laravel</a><br>
                    <a href="https://flutter.dev/" class="w u">Flutter</a></p>
-              
+
               <div class="col-md-3">
-                
+
               </div>
-            
+
           </div>
-          
-          
+
+
         </div>
     </div>
     </footer>
