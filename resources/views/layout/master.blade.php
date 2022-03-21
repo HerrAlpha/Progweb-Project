@@ -75,7 +75,10 @@
           </div>
         </div>
     </nav>
-    @yield('content')
+    <div  style="padding: 5%;">
+      @yield('content')
+    </div>
+    
     <br>
     <br>
     <div class="card bg-primary" style="padding: 3%; height:300px;">

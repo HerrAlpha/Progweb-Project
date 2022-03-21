@@ -5,7 +5,7 @@
 
 @section('content')
 
-<div  style="padding: 5%;">
+
     <div class="row g-3">
     <div class="col-md-6">
         <h2>UKlise</h2>
@@ -89,7 +89,7 @@
             </div>
         </div>
     </div>
-</div>
+
 
 @stop
 
