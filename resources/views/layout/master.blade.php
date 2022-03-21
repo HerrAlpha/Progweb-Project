@@ -60,8 +60,8 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav" style="text-align: right;">
-            <ul class="navbar-nav" style="text-align: right;">
+          <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav" style="text-align: right;">
+            <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" aria-current="page" href="/">Home</a>
               </li>
@@ -97,6 +97,19 @@
               Create by Aurum Team and Support from MAR Media<br>
               Malang City, East Java, Indonesia
               </p>
+    <div class="card bg-primary" style="padding: 3%; height:300px;">
+      <div class="col-md" style="padding: 3%;">
+        <div class="row g-3">
+          <div class="col-md-4">
+            <h3 class="w">UKlise</h3>
+            <p class="w">App and Web Templates<br>
+            Create by Aurum Team and Support from MAR Media<br>
+            Malang City, East Java, Indonesia
+            </p>
+          </div>
+          <div class="col-md-4">
+            <div class="col-md-3">
+
             </div>
             <div class="col-md-4">
               <div class="col-md-3">
@@ -131,12 +144,34 @@
               <div class="col-md-3">
                 
               </div>
+            <div class="col-md-3">
+
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-6">
+              <p class="w">
+                Others <br>
+                <a href="#" class="w u">MAR Media</a><br>
+                 <a href="#" class="w u">Carrier</a><br>
+                 <a href="#" class="w u">Stakeholders</a><br>
+                 <a href="https://laravel.com/" class="w u">Laravel</a><br>
+                 <a href="https://flutter.dev/" class="w u">Flutter</a></p>
+            </div>
+            <div class="col-md-3">
+
             </div>
           </div>
           
         </div>
     </div>
     </footer>
+
+      </div>
+  </div>
 </body>
 
 </html>
