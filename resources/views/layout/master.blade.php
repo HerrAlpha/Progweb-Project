@@ -55,7 +55,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav" style="text-align: right;">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav" style="text-align: right;">
               <li class="nav-item">
                 <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" aria-current="page" href="/">Home</a>
               </li>

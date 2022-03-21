@@ -46,14 +46,14 @@
     <div class="col-md" style="text-align: center;"><h3>Advantages of using templates</h3></div><br>
     <div class="row g-3" style="text-align: center;">
         <div class="col-md-6" style="align-self: center">
-            <div class="card" style="height: 500px">
+            <div class="card" style="height: 210px; padding:2%;">
                 <h1>60%</h1>
                 <h4>Time efficient for develop</h4>
             </div>
         </div>
 
         <div class="col-md-6" style="align-self: center">
-            <div class="card" style="height: 500px">
+            <div class="card" style="height: 210px; padding:2%;">
                 <h1>70%</h1>
                 <h4>Faster to develop instead create from blank pages</h4>
             </div>
@@ -61,29 +61,31 @@
     </div><br>
     <div class="row g-3" style="text-align: center;">
         <div class="col-md-6" style="align-self: center">
-            <div class="card" style="height: 500px">
+            <div class="card" style="height: 210px; padding:2%;">
                 <h1>90%</h1>
                 <h4>Developers Satisfying</h4>
             </div>
         </div>
 
         <div class="col-md-6" style="align-self: center">
-            <div class="card" style="height: 500px">
+            <div class="card" style="height: 210px; padding:2%;">
                 <h1>100%</h1>
                 <h4>Reusable</h4>
             </div>
         </div>
-    </div><br>
+    </div><br><br>
+    <div class="col-md" style="text-align: center;"><h3>What developers said ??</h3></div><br>
+
     <div class="row g-3" style="text-align: center;">
         <div class="col-md-6" style="align-self: center">
-            <div class="card" style="height: 500px">
-
+            <div class="card" style="height: 500px; padding:2%;">
+                <h4>It's clearly easy to learn and modify again and again and again - Anonym</h4>
             </div>
         </div>
 
         <div class="col-md-6" style="align-self: center">
-            <div class="card" style="height: 500px">
-                
+            <div class="card" style="height: 500px; padding:2%;">
+                <h4>It's more faster and efficient for time making than I made it from scratch - Anonym</h4>
             </div>
         </div>
     </div>
