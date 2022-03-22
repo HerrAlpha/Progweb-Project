@@ -6,6 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>UKlise - @yield('title')</title>
     <script defer src="/js/bootstrap.bundle.js"></script>
+    <script defer src="/js/@yield('js')"></script>
+    <script defer src="/js/owl.carousel.min.css"></script>
+    <script defer src="/js/Jquery3.6.0.main.js"></script>
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/all.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="/css/bootstrap-grid.css">
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/@yield('css')">

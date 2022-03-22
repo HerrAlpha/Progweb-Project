@@ -1,6 +1,7 @@
 @extends('layout.master')
 @section('title','Web Templates')
 @section('css','web.css')
+@section('js','web.js')
 
 @section('content')
     <div class="card bg-dark card-ku text-white">
@@ -33,8 +34,8 @@
 <div class="container text-center mt-5">
 
     <h1 class="m-5">Website Template Category</h1>
-    <div class="row">
-        <div class="col-sm-2">
+    <div class="row owl-carousel owl-theme">
+        <div class="col-sm-2 ">
             @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15'])
             Technology
             @endcomponent
@@ -63,6 +64,14 @@
             @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15'])
             Technology
             @endcomponent
+        </div>
+        <div class="row mt-5">
+            <div class="col">
+            <div class="owl-navigation">
+                <span class="owl-nav-prev"><i class="fas fa-long-arrow-alt-left"></i></span>
+                <span class="owl-nav-next"><i class="fas fa-long-arrow-alt-right"></i></span>
+            </div>
+        </div>
         </div>
     </div>
 
@@ -70,19 +79,19 @@
 <div class="container mt-5">
     <h1 class="text-center">Most Popular Website Template</h1>
     <div class="row mt-5 border-ku text-center">
-        <div class="col-sm-12">
+        <div class="col-sm-4">
              @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'26.5'])
             Technology
             @endcomponent
             <a href="#" class="btn btn-primary d-block">Go somewhere</a>
         </div>
-        <div class="col-sm-12">
+        <div class="col-sm-4">
             @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'26.5'])
             Technology
             @endcomponent
             <a href="#" class="btn btn-primary  d-block">Go somewhere</a>
         </div>
-        <div class="col-sm-12">
+        <div class="col-sm-4">
             @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'26.5'])
             Technology
             @endcomponent
