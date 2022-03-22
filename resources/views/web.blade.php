@@ -6,9 +6,9 @@
     <div class="card bg-dark card-ku text-white">
         <img src="assets/picture/jumbotron.jpg" class="card-img img-fluid" alt="...">
         <div class="card-img-overlay text-center mt-5">
-        <h5 class="card-title">UKlise Website Template</h5>
-        <p class="card-text text-capitalize font-ku-2-5 mt-4">you come to the right place <br> which our provide all category <br> website template</p>
-        <p class="card-text">Last updated 3 mins ago</p>
+        <h5 class="card-title font-ku-3">UKlise Website Template</h5>
+        <p class="card-text text-capitalize font-ku-4 mt-4">you come to the right place <br> which our provide all category <br> website template</p>
+        <p class="card-text font-ku-2-5">Last updated 3 mins ago</p>
         </div>
   </div>
 <div class="row mt-5">
