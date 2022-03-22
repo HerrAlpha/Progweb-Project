@@ -1,5 +1,5 @@
 <div class="card">
-    <a href="#">
+    <a href="{{$a}}">
         <div class="card-body">
             <p class="card-text text-black">{{$slot}}</p>
           </div>
