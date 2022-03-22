@@ -11,6 +11,7 @@
         <p class="card-text font-ku-2-5">Last updated 3 mins ago</p>
         </div>
   </div>
+<div class="container">
 <div class="row mt-5">
     <div class="col-sm-2">
 @component('layout.dropdown',['one'=>'Technology','two'=>'Technology','three'=>'Technology'])
@@ -66,22 +67,22 @@
     </div>
 
 </div>
-<div class="row mt-5">
+<div class="container mt-5">
     <h1 class="text-center">Most Popular Website Template</h1>
     <div class="row mt-5 border-ku text-center">
-        <div class="col-sm-4">
+        <div class="col-sm-12">
              @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'26.5'])
             Technology
             @endcomponent
             <a href="#" class="btn btn-primary d-block">Go somewhere</a>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-12">
             @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'26.5'])
             Technology
             @endcomponent
             <a href="#" class="btn btn-primary  d-block">Go somewhere</a>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-12">
             @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'26.5'])
             Technology
             @endcomponent
@@ -89,5 +90,6 @@
         </div>
         </div>
     </div>
+</div>
 </div>
 @stop
