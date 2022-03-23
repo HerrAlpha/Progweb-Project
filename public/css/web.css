@@ -11,17 +11,27 @@ a {
     color: black;
 }
 
-.card-title {
+
+/* .card-title {
     font-size: 8rem;
-}
+} */
 
 .card-ku,
 .card-img {
+    font-size: 8vw;
     border-radius: 20px;
 }
 
 .font-ku-2-5 {
     font-size: 2.5rem;
+}
+
+.font-ku-3 {
+    font-size: 3rem;
+}
+
+.font-ku-4 {
+    font-size: 4rem;
 }
 
 .border-ku {
@@ -31,6 +41,16 @@ a {
     border-radius: 20px;
 }
 
-.card-width-ku {
+
+/* .card-width-ku {
     width: 20px;
+} */
+
+.carousel-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin: 3rem 2rem;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 2);
 }
