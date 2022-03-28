@@ -100,8 +100,7 @@ class CollectionController extends Controller
 
         $categorieses = [$categories00, $categories01, $categories02, $categories03, $categories04, $categories05, $categories06, $categories07, $categories08, $categories09, $categories10, $categories11, $categories12];
 
-
-        return response()->json($categorieses);
+        return $categorieses;
         
 
 
