@@ -18,7 +18,7 @@
     <style>
         .navbar{
         width= 100%;
-        background-color: #f2f2f7;
+        
         /* rgb(10, 132, 255) */
     }
     body{
@@ -55,17 +55,15 @@
     a{
       color:#f2f2f7;
     }
-    a:hover{
-      color: rgb(209, 209, 214);
-    }
+   
 
     </style>
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="padding:0.5%;">
+    <nav class=" navbar navbar-expand-lg navbar-dark @yield('class-navbar')" style="padding:0.5%;">
         <div class="container-fluid">
-          <a class="navbar-brand fs-3" id="1" href="/">UKlise</a>
+          <a class="navbar-brand fs-3" id="1" href="/" style="color:#f2f2f7">UKlise</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>

@@ -1,7 +1,7 @@
 @extends('layout.master')
 @section('title','Templates')
 
-
+@section('class-navbar','bg-primary')
 @section('content')
 
 <h1 style="text-align: center;">Templates</h1>
