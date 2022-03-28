@@ -2,22 +2,38 @@
 @extends('layout.master')
 @section('title','Home')
 
-
+ <style>
+        body {
+  background-image: url("/assets/picture/bg1.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+    </style>
 @section('content')
 
-
+   
     <div class="row g-3">
     <div class="col-md-6">
-        <h2>UKlise</h2>
-        <h3>The First Indonesian Web and App Template Provider based from Framework</h3>
+        <h2 style="color: #f2f2f7">UKlise</h2>
+        <h3 style="color: #f2f2f7">The First Indonesian Web and App Template Provider based from Framework</h3>
         <a href="/templates"><button type="button" class="btn btn-primary start">Ready..Set..Go!!</button></a>
     </div>
     <div class="col-md-6" style="text-align: center;">
-        <img src="/assets/picture/kindpng_1272131.png" alt="" width="80%" height="80%">
+       
     </div>
 </div>
 <br><br>
-    <div class="col-md" style="text-align: center;"><h3>In Here We Provide...</h3></div><br>
+
+@section('content2')
+  <div class="container">
+      
+        <div style="padding-top: 6%; padding-left: 3% padding-right: 3%">
+            <div class="col-md" style="text-align: center;"><h3>In Here We Provide...</h3></div><br>
     <div class="row g-3" style="align-self: center">
         
         <div class="col-md-6" style="align-self: center">
@@ -89,6 +105,11 @@
             </div>
         </div>
     </div>
+  </div>
+        </div>
+      </div>
+   @endsection 
+    
 
 
 @stop
