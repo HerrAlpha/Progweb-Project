@@ -16,7 +16,7 @@
 <div class="row mt-5">
     <div class="col-sm-2">
         <div class="dropdown">
-            <button class="a-black w-100 btn btn-secondary dropdown-toggle bg-primary" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="a-black w-100 btn btn-secondary text-white dropdown-toggle bg-primary" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
               Category
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -32,7 +32,7 @@
     </div>
     <div class="col-sm-2">
         <div class="dropdown">
-            <button class="a-black w-100 btn btn-secondary dropdown-toggle bg-primary" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="a-black w-100 btn btn-secondary dropdown-toggle text-white bg-primary" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
               Free
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -52,52 +52,53 @@
 
     <h1 class="m-5">Website Template Category</h1>
     <div class="row owl-carousel owl-theme">
-        <div class="col-sm-2 ">
+        <div class="col-sm-3 ">
             @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15','a'=>''])
             Technology
             @endcomponent
         </div>
-        <div class="col-sm-2">
+        <div class="col-sm-3">
             @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15','a'=>''])
             Art & Design
             @endcomponent
         </div>
-        <div class="col-sm-2">
+        <div class="col-sm-3">
             @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15','a'=>''])
             Food & Restaurant
             @endcomponent
         </div>
-        <div class="col-sm-2">
+        <div class="col-sm-3">
             @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15','a'=>''])
             Education
             @endcomponent
-        </div>
-        <div class="col-sm-2">
+        </div><br>
+
+        <div class="col-sm-3">
             @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15','a'=>''])
             Industrial
             @endcomponent
         </div>
-        <div class="col-sm-2">
+        <div class="col-sm-3">
             @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15','a'=>''])
             Fashion & Beauty
             @endcomponent
         </div>
-        <div class="col-sm-2">
+        <div class="col-sm-3">
             @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15','a'=>''])
             Business & Law
             @endcomponent
         </div>
-        <div class="col-sm-2">
+        <div class="col-sm-3">
             @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15','a'=>''])
             Sport
             @endcomponent
-        </div>
-        <div class="col-sm-2">
+        </div><br>
+        <div class="col-sm-3">
             @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15','a'=>''])
             Travel & Hotels
             @endcomponent
         </div>
-        <div class="col-sm-2">
+        <div class="col-sm-3">
             @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15','a'=>''])
             Portfolio
             @endcomponent
