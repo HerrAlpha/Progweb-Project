@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>UKlise - @yield('title')</title>
     <script defer src="/js/bootstrap.bundle.js"></script>
+    <script defer src="/js/bootstrap.min.js"></script>
+    <script defer src="/js/bootstrap.js"></script>
     <script defer src="/js/@yield('js')"></script>
     <script defer src="/js/owl.carousel.min.css"></script>
     <script defer src="/js/Jquery3.6.0.main.js"></script>
@@ -16,11 +18,7 @@
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/@yield('css')">
     <style>
-        .navbar{
-        width= 100%;
-        
-        /* rgb(10, 132, 255) */
-    }
+       
     body{
         font-family: -apple-system, BlinkMacSystemFont, sans-serif;
         font-weight: semibold;
@@ -36,9 +34,7 @@
         /* color: rgb(229, 229, 234); */
         color: rgb(209, 209, 214);
     }
-    .navbar-nav{
-        alignment: center;
-    }
+    
     .start{
         width: 200px;
         height: 70px;
@@ -63,11 +59,11 @@
 <body>
     <nav class=" navbar navbar-expand-lg navbar-dark @yield('class-navbar')" style="padding:0.5%;">
         <div class="container-fluid">
-          <a class="navbar-brand fs-3" id="1" href="/" style="color:#f2f2f7">UKlise</a>
+          <a class="navbar-brand" id="1" href="/" style="color:#f2f2f7">UKlise</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse flex-row-reverse "  style="text-align: right;">
+          <div class="collapse navbar-collapse  flex-row-reverse" id="navbarNav" style="text-align: right">
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" aria-current="page" href="/">Home</a>
