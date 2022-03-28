@@ -16,7 +16,7 @@
 <div class="row mt-5">
     <div class="col-sm-2">
         <div class="dropdown">
-            <button class="a-black w-100 btn btn-secondary dropdown-toggle bg-primary" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="a-black w-100 btn btn-secondary text-white dropdown-toggle bg-primary" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
               Category
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -32,7 +32,7 @@
     </div>
     <div class="col-sm-2">
         <div class="dropdown">
-            <button class="a-black w-100 btn btn-secondary dropdown-toggle bg-primary" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="a-black w-100 btn btn-secondary dropdown-toggle text-white bg-primary" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
               Free
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
