@@ -53,52 +53,52 @@
     <h1 class="m-5">Website Template Category</h1>
     <div class="row owl-carousel owl-theme">
         <div class="col-sm-2 ">
-            @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15','a'=>'{{route('technology')}}'])
+            @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15','a'=>''])
             Technology
             @endcomponent
         </div>
         <div class="col-sm-2">
-            @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15','a'=>'{{route('art&design')}}'])
+            @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15','a'=>''])
             Art & Design
             @endcomponent
         </div>
         <div class="col-sm-2">
-            @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15','a'=>'{{route('food&restaurant')}}'])
+            @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15','a'=>''])
             Food & Restaurant
             @endcomponent
         </div>
         <div class="col-sm-2">
-            @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15','a'=>'{{route('education')}}'])
+            @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15','a'=>''])
             Education
             @endcomponent
         </div>
         <div class="col-sm-2">
-            @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15','a'=>'{{route('industrial')}}'])
+            @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15','a'=>''])
             Industrial
             @endcomponent
         </div>
         <div class="col-sm-2">
-            @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15','a'=>'{{route('fashion&beauty')}}'])
+            @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15','a'=>''])
             Fashion & Beauty
             @endcomponent
         </div>
         <div class="col-sm-2">
-            @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15','a'=>'{{route('business&law')}}'])
+            @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15','a'=>''])
             Business & Law
             @endcomponent
         </div>
         <div class="col-sm-2">
-            @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15','a'=>'{{route('sport')}}'])
+            @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15','a'=>''])
             Sport
             @endcomponent
         </div>
         <div class="col-sm-2">
-            @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15','a'=>'{{route('travel&hotels')}}'])
+            @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15','a'=>''])
             Travel & Hotels
             @endcomponent
         </div>
         <div class="col-sm-2">
-            @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15','a'=>'{{route('portfolio')}}'])
+            @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15','a'=>''])
             Portfolio
             @endcomponent
         </div>
