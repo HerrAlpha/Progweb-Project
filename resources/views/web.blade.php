@@ -52,7 +52,14 @@
 
     <h1 class="m-5">Website Template Category</h1>
     <div class="row owl-carousel owl-theme">
+        @foreach ($p as $pp)
         <div class="col-sm-2 ">
+            @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15','a'=>''])
+            {{$pp}}
+            @endcomponent
+        </div>
+        @endforeach
+        {{-- <div class="col-sm-2 ">
             @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15','a'=>''])
             Technology
             @endcomponent
@@ -101,7 +108,7 @@
             @component('layout.cardWeb',['img'=>'jumbotron.jpg','width'=>'15','a'=>''])
             Portfolio
             @endcomponent
-        </div>
+        </div> --}}
         <div class="row mt-5">
             <div class="col">
             <div class="owl-navigation">

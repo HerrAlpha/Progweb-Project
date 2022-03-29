@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class CollectionController extends Controller
 {
-    public function webCategories(){
+    public function web(){
         $categories00 =new \stdClass();
         $categories00->id = 0;
         $categories00->name = 'All';
@@ -98,9 +98,11 @@ class CollectionController extends Controller
         $categories12->pictureurl = 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png';
         $categories12->link = 'web/categories/food';
 
-        $categorieses = [$categories00, $categories01, $categories02, $categories03, $categories04, $categories05, $categories06, $categories07, $categories08, $categories09, $categories10, $categories11, $categories12];
+        $categorieses =collect([$categories00, $categories01, $categories02, $categories03, $categories04, $categories05, $categories06, $categories07, $categories08, $categories09, $categories10, $categories11, $categories12]);
 
-        return $categorieses;
+        $p = $categorieses->pluck('name')->all();
+
+        return view('web',compact('p'));
     }
 
     public function home(){
@@ -109,9 +111,7 @@ class CollectionController extends Controller
     public function templates(){
         return view('template');
     }
-    public function web(){
-        return view('web');
-    }
+
     public function app(){
         return view('app');
     }
