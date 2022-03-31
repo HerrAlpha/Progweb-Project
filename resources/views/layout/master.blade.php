@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="/css/bootstrap-grid.css">
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/@yield('css')">
+    <link rel="shortcut icon" href="/assets/picture/Logo.png">
+    <link rel="apple-touch-icon" href="/assets/picture/Logo.png">
     <style>
        
     body{
