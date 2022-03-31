@@ -2,7 +2,8 @@
 @extends('layout.master')
 @section('title','Home')
 
- <style>
+
+ <style type="text/css">
         body {
   background-image: url("/assets/picture/bg1.jpg");
     background-repeat: no-repeat;
@@ -11,8 +12,8 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    
 }
+
 #container {
 	text-align: center;
 }
@@ -21,6 +22,7 @@
 	display: inline-block;
 	vertical-align: middle;
 	color: rgb(242,242,247);
+	
 }
 
 #cursor {
@@ -40,14 +42,22 @@
 		background-color: rgb(242,242,247); 
 	}
 }
+
     </style>
 
-@section('content')
-  <script>
-    // List of sentences
+@section('content') 
+    <div class="row g-3">
+        <div class="col-md-6">
+            <h2 style="color: #f2f2f7"><div id="text"></div><div id="cursor"></div></h2>
+            <h3 style="color: #f2f2f7">The First Indonesian Web and App Template Provider based from Framework</h3>
+            <a href="/templates"><button type="button" class="btn btn-primary start">Ready..Set..Go!!</button></a>
+        </div>
+        <script type="text/javascript">
+            // List of sentences
 var _CONTENT = [ 
-"Uklise","Good Night Developers","Gutten Nacht Entwickler","Bonne Nuit Développeurs","Доброй Hочи Pазработчики","Selamat Malam Para Pengembang", "Sugeng Dalu Para Pengembang", "Wilujeng Wengi Pamekar"
+	"Uklise","Good Night Developers","Gutten Nacht Entwickler","Bonne Nuit Développeurs","Доброй Hочи Pазработчики","Selamat Malam Para Pengembang", "Sugeng Dalu Para Pengembang", "Wilujeng Wengi Pamekar"
 ];
+
 // Current sentence being processed
 var _PART = 0;
 
@@ -111,18 +121,7 @@ function Delete() {
 
 // Start the typing effect on load
 _INTERVAL_VAL = setInterval(Type, 100);
-
-
-</script>
-
-    
-    <div class="row g-3">
-        <div class="col-md-6">
-            <h2 style="color: #f2f2f7"><div id="text"></div><div id="cursor"></div></h2>
-            <h3 style="color: #f2f2f7">The First Indonesian Web and App Template Provider based from Framework</h3>
-            <a href="/templates"><button type="button" class="btn btn-primary start">Ready..Set..Go!!</button></a>
-        </div>
-      
+        </script>
         <div class="col-md-6" style="text-align: center;">
            
         </div>
