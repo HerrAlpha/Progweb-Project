@@ -51,6 +51,9 @@
     a{
       color:#f2f2f7;
     }
+    nav{
+      background-blur: blur(16px);
+    }
    
 
     </style>
@@ -76,6 +79,9 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link {{ Request::is('app') ? 'active' : '' }}" href="{{route('app')}}">Apps</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {{ Request::is('news') ? 'active' : '' }}" href="{{route('news')}}">News</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link {{ Request::is('about') ? 'active' : '' }}" href="{{route('about')}}">About</a>

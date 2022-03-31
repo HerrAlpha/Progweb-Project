@@ -118,6 +118,9 @@ class CollectionController extends Controller
     public function about(){
         return view('about');
     }
+    public function news(){
+        return view('news');
+    }
     public function error(){
         return view('error');
     }

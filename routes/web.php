@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[CollectionController::class,'home'])->name('home');
 Route::get('/templates', [CollectionController::class,'templates'])->name('template');
-
+Route::get('/news', [CollectionController::class,'news'])->name('news');
 //============== WEB ==============//
 Route::get('/web', [CollectionController::class,'web'])->name('web');
 
