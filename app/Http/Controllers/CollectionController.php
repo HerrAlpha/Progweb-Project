@@ -114,10 +114,90 @@ class CollectionController extends Controller
         $categories01 = new \stdClass();
         $categories01 -> id=1;
         $categories01 -> name='Sport';
-        $categories01 -> pictureurl = '/assets/picture/app/category/all.png';
+        $categories01 -> pictureurl = '/assets/picture/app/category/sport.png';
         $categories01 -> link = 'app/categories/sport';
 
+        $categories02 = new \stdClass();
+        $categories02 -> id=2;
+        $categories02 -> name='Technology';
+        $categories02 -> pictureurl = '/assets/picture/app/category/technology.png';
+        $categories02 -> link = 'app/categories/technology';
+
+        $categories03 = new \stdClass();
+        $categories03 -> id=3;
+        $categories03 -> name='Business';
+        $categories03 -> pictureurl = '/assets/picture/app/category/business.png';
+        $categories03 -> link = 'app/categories/business';
+
+        $categories04 = new \stdClass();
+        $categories04 -> id=4;
+        $categories04 -> name='Entertainment';
+        $categories04 -> pictureurl = '/assets/picture/app/category/entertainment.png';
+        $categories04 -> link = 'app/categories/entertainment';
+
+        $categories05 = new \stdClass();
+        $categories05 -> id=5;
+        $categories05 -> name='Health';
+        $categories05 -> pictureurl = '/assets/picture/app/category/health.png';
+        $categories05 -> link = 'app/categories/health';
+
+        $categories06 = new \stdClass();
+        $categories06 -> id=6;
+        $categories06 -> name='Science';
+        $categories06 -> pictureurl = '/assets/picture/app/category/science.png';
+        $categories06 -> link = 'app/categories/science';
+
+        $categories07 = new \stdClass();
+        $categories07 -> id=7;
+        $categories07 -> name='Transport';
+        $categories07 -> pictureurl = '/assets/picture/app/category/transport.png';
+        $categories07 -> link = 'app/categories/transport';
+
+        $categories08 = new \stdClass();
+        $categories08 -> id=8;
+        $categories08 -> name='Travel';
+        $categories08 -> pictureurl = '/assets/picture/app/category/travel.png';
+        $categories08 -> link = 'app/categories/travel';
+
+        $categories09 = new \stdClass();
+        $categories09 -> id=9;
+        $categories09 -> name='Gaming';
+        $categories09 -> pictureurl = '/assets/picture/app/category/gaming.png';
+        $categories09 -> link = 'app/categories/gaming';
+
+        $categories10 = new \stdClass();
+        $categories10 -> id=10;
+        $categories10 -> name='Music';
+        $categories10 -> pictureurl = '/assets/picture/app/category/music.png';
+        $categories10 -> link = 'app/categories/music';
+
+        $categories11 = new \stdClass();
+        $categories11 -> id=11;
+        $categories11 -> name='News';
+        $categories11 -> pictureurl = '/assets/picture/app/category/news.png';
+        $categories11 -> link = 'app/categories/news';
+
+        $categories12 = new \stdClass();
+        $categories12 -> id=12;
+        $categories12 -> name='Finance';
+        $categories12 -> pictureurl = '/assets/picture/app/category/finance.png';
+        $categories12 -> link = 'app/categories/finance';
+
+        $categories13 = new \stdClass();
+        $categories13 -> id=13;
+        $categories13 -> name='Food';
+        $categories13 -> pictureurl = '/assets/picture/app/category/food.png';
+        $categories13 -> link = 'app/categories/food';
+
         
+
+
+        $categorieses =collect([$categories00, $categories01, $categories02, $categories03, $categories04, $categories05, $categories06, $categories07, $categories08, $categories09, $categories10, $categories11, $categories12, $categories13]);
+
+        $p = $categorieses->pluck('name')->all();
+
+
+
 
     }
 
