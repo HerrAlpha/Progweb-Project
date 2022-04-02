@@ -104,6 +104,21 @@ class CollectionController extends Controller
 
         return view('web',compact('p'));
     }
+    public function appCategories(){
+        $categories00 = new \stdClass();
+        $categories00 -> id=0;
+        $categories00 -> name='All';
+        $categories00 -> pictureurl = '/assets/picture/app/category/all.png';
+        $categories00 -> link = 'app/categories/all';
+
+        $categories01 = new \stdClass();
+        $categories01 -> id=1;
+        $categories01 -> name='Sport';
+        $categories01 -> pictureurl = '/assets/picture/app/category/all.png';
+        $categories01 -> link = 'app/categories/sport';
+
+
+    }
 
     public function home(){
         return view('home');

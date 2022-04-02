@@ -94,21 +94,19 @@
           </div>
         </div>
     </nav>
-    <div  style="padding: 7%;">
+  <div class="container">
+    
       @yield('content')
-    </div>
+      
+  </div>
     <br>
     <br>
     <br>
-    <div class="card">
-      <div class="card-body">
-        @yield('content2')
-      </div>
-    </div>
+   
       
     
     <footer>
-      <div class="card bg-primary" style="padding: 3%; height:auto;">
+      <div class="card bg-primary" style="width:auto;height:auto;">
         <div class="col-md" style="padding: 3%;">
           <div class="row g-3">
             <div class="col-md-4">
