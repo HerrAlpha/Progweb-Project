@@ -117,6 +117,7 @@ class CollectionController extends Controller
         $categories01 -> pictureurl = '/assets/picture/app/category/all.png';
         $categories01 -> link = 'app/categories/sport';
 
+        
 
     }
 
