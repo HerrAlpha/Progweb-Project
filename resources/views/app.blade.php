@@ -40,6 +40,7 @@
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="row g-3">
+                    @foreach ($appCat as $i)
                     <div class="col-sm-3">
                         <a href="/app/category?category=sport">
                             <div class="card">
@@ -50,93 +51,10 @@
                             </div>
                     </a>
                     </div>
-                    <div class="col-sm-3">
-                        <div class="card">
-                            <div class="card-body" style="height: 200px">
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="card">
-                            <div class="card-body" style="height: 200px">
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="card">
-                            <div class="card-body" style="height: 200px">
-                                
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
-              </div>
-              <div class="carousel-item">
-                <div class="row g-3">
-                    <div class="col-sm-3">
-                        <div class="card">
-                            <div class="card-body" style="height: 200px">
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="card">
-                            <div class="card-body" style="height: 200px">
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="card">
-                            <div class="card-body" style="height: 200px">
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="card">
-                            <div class="card-body" style="height: 200px">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="row g-3">
-                    <div class="col-sm-3">
-                        <div class="card">
-                            <div class="card-body" style="height: 200px">
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="card">
-                            <div class="card-body" style="height: 200px">
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="card">
-                            <div class="card-body" style="height: 200px">
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="card">
-                            <div class="card-body" style="height: 200px">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-              </div>
+               </div>
+                 
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
