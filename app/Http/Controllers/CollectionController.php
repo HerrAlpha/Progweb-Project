@@ -100,9 +100,10 @@ class CollectionController extends Controller
 
         $categorieses =collect([$categories00, $categories01, $categories02, $categories03, $categories04, $categories05, $categories06, $categories07, $categories08, $categories09, $categories10, $categories11, $categories12]);
 
-        $p = $categorieses->pluck('name')->all();
-
-        return view('web',compact('p'));
+        $names = $categorieses->pluck('name');
+        $links = $categorieses->pluck('link');
+        $imgs = $categorieses->pluck('pictureurl');
+        return view('web',['names'=>$names,'links'=>$links,'imgs'=>$imgs]);
     }
 
     public function home(){
