@@ -66,7 +66,7 @@
                 <span class="owl-nav-next"><i class="fas fa-long-arrow-alt-right"></i></span>
             </div>
         </div>
-        </div>
+
     </div>
 </div>
 <div class="container mt-5">
@@ -92,6 +92,7 @@
         </div>
         </div>
     </div>
-</div>
-</div>
+    </div>
+    </div>
+
 @stop

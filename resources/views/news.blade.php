@@ -1,8 +1,11 @@
 @extends('layout.master')
-@section('title','About')
+@section('title','Tech News')
+@section('css','web')
+
 
 @section('class-navbar','bg-primary')
 @section('content')
+
 
 
 @stop

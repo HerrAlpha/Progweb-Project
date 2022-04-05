@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="/css/bootstrap-grid.css">
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/@yield('css')">
+    <link rel="shortcut icon" href="/assets/picture/Logo.png">
+    <link rel="apple-touch-icon" href="/assets/picture/Logo.png">
     <style>
        
     body{
@@ -51,6 +53,9 @@
     a{
       color:#f2f2f7;
     }
+    nav{
+      background-blur: blur(16px);
+    }
    
 
     </style>
@@ -59,7 +64,9 @@
 <body>
     <nav class=" navbar navbar-expand-lg navbar-dark @yield('class-navbar')" style="padding:0.5%;">
         <div class="container-fluid">
-          <a class="navbar-brand" id="1" href="/" style="color:#f2f2f7">UKlise</a>
+          <a class="navbar-brand" id="1" href="/" style="color:#f2f2f7">
+          <img src="/assets/picture/Logo.png" alt="" width="4%" height="4%" style="text-align: center;" class="d-inline-block">
+          UKlise</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -78,27 +85,28 @@
                 <a class="nav-link {{ Request::is('app') ? 'active' : '' }}" href="{{route('app')}}">Apps</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link {{ Request::is('news') ? 'active' : '' }}" href="{{route('news')}}">News</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link {{ Request::is('about') ? 'active' : '' }}" href="{{route('about')}}">About</a>
               </li>
             </ul>
           </div>
         </div>
     </nav>
-    <div  style="padding: 7%;">
+  <div class="container">
+    
       @yield('content')
-    </div>
+      
+  </div>
     <br>
     <br>
     <br>
-    <div class="card">
-      <div class="card-body">
-        @yield('content2')
-      </div>
-    </div>
+   
       
     
     <footer>
-      <div class="card bg-primary" style="padding: 3%; height:auto;">
+      <div class="card bg-primary" style="width:auto;height:auto;">
         <div class="col-md" style="padding: 3%;">
           <div class="row g-3">
             <div class="col-md-4">
