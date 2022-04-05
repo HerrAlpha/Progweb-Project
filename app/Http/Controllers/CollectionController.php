@@ -251,7 +251,7 @@ class CollectionController extends Controller
         $teamID5 -> link = 'team/github';
 
         $teamIDs =collect([$teamID, $teamID1, $teamID2, $teamID3, $teamID4, $teamID5]);
-        $teamID = $teamIDes->pluck('name')->all();
+        $teamID = $teamIDs->pluck('name')->all();
         return view('team',compact('teamID'));
 
     }
