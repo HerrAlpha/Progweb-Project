@@ -1,5 +1,7 @@
 @extends('layout.master')
 @section('title','Templates')
+@section('css','')
+@section('js','')
 <style>
     body{
         background-image: url("/assets/picture/tempbg.jpg");
@@ -11,7 +13,7 @@
         background-attachment: fixed;
 
     }
-  
+
 </style>
 @section('content')
 <div  style="padding: 3%;">
@@ -25,8 +27,8 @@
         </div>
    </div>
 </div>
-   
-   
+
+
    <div class="card">
        <div class="card-body">
         <div class="container">
@@ -53,10 +55,10 @@
                         </div>
                     </div>
                 </div>
-               
+
             </div>
        </div>
    </div>
-    
+
 
 @stop
