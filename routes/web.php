@@ -20,16 +20,18 @@ Route::get('/news', [CollectionController::class,'news'])->name('news');
 //============== WEB ==============//
 Route::get('/web', [CollectionController::class,'web'])->name('web');
 
-// Route::view('/web/technology')->name('technology');
-// Route::view('/web/art&design')->name('art&design');
-// Route::view('/web/food&restaurant')->name('food&restaurant');
-// Route::view('/web/education')->name('education');
-// Route::view('/web/industrial')->name('industrial');
-// Route::view('/web/fashion&beauty')->name('fashion&beauty');
-// Route::view('/web/business&law')->name('business&law');
-// Route::view('/web/sport')->name('sport');
-// Route::view('/web/travel&hotels')->name('travel&hotels');
-// Route::view('/web/portfolio')->name('portfolio');
+Route::view('/web/all');
+Route::view('/web/technology');
+Route::view('/web/business');
+Route::view('/web/entertainment');
+Route::view('/web/health');
+Route::view('/web/science');
+Route::view('/web/sports');
+Route::view('/web/travel');
+Route::view('/web/gaming');
+Route::view('/web/music');
+Route::view('/web/finance');
+Route::view('/web/food');
 
 //=====X====== WEB =======X========//
 
