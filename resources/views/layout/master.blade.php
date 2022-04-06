@@ -9,18 +9,15 @@
     <script defer src="/js/bootstrap.min.js"></script>
     <script defer src="/js/bootstrap.js"></script>
     <script defer src="/js/@yield('js')"></script>
-    <script defer src="/js/owl.carousel.min.css"></script>
     <script defer src="/js/Jquery3.6.0.main.js"></script>
-    <link rel="stylesheet" href="/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="/css/all.css">
-    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jcarousel/0.3.9/jquery.jcarousel.min.js" integrity="sha512-5TU8T3STShZiLsdqDqiKnj0Z72ccPZpIDCuItxc2S7G3lyiwqiuLuDFVNsLQ7Hgu5f33DlZ2KAJspbn6NAXqnA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="/css/bootstrap-grid.css">
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/@yield('css')">
     <link rel="shortcut icon" href="/assets/picture/Logo.png">
     <link rel="apple-touch-icon" href="/assets/picture/Logo.png">
     <style>
-       
+
     body{
         font-family: -apple-system, BlinkMacSystemFont, sans-serif;
         font-weight: semibold;
@@ -36,7 +33,7 @@
         /* color: rgb(229, 229, 234); */
         color: rgb(209, 209, 214);
     }
-    
+
     .start{
         width: 200px;
         height: 70px;
@@ -56,7 +53,7 @@
     nav{
       background-blur: blur(16px);
     }
-   
+
 
     </style>
 
@@ -95,16 +92,16 @@
         </div>
     </nav>
   <div class="container">
-    
+
       @yield('content')
-      
+
   </div>
     <br>
     <br>
     <br>
-   
-      
-    
+
+
+
     <footer>
       <div class="card bg-primary" style="width:auto;height:auto;">
         <div class="col-md" style="padding: 3%;">

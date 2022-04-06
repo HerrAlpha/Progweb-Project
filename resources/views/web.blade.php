@@ -52,13 +52,15 @@
 
     <h1 class="m-5">Website Template Category</h1>
     <div class="row owl-carousel owl-theme">
-        @foreach ($names as $name)
+        {{-- <div class="jcarousel"> --}}
+        @for ($i=1;$i<count($names);$i++)
         <div class="col-sm-2 ">
-            @component('layout.cardWeb',['img'=>$links,'width'=>'15','a'=>''])
-           {{$name}}
+            @component('layout.cardWeb',['img'=>'{{$imgs[$i]}}','width'=>'15','a'=>'{{$links[$i]}}'])
+           {{$names[$i]}}
             @endcomponent
         </div>
-        @endforeach
+        @endfor
+        {{-- </div> --}}
         <div class="row mt-5">
             <div class="col">
             <div class="owl-navigation">
