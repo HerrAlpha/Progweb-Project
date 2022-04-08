@@ -35,6 +35,6 @@ Route::view('/web/categories/food','food');
 
 //=====X====== WEB =======X========//
 
-Route::get('/app',[CollectionController::class,'app'])->name('app');
+Route::get('/app',[CollectionController::class,'appCategories'])->name('app');
 Route::get('/about', [CollectionController::class,'about'])->name('about');
 Route::fallback([CollectionController::class,'error']);
