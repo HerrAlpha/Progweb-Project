@@ -20,18 +20,18 @@ Route::get('/news', [CollectionController::class,'news'])->name('news');
 //============== WEB ==============//
 Route::get('/web', [CollectionController::class,'web'])->name('web');
 
-Route::view('/web/categories/all');
-Route::view('/web/categories/technology');
-Route::view('/web/categories/business');
-Route::view('/web/categories/entertainment');
-Route::view('/web/categories/health');
-Route::view('/web/categories/science');
-Route::view('/web/categories/sports');
-Route::view('/web/categories/travel');
-Route::view('/web/categories/gaming');
-Route::view('/web/categories/music');
-Route::view('/web/categories/finance');
-Route::view('/web/categories/food');
+Route::view('/web/categories/all','all');
+Route::view('/web/categories/technology','technology');
+Route::view('/web/categories/business','business');
+Route::view('/web/categories/entertainment','entertainment');
+Route::view('/web/categories/health','health');
+Route::view('/web/categories/science','science');
+Route::view('/web/categories/sports','sports');
+Route::view('/web/categories/travel','travel');
+Route::view('/web/categories/gaming','gaming');
+Route::view('/web/categories/music','music');
+Route::view('/web/categories/finance','finance');
+Route::view('/web/categories/food','food');
 
 //=====X====== WEB =======X========//
 
