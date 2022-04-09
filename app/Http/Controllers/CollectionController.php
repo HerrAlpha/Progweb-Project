@@ -195,6 +195,7 @@ class CollectionController extends Controller
         return view('app',compact('appCat'));
     }
 
+<<<<<<< Updated upstream
     public function teamID(){
         $teamID = new \stdClass();
         $teamID -> id=0;
@@ -256,6 +257,8 @@ class CollectionController extends Controller
 
     }
 
+=======
+>>>>>>> Stashed changes
     public function home(){
         return view('home');
     }
