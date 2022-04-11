@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class CollectionController extends Controller
 {
@@ -211,16 +213,45 @@ class CollectionController extends Controller
     public function news(){
         return view('news');
     }
-    public function signup(){
-        return view('register');
-    }
     public function error(){
         return view('error');
     }
 
+    //===========SIGNUP==========//
+    public function signupSubmit(Request $request){
+        $data = $request -> validate([
+            'name' => 'required',
+            'username' => 'required|min:7',
+            'email'=>'required|email:dns|unique:users',
+            'password'=>'required|min:6',
+            'password_confirmation'=>'required_with:password|same:password|min:6',
+            'phone'=>'required',
+            'address'=>'required',
+            'city'=>'required',
+            'state'=>'required',
+            'zip'=>'required|integer',
+            'country'=>'required',
+            'company'=>'',
+            'avatar'=>'file|size:3072',
+            'web'=>'',
+            'app'=>'',
+            'about'=>'',
+        ]);
+
+        User::create($data);
+    }
+
+public function signup(){
+    return view('register');
+}
+
     //===========LOGIN==========//
     public function login(){
-        return view('login');
+        if(Auth::check()){
+            return view('home');
+        }else {
+            return view('login');
+        }
     }
 
 }

@@ -42,6 +42,7 @@ Route::get('/app',[CollectionController::class,'appCategories'])->name('app');
 Route::get('/about', [CollectionController::class,'about'])->name('about');
 Route::get('/login', [CollectionController::class,'login'])->name('login');
 Route::get('/signup', [CollectionController::class,'signup'])->name('signup');
+Route::post('/signup', [CollectionController::class,'signupSubmit'])->name('signupSubmit');
 Route::fallback([CollectionController::class,'error']);
 
 //============== LOGIN ==============//

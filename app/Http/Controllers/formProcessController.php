@@ -2,14 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class formProcessController extends Controller
 {
     public function loginCek(Request $request){
-        $request->validate([
-            'username' => 'required|unique:users',
-            'password' => 'required|unique:users'
+        $data = $request->validate([
+            'username' =>$request -> input('username'),
+            'password' =>$request -> input('password')
         ]);
+
+        if(Auth::attempt($data)){
+            return redirect('home');
+        }
     }
 }

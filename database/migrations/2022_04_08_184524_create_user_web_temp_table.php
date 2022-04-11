@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\DB;
 
 return new class extends Migration
 {
@@ -14,11 +15,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('web', function (Blueprint $table) {
-            $table->id_web();
-            $table->id_user();
+            $table->id('id_web');
+            $table->id('id_user');
             $table->string('name');
             $table->string('description');
-            $table->picture('picture');
+            $table->string('picture');
             $table->string('url');
             $table->string('category');
             $table->string('subcategory');
@@ -32,11 +33,11 @@ return new class extends Migration
             $table->string('comments');
             $table->string('favorites');
             $table->string('shares');
-            $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
-            $table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
-
-
-            $table->timestamps();
+            $table->timestamp('createed_at');
+            $table->timestamp('updateed_at');
+            // $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+            // $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
+            $table->timestamps('');
         });
     }
 
