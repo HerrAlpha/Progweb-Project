@@ -53,6 +53,7 @@
     nav{
       background-blur: blur(16px);
     }
+    
 
 
     </style>
@@ -87,6 +88,11 @@
               <li class="nav-item">
                 <a class="nav-link {{ Request::is('about') ? 'active' : '' }}" href="{{route('about')}}">About</a>
               </li>
+              <li class="nav-item">
+                <a class="btn btn-primary btn-sm" href="{{route('login')}}" role="button">Login</a>  
+              </li>
+              <li class="nav-item"></li>
+              
             </ul>
           </div>
         </div>

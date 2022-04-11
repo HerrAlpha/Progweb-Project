@@ -14,7 +14,28 @@ return new class extends Migration
     public function up()
     {
         Schema::create('web', function (Blueprint $table) {
-            $table->id();
+            $table->id_web();
+            $table->id_user();
+            $table->string('name');
+            $table->string('description');
+            $table->picture('picture');
+            $table->string('url');
+            $table->string('category');
+            $table->string('subcategory');
+            $table->string('tags');
+            $table->string('type');
+            $table->string('status');
+            $table->string('rating');
+            $table->string('views');
+            $table->string('likes');
+            $table->string('dislikes');
+            $table->string('comments');
+            $table->string('favorites');
+            $table->string('shares');
+            $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
+
+
             $table->timestamps();
         });
     }

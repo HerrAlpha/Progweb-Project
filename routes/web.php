@@ -37,4 +37,6 @@ Route::view('/web/categories/food','food');
 
 Route::get('/app',[CollectionController::class,'appCategories'])->name('app');
 Route::get('/about', [CollectionController::class,'about'])->name('about');
+Route::get('/login', [CollectionController::class,'login'])->name('login');
+Route::get('/signup', [CollectionController::class,'signup'])->name('signup');
 Route::fallback([CollectionController::class,'error']);
