@@ -19,6 +19,8 @@ Route::get('/',[CollectionController::class,'home'])->name('home');
 Route::get('/templates', [CollectionController::class,'templates'])->name('template');
 Route::get('/news', [CollectionController::class,'news'])->name('news');
 //============== WEB ==============//
+//============== WEB ==============//
+//============== WEB ==============//
 Route::get('/web', [CollectionController::class,'web'])->name('web');
 
 Route::view('/web/categories/all','all');
@@ -38,6 +40,10 @@ Route::view('/web/categories/food','food');
 
 Route::get('/app',[CollectionController::class,'appCategories'])->name('app');
 Route::get('/about', [CollectionController::class,'about'])->name('about');
-Route::get('/login', [LoginController::class,'login'])->name('login');
+Route::get('/login', [CollectionController::class,'login'])->name('login');
 Route::get('/signup', [CollectionController::class,'signup'])->name('signup');
 Route::fallback([CollectionController::class,'error']);
+
+//============== LOGIN ==============//
+
+Route::post('/login',[formProcessController::class,'loginCek']);

@@ -211,11 +211,16 @@ class CollectionController extends Controller
     public function news(){
         return view('news');
     }
-
     public function signup(){
         return view('register');
     }
     public function error(){
         return view('error');
     }
+
+    //===========LOGIN==========//
+    public function login(){
+        return view('login');
+    }
+
 }

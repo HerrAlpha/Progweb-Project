@@ -15,7 +15,7 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Login</h5>
-                <form action="{{url('/proccessForm')}}" method="GET">
+                <form action="/login" method="post">
                     <div class="form-group">
                         <label for="username">Username</label>
                         <input type="text" class="form-control @error('username') is-invalid @enderror" id="username" name="username" placeholder="Enter username">
