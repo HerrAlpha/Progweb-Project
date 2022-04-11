@@ -232,12 +232,13 @@ class CollectionController extends Controller
             'zip'=>'required|integer',
             'country'=>'required',
             'company'=>'',
-            'avatar'=>'file|size:3072',
+            // 'avatar'=>'file|size:3072',
             'web'=>'',
             'app'=>'',
             'about'=>'',
         ]);
 
+        $data['password'] = bcrypt($data['password']);
         User::create($data);
     }
 

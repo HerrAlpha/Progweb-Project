@@ -26,7 +26,7 @@ return new class extends Migration
             $table->string('zip');
             $table->string('country');
             $table->string('company')->nullable();
-            $table->string('Avatar')->nullable();
+            // $table->string('Avatar')->nullable();
             $table->string('web')->nullable();
             $table->string('app')->nullable();
             $table->string('About')->nullable();
