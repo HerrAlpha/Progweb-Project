@@ -240,6 +240,8 @@ class CollectionController extends Controller
 
         $data['password'] = bcrypt($data['password']);
         User::create($data);
+        $confirm = 1;
+        return view('register');
     }
 
 public function signup(){

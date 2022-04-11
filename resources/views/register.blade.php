@@ -1,6 +1,9 @@
 @extends('layout.masterNonNavbar')
 @section('title', 'Register')
 @section('content')
+{{-- @if ($confirm == 1)
+    <script> alert('Data Berhasil Ditambahkan')</script>
+@endif --}}
 <div class="row g-3">
     <div class="col-md-6">
         <h1 style="color:rgb(242, 242, 247)">Welcome Developers</h1>
