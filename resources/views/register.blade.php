@@ -115,7 +115,7 @@
                     </div>
                     <div class="form-group">
                         <label for="about">About</label>
-                        <textarea class="form-control @error('about') is-invalid @enderror" id="about" name="about" placeholder="Enter about" value='{{old('about')}}'></textarea>
+                        <textarea class="form-control @error('about') is-invalid @enderror" id="about" name="about" placeholder="Enter about" value=''>{{old('about')}}</textarea>
                         @error('about')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror

@@ -16,13 +16,17 @@ class LoginController extends Controller
 
     public function login(Request $request){
         $data = $request->validate([
-            'username' =>$request -> input('username'),
-            'password' =>$request -> input('password')
+            'username' =>'required',
+            'password' =>'required'
         ]);
 
         if(Auth::attempt($data)){
-            return redirect('home');
+            $request->session()->regenerate();
+            // return redirect()->intended('/dashboard');
+            return view('dashboard.index');
         }
+
+        return back()->with('err','Username atau Password Salah');
     }
 
 }

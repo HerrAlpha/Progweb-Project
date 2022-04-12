@@ -10,7 +10,7 @@ class RegisController extends Controller
     public function signup(Request $request){
         $data = $request -> validate([
             'name' => 'required',
-            'username' => 'required|min:7',
+            'username' => 'required|min:7|unique:users',
             'email'=>'required|email:dns|unique:users',
             'password'=>'required|min:6',
             'password_confirmation'=>'required_with:password|same:password|min:6',

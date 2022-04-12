@@ -7,9 +7,7 @@
 </style>
 @section('content')
 
-@if (session()->has('success'))
-    {{session('success')}}
-@endif
+
 <div class="row g-3">
     <div class="col-md-6">
         <h3 style="color: rgb(242,242,247);">Welcome Back Developers</h3>
@@ -19,24 +17,27 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Login</h5>
+                @if (session()->has('success'))
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
-                   {{session('success')}}
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                  </div>
+                    {{session('success')}}
+                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                 </div>
+                @endif
+                @if (session()->has('err'))
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    {{session('err')}}
+                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                 </div>
+                 @endif
                 <form action="/login" method="post">
+                    @csrf
                     <div class="form-group">
                         <label for="username">Username</label>
                         <input type="text" class="form-control @error('username') is-invalid @enderror" id="username" name="username" placeholder="Enter username">
-                        @error('username')
-                            <div class="invalid-feedback">{{ $message }}</div>
-                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
                         <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" name="password" placeholder="Enter password">
-                        @error('password')
-                            <div class="invalid-feedback">{{ $message }}</div>
-                        @enderror
                     </div><br>
                     <p>Doesn't have an account? You can <a href="/signup">Sign Up</a> first!</p>
                     <button type="submit" class="btn btn-primary">Sign In</button>
