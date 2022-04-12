@@ -40,11 +40,17 @@ Route::view('/web/categories/food','food');
 
 Route::get('/app',[CollectionController::class,'appCategories'])->name('app');
 Route::get('/about', [CollectionController::class,'about'])->name('about');
-Route::get('/login', [CollectionController::class,'login'])->name('login');
-Route::get('/signup', [CollectionController::class,'signup'])->name('signup');
-Route::post('/signup', [CollectionController::class,'signupSubmit'])->name('signupSubmit');
 Route::fallback([CollectionController::class,'error']);
 
-//============== LOGIN ==============//
 
-Route::post('/login',[formProcessController::class,'loginCek']);
+//============== REGISTER ==============//
+Route::get('/signup', function(){
+    return view('register');
+})->name('signup');
+Route::post('/signup', [RegisController::class,'signup'])->name('signup');
+
+//============== LOGIN ==============//
+Route::post('/login',[LoginController::class,'login']);
+Route::get('/login',function(){
+    return view('login');
+})->name('login');

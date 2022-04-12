@@ -216,45 +216,4 @@ class CollectionController extends Controller
     public function error(){
         return view('error');
     }
-
-    //===========SIGNUP==========//
-    public function signupSubmit(Request $request){
-        $data = $request -> validate([
-            'name' => 'required',
-            'username' => 'required|min:7',
-            'email'=>'required|email:dns|unique:users',
-            'password'=>'required|min:6',
-            'password_confirmation'=>'required_with:password|same:password|min:6',
-            'phone'=>'required',
-            'address'=>'required',
-            'city'=>'required',
-            'state'=>'required',
-            'zip'=>'required|integer',
-            'country'=>'required',
-            'company'=>'',
-            // 'avatar'=>'file|size:3072',
-            'web'=>'',
-            'app'=>'',
-            'about'=>'',
-        ]);
-
-        $data['password'] = bcrypt($data['password']);
-        User::create($data);
-        $confirm = 1;
-        return view('register');
-    }
-
-public function signup(){
-    return view('register');
-}
-
-    //===========LOGIN==========//
-    public function login(){
-        if(Auth::check()){
-            return view('home');
-        }else {
-            return view('login');
-        }
-    }
-
 }

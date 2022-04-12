@@ -11,6 +11,7 @@
     <script defer src="/js/@yield('js')"></script>
     <script defer src="/js/Jquery3.6.0.main.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jcarousel/0.3.9/jquery.jcarousel.min.js" integrity="sha512-5TU8T3STShZiLsdqDqiKnj0Z72ccPZpIDCuItxc2S7G3lyiwqiuLuDFVNsLQ7Hgu5f33DlZ2KAJspbn6NAXqnA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/bootstrap-grid.css">
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/@yield('css')">
@@ -53,7 +54,7 @@
     nav{
       background-blur: blur(16px);
     }
-    
+
 
 
     </style>
@@ -89,10 +90,10 @@
                 <a class="nav-link {{ Request::is('about') ? 'active' : '' }}" href="{{route('about')}}">About</a>
               </li>
               <li class="nav-item">
-                <a class="btn btn-primary btn-sm" href="{{route('login')}}" role="button">Login</a>  
+                <a class="btn btn-primary btn-sm" href="{{route('login')}}" role="button">Login</a>
               </li>
               <li class="nav-item"></li>
-              
+
             </ul>
           </div>
         </div>

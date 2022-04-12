@@ -6,6 +6,10 @@
     }
 </style>
 @section('content')
+
+@if (session()->has('success'))
+    {{session('success')}}
+@endif
 <div class="row g-3">
     <div class="col-md-6">
         <h3 style="color: rgb(242,242,247);">Welcome Back Developers</h3>
@@ -15,6 +19,10 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Login</h5>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                   {{session('success')}}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
                 <form action="/login" method="post">
                     <div class="form-group">
                         <label for="username">Username</label>
