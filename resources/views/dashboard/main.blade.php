@@ -56,13 +56,13 @@
       <div class="position-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link {{Request::is('/dashboard')?'active':''}}" aria-current="page" href="{{route('dashboard')}}">
+            <a class="nav-link {{Request::is('/dashboard')?'active':''}}" aria-current="page" href="/dashboard">
               <span data-feather="home"></span>
               Dashboard
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {{Request::is('/dashboard/template')?'active':''}}" href="{{route('dashboard.template')}}">
+            <a class="nav-link {{Request::is('/dashboard/template')?'active':''}}" href="/dashboard/template">
               <span data-feather="file"></span>
               Your Template
             </a>

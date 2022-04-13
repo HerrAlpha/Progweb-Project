@@ -89,8 +89,12 @@
               <li class="nav-item">
                 <a class="nav-link {{ Request::is('about') ? 'active' : '' }}" href="{{route('about')}}">About</a>
               </li>
+              @auth()
+
+              @else
               <li class="nav-item">
-                <a class="btn btn-primary btn-sm" href="{{route('login')}}" role="button">Login</a>
+                <a class="btn btn-primary btn-md border-0 px-2 mx-3" href="{{route('login')}}" role="button">Login</a>
+              @endauth
               </li>
               <li class="nav-item"></li>
 

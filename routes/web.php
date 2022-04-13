@@ -43,23 +43,28 @@ Route::get('/about', [CollectionController::class,'about'])->name('about')->midd
 Route::fallback([CollectionController::class,'error']);
 
 //============== DASHBOARD==============//
-Route::get('/dashboard',[DashboardController::class,'dash'])->name('dashboard');//->middleware('auth');
+// Route::get('/dashboard/{user?}',[DashboardController::class,'dash'])->name('dashboard')->middleware('auth');
+Route::resource('/dashboard',DashboardController::class)->middleware('auth');
 //============== DASHBOARD.TEMPLATE==============//
-Route::get('dashboard/template',function(){
+Route::get('/dashboard/template',function(){
     return view('dashboard.template');
-})->name('dashboard.template');//->middleware('auth');
+})->name('dashboard.template')->middleware('auth');
 
-//============== REGISTER ==============//
-Route::get('/signup', function(){
-    return view('register');
-})->name('signup')->middleware('guest');
-Route::post('/signup', [RegisController::class,'signup'])->name('signup');
+Route::group(['middleware'=>['guest']],function(){
 
-//============== LOGIN ==============//
-Route::post('/login',[LoginController::class,'login'])->middleware('guest');
-Route::get('/login',function(){
-    return view('login');
-})->name('login')->middleware('guest');
+    //============== REGISTER ==============//
+    Route::get('/signup', function(){
+        return view('register');
+    })->name('signup');
+    Route::post('/signup', [RegisController::class,'signup'])->name('signup');
+
+    //============== LOGIN ==============//
+    Route::post('/login',[LoginController::class,'login']);
+    Route::get('/login',function(){
+        return view('login');
+    })->name('login');
+
+});
 
 //============== LOGOUT ==============//
 Route::post('/logout',[LogoutController::class,'logout']);
