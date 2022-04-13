@@ -43,11 +43,11 @@ Route::get('/about', [CollectionController::class,'about'])->name('about')->midd
 Route::fallback([CollectionController::class,'error']);
 
 //============== DASHBOARD==============//
-Route::get('/dashboard',[DashboardController::class,'dash'])->name('dashboard')->middleware('auth');
+Route::get('/dashboard',[DashboardController::class,'dash'])->name('dashboard');//->middleware('auth');
 //============== DASHBOARD.TEMPLATE==============//
 Route::get('dashboard/template',function(){
     return view('dashboard.template');
-})->name('dashboard.template')->middleware('auth');
+})->name('dashboard.template');//->middleware('auth');
 
 //============== REGISTER ==============//
 Route::get('/signup', function(){
