@@ -4,6 +4,8 @@ use App\Http\Controllers\CollectionController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\LogoutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,9 +42,12 @@ Route::get('/app',[CollectionController::class,'appCategories'])->name('app')->m
 Route::get('/about', [CollectionController::class,'about'])->name('about')->middleware('guest');
 Route::fallback([CollectionController::class,'error']);
 
-Route::get('/dashboard',function(){
-    return view('dashboard.index');
-})->name('dashboard');//->middleware('auth');
+//============== DASHBOARD==============//
+Route::get('/dashboard',[DashboardController::class,'dash'])->name('dashboard')->middleware('auth');
+//============== DASHBOARD.TEMPLATE==============//
+Route::get('dashboard/template',function(){
+    return view('dashboard.template');
+})->name('dashboard.template')->middleware('auth');
 
 //============== REGISTER ==============//
 Route::get('/signup', function(){
@@ -55,3 +60,6 @@ Route::post('/login',[LoginController::class,'login'])->middleware('guest');
 Route::get('/login',function(){
     return view('login');
 })->name('login')->middleware('guest');
+
+//============== LOGOUT ==============//
+Route::post('/logout',[LogoutController::class,'logout']);
