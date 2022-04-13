@@ -42,7 +42,7 @@ Route::fallback([CollectionController::class,'error']);
 
 Route::get('/dashboard',function(){
     return view('dashboard.index');
-})->name('dashboard')->middleware('auth');
+})->name('dashboard');//->middleware('auth');
 
 //============== REGISTER ==============//
 Route::get('/signup', function(){

@@ -12,7 +12,7 @@
         <div class="card" style="width: 300; height: auto">
             <div class="card-body">
                 <h5 class="card-title">Register</h5>
-                <form action="/signup" method="POST">
+                <form action="/signup" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         <label for="name">Name</label>

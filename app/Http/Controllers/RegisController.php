@@ -21,18 +21,26 @@ class RegisController extends Controller
             'zip'=>'required|integer',
             'country'=>'required',
             'company'=>'',
-            // 'avatar'=>'file|size:3072',
+            'avatar'=>'image|file|size:3072',
             'web'=>'',
             'app'=>'',
             'about'=>'',
         ]);
 
+        //avatar store image
+        if($request->file('avatar')){
+            $data['avatar'] = $request->file('avatar')->store('avatars');
+        }
+
+        //enkripsi password
         $data['password'] = bcrypt($data['password']);
 
+        //insert data dengan model
         User::create($data);
 
-        $request->session()->flash('success','Berhasil Registrasi, Silahkan Login');
+        //flash message
+        // $request->session()->flash('success','Berhasil Registrasi, Silahkan Login');
 
-        return view('login');
+        return view('login')->with('success','Berhasil Registrasi, Silahkan Login');
     }
 }
