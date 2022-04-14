@@ -18,8 +18,8 @@ use App\Http\Controllers\LogoutController;
 |
 */
 
-Route::get('/',[CollectionController::class,'home'])->name('home')->middleware('guest');
-Route::get('/templates', [CollectionController::class,'templates'])->name('template')->middleware('guest');
+Route::get('/',[CollectionController::class,'home'])->name('home');//->middleware('guest');
+Route::get('/templates', [CollectionController::class,'templates'])->name('template');//->middleware('guest');
 Route::get('/news', [CollectionController::class,'news'])->name('news')->middleware('guest');
 //============== WEB ==============//
 Route::get('/web', [CollectionController::class,'web'])->name('web');

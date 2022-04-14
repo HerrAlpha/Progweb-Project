@@ -22,7 +22,8 @@ class LoginController extends Controller
 
         if(Auth::attempt($data)){
             $request->session()->regenerate();
-            return redirect()->intended('/dashboard/' . auth()->user()->id);
+            // return redirect()->intended('/dashboard/' . auth()->user()->id);
+            return redirect()->intended('/dashboard');
         }
 
         return back()->with('err','Username atau Password Salah');

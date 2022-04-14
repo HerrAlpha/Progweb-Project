@@ -47,7 +47,7 @@ class DashboardController extends Controller
      */
     public function show(User $user)
     {
-        //
+        return $user;
     }
 
     /**
@@ -58,7 +58,7 @@ class DashboardController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        return view('dashboard.indexEdit',compact('user'));
     }
 
     /**
@@ -70,7 +70,7 @@ class DashboardController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        // return "halo";
     }
 
     /**

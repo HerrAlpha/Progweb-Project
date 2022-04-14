@@ -8,6 +8,9 @@ use App\Models\User;
 class RegisController extends Controller
 {
     public function signup(Request $request){
+
+        // dd($request);
+
         $data = $request -> validate([
             'name' => 'required',
             'username' => 'required|min:7|unique:users',
@@ -21,16 +24,19 @@ class RegisController extends Controller
             'zip'=>'required|integer',
             'country'=>'required',
             'company'=>'',
-            'avatar'=>'image|file|size:3072',
+            'avatar'=>'image|file|size:1024',
             'web'=>'',
             'app'=>'',
             'about'=>'',
         ]);
 
         //avatar store image
-        if($request->file('avatar')){
-            $data['avatar'] = $request->file('avatar')->store('avatars');
+        if($request->file('avatar'))
+        {
+            $data['avatar'] = $request->file('avatar')->store('avatar');
         }
+
+        // dd($request->file('avatar')->store('avatar'));
 
         //enkripsi password
         $data['password'] = bcrypt($data['password']);
