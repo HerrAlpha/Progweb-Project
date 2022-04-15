@@ -7,6 +7,9 @@ use App\Http\Controllers\RegisController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DashboardTemplateController;
 use App\Http\Controllers\LogoutController;
+use App\Models\Post;
+use App\Models\Category;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,12 +48,13 @@ Route::fallback([CollectionController::class,'error']);
 
 //============== DASHBOARD==============//
 // Route::get('/dashboard/{user?}',[DashboardController::class,'dash'])->name('dashboard')->middleware('auth');
-Route::resource('/dashboard',DashboardController::class)->middleware('auth');
+Route::get('/dashboard',[DashboardController::class,'index'])->middleware('auth');
+// Route::resource('/dashboard',DashboardController::class)->middleware('auth');
 //============== DASHBOARD.TEMPLATE==============//
 // Route::get('/dashboard/template',function(){
 //     return view('dashboard.template');
 // })->name('dashboard.template')->middleware('auth');
-Route::get('/dashboard/template',[DashboardTemplateController::class,'index'])->middleware('auth');
+Route::resource('/dashboard/template',DashboardTemplateController::class)->middleware('auth');
 
 Route::group(['middleware'=>['guest']],function(){
 

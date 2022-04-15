@@ -39,43 +39,44 @@ class DatabaseSeeder extends Seeder
 
         Category::create([
             'title'=>'Sport',
-            'cover'=>'/assets/picture/app/category/sport.png',
+            'cover'=>'/assets/picture/app/category/sport.png'
         ]);
 
         Category::create([
             'title'=>'Technology',
-            'cover'=>'/assets/picture/app/category/technology.png',
+            'cover'=>'/assets/picture/app/category/technology.png'
         ]);
 
         Category::create([
             'title'=>'Business',
-            'cover'=>'/assets/picture/app/category/business.png',
+            'cover'=>'/assets/picture/app/category/business.png'
         ]);
 
         Category::create([
             'title'=>'Entertainment',
-            'cover'=>'/assets/picture/app/category/entertainment.png',
+            'cover'=>'/assets/picture/app/category/entertainment.png'
         ]);
 
         Category::create([
             'title'=>'Health',
-            'cover'=>'/assets/picture/app/category/health.png',
+            'cover'=>'/assets/picture/app/category/health.png'
         ]);
 
         Category::create([
             'title'=>'Science',
-            'cover'=>'/assets/picture/app/category/science.png',
+            'cover'=>'/assets/picture/app/category/science.png'
         ]);
 
         Category::create([
             'title'=>'Transport',
-            'cover'=>'/assets/picture/app/category/transport.png',
+            'cover'=>'/assets/picture/app/category/transport.png'
         ]);
 
         Post::create([
             'title'=>'Sport Template Ronaldo',
             'description'=>'Template ini mengandung bawang',
-            'category'=>1,
+            'category_id'=>2,
+            'user_id'=>1,
             'file'=> 'urlFile',
             'cover'=>'urlCover',
             'price' => '2',
@@ -84,7 +85,8 @@ class DatabaseSeeder extends Seeder
         Post::create([
             'title'=>'Healt Template Jantung',
             'description'=>'Template ini mengandung Jantung',
-            'category'=>5,
+            'category_id'=>5,
+            'user_id'=>2,
             'file'=> 'urlFile',
             'cover'=>'urlCover',
             'price' => '2',
@@ -93,7 +95,8 @@ class DatabaseSeeder extends Seeder
         Post::create([
             'title'=>'Sport Template Ronaldo',
             'description'=>'Template ini mengandung bawang',
-            'category'=>4,
+            'category_id'=>4,
+            'user_id'=>1,
             'file'=> 'urlFile',
             'cover'=>'urlCover',
             'price' => '2',
@@ -102,7 +105,8 @@ class DatabaseSeeder extends Seeder
         Post::create([
             'title'=>'Sport Template Ronaldo',
             'description'=>'Template ini mengandung bawang',
-            'category'=>2,
+            'category_id'=>2,
+            'user_id'=>1,
             'file'=> 'urlFile',
             'cover'=>'urlCover',
             'price' => '2',
@@ -112,7 +116,8 @@ class DatabaseSeeder extends Seeder
         Post::create([
             'title'=>'Sport Template Ronaldo',
             'description'=>'Template ini mengandung bawang',
-            'category'=>3,
+            'category_id'=>3,
+            'user_id'=>2,
             'file'=> 'urlFile',
             'cover'=>'urlCover',
             'price' => '2',
@@ -121,7 +126,8 @@ class DatabaseSeeder extends Seeder
         Post::create([
             'title'=>'Sport Template Ronaldo',
             'description'=>'Template ini mengandung bawang',
-            'category'=>7,
+            'category_id'=>7,
+            'user_id'=>1,
             'file'=> 'urlFile',
             'cover'=>'urlCover',
             'price' => '2',
@@ -130,7 +136,8 @@ class DatabaseSeeder extends Seeder
         Post::create([
             'title'=>'Sport Template Ronaldo',
             'description'=>'Template ini mengandung bawang',
-            'category'=>1,
+            'category_id'=>1,
+            'user_id'=>1,
             'file'=> 'urlFile',
             'cover'=>'urlCover',
             'price' => '2',
@@ -139,7 +146,8 @@ class DatabaseSeeder extends Seeder
         Post::create([
             'title'=>'Sport Template Ronaldo',
             'description'=>'Template ini mengandung bawang',
-            'category'=>1,
+            'category_id'=>1,
+            'user_id'=>1,
             'file'=> 'urlFile',
             'cover'=>'urlCover',
             'price' => '2',

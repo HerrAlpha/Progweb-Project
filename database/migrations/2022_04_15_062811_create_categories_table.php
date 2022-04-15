@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->id('id');
-            $table->foreignId('post_id');
             $table->string('title')->unique();
             $table->string('cover');
             $table->timestamps();

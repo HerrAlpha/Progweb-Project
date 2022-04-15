@@ -18,7 +18,6 @@ return new class extends Migration
             $table->foreignId('category_id');
             $table->foreignId('user_id');
             $table->string('title');
-            $table->string('category');
             $table->text('description');
             $table->string('file');
             $table->string('cover');
