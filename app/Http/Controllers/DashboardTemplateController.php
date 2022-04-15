@@ -27,7 +27,9 @@ class DashboardTemplateController extends Controller
      */
     public function create()
     {
-        //
+        $categories = Category::all();
+        $posts = Post::where('user_id',auth()->user()->id)->get();
+        return view('dashboard.templateEdit',compact('posts','categories'));
     }
 
     /**
@@ -38,7 +40,20 @@ class DashboardTemplateController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'title'=>'required|min:5',
+            'category'=> 'required',
+            'description'=> 'required|min:10',
+            'file'=>'required|file',
+            'cover'=>'file|image|size:1024',
+            'price'=>'required'
+        ]);
+
+        //kurang store data path ke public dan database
+
+        Post::create($data);
+
+        return redirect('/dashboard/template')->with('success','Post berhasil ditambahkan');
     }
 
     /**
