@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Post;
+use App\Models\Category;
+use App\Models\User;
 
 class DashboardTemplateController extends Controller
 {
@@ -13,7 +16,8 @@ class DashboardTemplateController extends Controller
      */
     public function index()
     {
-        return view('dashboard.template');
+        $posts = Post::where('user_id',auth()->user()->id)->get();
+        return view('dashboard.template',compact('posts'));
     }
 
     /**
