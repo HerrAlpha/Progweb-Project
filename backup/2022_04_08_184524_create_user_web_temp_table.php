@@ -14,7 +14,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('web', function (Blueprint $table) {
+        Schema::create('webs', function (Blueprint $table) {
             $table->id('id_web');
             $table->id('id_user');
             $table->string('name');
@@ -37,7 +37,7 @@ return new class extends Migration
             $table->timestamp('updateed_at');
             // $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
             // $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
-            $table->timestamps('');
+            $table->timestamps();
         });
     }
 
@@ -48,6 +48,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('web');
+        Schema::dropIfExists('webs');
     }
 };

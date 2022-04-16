@@ -3,6 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Post;
+use App\Models\Category;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 
 class DashboardTemplateController extends Controller
 {
@@ -13,7 +19,10 @@ class DashboardTemplateController extends Controller
      */
     public function index()
     {
-        return view('dashboard.template');
+        $posts = Post::where('user_id',auth()->user()->id)->get();
+        // $sing = $posts->description->Str::limit($posts->description, 20, '...');
+        // $posts['description'] = Str::limit($posts->description,20,'...');
+        return view('dashboard.template',compact('posts'));
     }
 
     /**
@@ -23,7 +32,9 @@ class DashboardTemplateController extends Controller
      */
     public function create()
     {
-        //
+        $categories = Category::all();
+        $posts = Post::where('user_id',auth()->user()->id)->get();
+        return view('dashboard.templateEdit',compact('posts','categories'));
     }
 
     /**
@@ -34,7 +45,23 @@ class DashboardTemplateController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'title'=>'required|min:5',
+            'category_id'=> 'required',
+            'user_id'=> 'required',
+            'description'=> 'required|min:10',
+            'file'=>'required|file',
+            'cover'=>'file|image|max:2048',
+            'price'=>'required'
+        ]);
+
+        //kurang store data path ke public dan database //sudah
+        $data['file'] = $request->file('file')->store('file');
+        $data['cover'] = $request->file('cover')->store('cover');
+
+        Post::create($data);
+
+        return redirect('/dashboard/template')->with('success','Post berhasil ditambahkan');
     }
 
     /**
@@ -54,9 +81,10 @@ class DashboardTemplateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Post $template)
     {
-        //
+        $categories = Category::all();
+        return view('dashboard.editPost',compact('template','categories'));
     }
 
     /**
@@ -66,9 +94,37 @@ class DashboardTemplateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Post $template)
     {
-        //
+        $data = $request->validate([
+            'title'=>'required|min:5',
+            'category_id'=> 'required',
+            'user_id'=> 'required',
+            'description'=> 'required|min:10',
+            'file'=>'file',
+            'cover'=>'file|image|max:2048',
+            'price'=>'required'
+        ]);
+
+        if($request->file('file'))
+        {
+            if($template->file){
+                Storage::delete($template->file);
+            }
+            $data['file'] = $request->file('file')->store('file');
+        }
+
+        if($request->file('cover'))
+        {
+            if($template->cover){
+                Storage::delete($template->cover);
+            }
+            $data['cover'] = $request->file('cover')->store('cover');
+        }
+
+        Post::where('id',$template->id)->update($data);
+
+        return redirect('/dashboard/template')->with('success','Post has been update');
     }
 
     /**
@@ -77,8 +133,15 @@ class DashboardTemplateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Post $template)
     {
-        //
+        if($template->cover){
+            Storage::delete($template->cover);
+        }
+        if($template->file){
+            Storage::delete($template->file);
+        }
+        Post::destroy($template->id);
+        return redirect('/dashboard/template')->with('success','Post has been deleted');
     }
 }
