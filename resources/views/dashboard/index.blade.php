@@ -11,8 +11,8 @@
 @stop
 @foreach ($users as $user)
     <div class="row">
-        <div class="col-lg-4">
-        <img src="/storage/{{$user->avatar}}">
+        <div class="col-lg-4 ">
+        <img class='img-fluid border border-secondary border-5 rounded' src="/storage/{{$user->avatar}}">
         </div>
         <div class="col-lg-8">
             <div class=" mb-2 text-uppercase bg-black text-white text-center">Nama</div>

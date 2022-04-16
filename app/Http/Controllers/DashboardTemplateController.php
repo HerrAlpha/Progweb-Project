@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Category;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 
 class DashboardTemplateController extends Controller
 {
@@ -17,6 +19,8 @@ class DashboardTemplateController extends Controller
     public function index()
     {
         $posts = Post::where('user_id',auth()->user()->id)->get();
+        // $sing = $posts->description->Str::limit($posts->description, 20, '...');
+        // $posts['description'] = Str::limit($posts->description,20,'...');
         return view('dashboard.template',compact('posts'));
     }
 
@@ -42,14 +46,17 @@ class DashboardTemplateController extends Controller
     {
         $data = $request->validate([
             'title'=>'required|min:5',
-            'category'=> 'required',
+            'category_id'=> 'required',
+            'user_id'=> 'required',
             'description'=> 'required|min:10',
             'file'=>'required|file',
-            'cover'=>'file|image|size:1024',
+            'cover'=>'file|image|max:2048',
             'price'=>'required'
         ]);
 
-        //kurang store data path ke public dan database
+        //kurang store data path ke public dan database //sudah
+        $data['file'] = $request->file('file')->store('file');
+        $data['cover'] = $request->file('cover')->store('cover');
 
         Post::create($data);
 
@@ -73,9 +80,10 @@ class DashboardTemplateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Post $template)
     {
-        //
+        $categories = Category::all();
+        return view('dashboard.editPost',compact('template','categories'));
     }
 
     /**
@@ -85,9 +93,24 @@ class DashboardTemplateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Post $template)
     {
-        //
+        $data = $request->validate([
+            'title'=>'required|min:5',
+            'category_id'=> 'required',
+            'user_id'=> 'required',
+            'description'=> 'required|min:10',
+            'file'=>'file',
+            'cover'=>'file|image|max:2048',
+            'price'=>'required'
+        ]);
+
+        $data['file'] = $request->file('file')->store('file');
+        $data['cover'] = $request->file('cover')->store('cover');
+
+        Post::where('id',$template->id)->update($data);
+
+        return redirect('/dashboard/template')->with('success','Post has been update');
     }
 
     /**
@@ -96,8 +119,9 @@ class DashboardTemplateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Post $template)
     {
-        //
+        Post::destroy($template->id);
+        return redirect('/dashboard/template')->with('success','Post has been deleted');
     }
 }

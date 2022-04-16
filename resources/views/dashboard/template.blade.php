@@ -16,8 +16,8 @@
 @foreach ($posts as $post)
 <div class="d-block py-3 mb-2 border-5 border-dark rounded border position-relative bg-template-ku">
     <div class="row">
-        <div class="col-lg-3 justify-content-center align-items-center d-flex">
-            <canvas class="" width="200" height="150" style="border:1px solid #000000;"></canvas>
+        <div class="col-lg-3">
+           <img class='img-fluid' src="/storage/{{$post->cover}}">
         </div>
         <div class="col-lg-3">
             <table>
@@ -50,10 +50,16 @@
         <div class="col-lg-1 text-center bg-black rounded">
             <table>
                 <tr>
-                    <td><a href=''  class="btn btn-info mt-1 mb-1 rounded">Update</a></td>
+                    <td><a href='/dashboard/template/{{$post->id}}/edit'  class="btn btn-info mt-1 mb-1 rounded">Update</a></td>
                 </tr>
                 <tr>
-                    <td><a href='' class="btn btn-danger mt-1 mb-1 rounded">Delete</a></td>
+                    <td>
+                        <form action="/dashboard/template/{{$post->id}}" method="post">
+                            @method('delete')
+                            @csrf
+                            <button class="btn btn-danger mt-1 mb-1 rounded"onclick="return confirm('Yakin Banget??')">Delete</button>
+                        </form>
+                    </td>
                 </tr>
                 <tr>
                     <td><a href='' class="btn btn-success mt-1 mb-1 rounded">Show</a></td>

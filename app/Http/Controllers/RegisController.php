@@ -24,7 +24,7 @@ class RegisController extends Controller
             'zip'=>'required|integer',
             'country'=>'required',
             'company'=>'',
-            'avatar'=>'image|file|size:1024',
+            'avatar'=>'image|file|max:2048',
             'web'=>'',
             'app'=>'',
             'about'=>'',
@@ -40,7 +40,6 @@ class RegisController extends Controller
 
         //enkripsi password
         $data['password'] = bcrypt($data['password']);
-
         //insert data dengan model
         User::create($data);
 
