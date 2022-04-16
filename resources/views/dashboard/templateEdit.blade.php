@@ -41,7 +41,7 @@
         </div>
         <div class="form-group">
             <label for="price">Upload File Template</label>
-            <input type="file" class="form-control @error('file') is-invalid @enderror" id="file" name="file" onchange='prevImg()'>
+            <input type="file" class="form-control @error('file') is-invalid @enderror" id="file" name="file">
             @error('file')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror

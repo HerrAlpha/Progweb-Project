@@ -42,14 +42,24 @@
         </div>
         <div class="form-group">
             <label for="price">Upload File Template</label>
-            <input type="file" class="form-control @error('file') is-invalid @enderror" id="file" name="file" value='{{old('file',$template->file)}}'>
+            @if ($template->file)
+            <img  src='/storage/{{$template->file}}' class='prev-img-cover img-fluid col-lg-2 d-block'><img>
+            @else
+            <img class='prev-img-cover img-fluid col-lg-2'><img>
+            @endif
+            <input type="file" class="form-control @error('file') is-invalid @enderror" id="cover" name="file" value='{{old('file')}}'>
             @error('file')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
         </div>
         <div class="form-group">
             <label for="cover">Front Cover</label>
-            <input type="file" class="form-control @error('cover') is-invalid @enderror" id="cover" name="cover" value='{{old('cover',$template->cover)}}'>
+            @if ($template->cover)
+            <img  src='/storage/{{$template->cover}}' class='prev-img-cover img-fluid col-lg-2 d-block'><img>
+            @else
+            <img class='prev-img-cover img-fluid col-lg-2'><img>
+            @endif
+            <input type="file" class="form-control @error('cover') is-invalid @enderror" id="cover" name="cover" value='{{old('cover')}}' onchange="prevImg()">
             @error('cover')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror

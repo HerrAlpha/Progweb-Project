@@ -8,6 +8,7 @@ use App\Models\Category;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 
 class DashboardTemplateController extends Controller
 {
@@ -105,8 +106,21 @@ class DashboardTemplateController extends Controller
             'price'=>'required'
         ]);
 
-        $data['file'] = $request->file('file')->store('file');
-        $data['cover'] = $request->file('cover')->store('cover');
+        if($request->file('file'))
+        {
+            if($template->file){
+                Storage::delete($template->file);
+            }
+            $data['file'] = $request->file('file')->store('file');
+        }
+
+        if($request->file('cover'))
+        {
+            if($template->cover){
+                Storage::delete($template->cover);
+            }
+            $data['cover'] = $request->file('cover')->store('cover');
+        }
 
         Post::where('id',$template->id)->update($data);
 
@@ -121,6 +135,12 @@ class DashboardTemplateController extends Controller
      */
     public function destroy(Post $template)
     {
+        if($template->cover){
+            Storage::delete($template->cover);
+        }
+        if($template->file){
+            Storage::delete($template->file);
+        }
         Post::destroy($template->id);
         return redirect('/dashboard/template')->with('success','Post has been deleted');
     }

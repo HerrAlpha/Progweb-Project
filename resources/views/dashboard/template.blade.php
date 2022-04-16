@@ -62,7 +62,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><a href='' class="btn btn-success mt-1 mb-1 rounded">Show</a></td>
+                    <td><a href='/dashboard/template/{{$post->id}}' class="btn btn-success mt-1 mb-1 rounded">Show</a></td>
                 </tr>
             </table>
         </div>
