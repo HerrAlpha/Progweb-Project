@@ -44,12 +44,12 @@
   <input class="form-control form-control-dark w-100" type="text" placeholder="Welcome Back - {{auth()->user()->name}}" aria-label="Search">
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
-      <form action="/logout" method="post">
-        @csrf
-        <button class="nav-link px-3 bg-black border-0" type="submit">Logout</button>
-    </form>
+      
+        <button class="nav-link px-3 bg-black border-0" type="button" data-bs-toggle="modal" data-bs-target="#logout">Logout</button>
+    
     </div>
   </div>
+  
 </header>
 
 <div class="container-fluid">
@@ -81,6 +81,27 @@
     </main>
   </div>
 </div>
+<form action="/logout" method="post">
+        @csrf
+  <!-- Modal -->
+<div class="modal fade" id="logout" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Logout Confirmation</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure to logout?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Abort</button>
+        <button type="submit" class="btn btn-danger">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+</form>
 <script>
   function prevImg(){
 
