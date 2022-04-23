@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">    <meta name="description" content="">
     <title>@yield('title')</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
-
+    
     <!-- Bootstrap core CSS -->
 <link href="/css/dashboard.css" rel="stylesheet">
 <link rel="stylesheet" href="/css/bootstrap.css">
@@ -20,6 +20,10 @@
         -moz-user-select: none;
         user-select: none;
       }
+      body{
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: semibold;
+    }
 
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
