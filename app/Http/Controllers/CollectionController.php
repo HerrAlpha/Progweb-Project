@@ -198,7 +198,7 @@ class CollectionController extends Controller
     }
 
     public function home(){
-        return view('home');
+        return view('register.reg1');
     }
     public function templates(){
         return view('template');
