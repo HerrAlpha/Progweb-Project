@@ -20,9 +20,10 @@ class DashboardTemplateController extends Controller
     public function index()
     {
         $posts = Post::where('user_id',auth()->user()->id)->get();
+        $categories = Category::all();
         // $sing = $posts->description->Str::limit($posts->description, 20, '...');
         // $posts['description'] = Str::limit($posts->description,20,'...');
-        return view('dashboard.template',compact('posts'));
+        return view('dashboard.template',compact('posts','categories'));
     }
 
     /**

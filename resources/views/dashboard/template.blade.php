@@ -2,7 +2,7 @@
 @section('title','UKlise - Your Template')
 @section('subTitle','Your Template')
 @section('subHeader')
-     <a href="#post" class="btn btn-warning">Create...</a>
+     <a data-bs-toggle="modal" data-bs-target='#post' class="btn btn-warning">Create...</a>
 @stop
 @section('content')
 @if (session()->has('success'))
@@ -68,7 +68,7 @@
 </div>
 @endforeach
 <!--MODAL STATIC POST TEMPLATE-->
-<div class="modal fade" id="post" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="post" data-backdrop="static"  data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -81,8 +81,6 @@
             <form action="/dashboard/template" method="post" enctype="multipart/form-data">
                 @csrf
                 <button type="submit" class="btn btn-info">Post Template</button>
-            @stop
-            @section('content')
             <div class="row">
                 <div class="col-lg-8">
                     <div class="form-group">
@@ -140,12 +138,13 @@
                     <input type="hidden" name="user_id" value="{{auth()->user()->id}}">
                 </div>
             </div>
-            </form>
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           <button type="button" class="btn btn-primary">Save changes</button>
         </div>
+    </form>
       </div>
     </div>
   </div>
