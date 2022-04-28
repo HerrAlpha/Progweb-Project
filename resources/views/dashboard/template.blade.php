@@ -2,7 +2,10 @@
 @section('title','UKlise - Your Template')
 @section('subTitle','Your Template')
 @section('subHeader')
-     <a data-bs-toggle="modal" data-bs-target='#add' class="btn btn-warning">Create Template</a>
+     <a data-bs-toggle="modal" data-bs-target='#add' class="btn btn-warning">
+         <span data-feather="plus"></span>
+         Create Template
+        </a>
 @stop
 @section('content')
 @if (session()->has('success'))

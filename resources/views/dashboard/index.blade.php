@@ -2,12 +2,6 @@
 @section('title','UKlise - Dashboard')
 @section('content')
 @section('subHeader')
-
-@foreach ($users as $user)
-<form action="/dashboard/{{$user->id}}/edit" method="get">
-      <button type="submit" class="btn btn-primary">Update Profile | Password</button>
-</form>
-@endforeach
 @stop
 @foreach ($users as $user)
     <div class="row">
