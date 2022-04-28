@@ -42,8 +42,8 @@ Route::view('/web/categories/food','food');
 
 //=====X====== WEB =======X========//
 
-Route::get('/app',[CollectionController::class,'appCategories'])->name('app')->middleware('guest');
-Route::get('/about', [CollectionController::class,'about'])->name('about')->middleware('guest');
+Route::get('/app',[CollectionController::class,'apps'])->name('app'); //->middleware('guest');
+Route::get('/about', [CollectionController::class,'about'])->name('about'); //->middleware('guest');
 Route::fallback([CollectionController::class,'error']);
 
 //============== DASHBOARD==============//

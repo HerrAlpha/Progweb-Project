@@ -91,11 +91,11 @@
           
             var greet;
           
-            if (hrs < 12)
+            if (hrs < 12 && hrs >=4)
                 greet = '<span data-feather="sunrise" style="width: 40px; height: 40px"></span> Good Morning';
             else if (hrs >= 12 && hrs <= 17)
                 greet = '<span data-feather="sun" style="width: 40px; height: 40px"></span> Good Afternoon';
-            else if (hrs >= 17 && hrs <= 24)
+          else if (hrs >= 17 && hrs <= 24 || hrs >= 0 && hrs < 4)
                 greet = '<span data-feather="moon" style="width: 40px; height: 40px"></span> Good Evening';
           
             document.getElementById('Greeting').innerHTML =

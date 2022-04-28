@@ -40,18 +40,19 @@
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="row g-3">
-                    @foreach ($appCat as $i)
-                    <div class="col-sm-3">
-                        <a href="/app/category?category=sport">
-                            <div class="card">
-                            <img src="..." alt="..." class="card-img-top">
-                                <div class="card-body" style="height: 200px">
-                                   <h5 style="text-align: center">Sport</h5>
-                                </div>
-                            </div>
-                    </a>
+                    @foreach($namesApp as $i)
+        <div class="col-sm-2 mb-4">
+            <div class="card">
+                <a href="{{$i->$linksApp}}">
+                    <div class="card-body bg-light">
+                        <p class="card-text text-black">{{$i->$namesApp}}</p>
                     </div>
-                    @endforeach
+                      <img src="{{$i->$imgsApp}}" class="card-img-bottom" height="100">
+                </a>
+            </div>
+        </div>
+        @endforeach
+                    
                 </div>
                </div>
                  
