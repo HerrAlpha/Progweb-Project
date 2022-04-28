@@ -47,16 +47,6 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <input class="form-control form-control-dark w-100" type="text" placeholder="Search Here..." aria-label="Search" style="width: 100px; padding-left:2%">
-  <div class="navbar-nav">
-    <div class="nav-item text-nowrap">
-      
-        <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#logout">
-          <span data-feather="power"></span>
-          Logout
-        </button>
-    
-    </div>
-  </div>
   
 </header>
 
@@ -81,6 +71,12 @@
             <a class="nav-link {{Request::is('/dashboard/settings')?'active':''}}" href="/dashboard/settings">
               <span data-feather="settings"></span>
               Settings
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" type="button" data-bs-toggle="modal" data-bs-target="#logout" style="color: rgb(255, 69, 58)">
+              <span data-feather="power"></span>
+              Logout
             </a>
           </li>
         </ul>
