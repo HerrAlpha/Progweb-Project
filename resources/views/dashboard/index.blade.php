@@ -1,8 +1,8 @@
 @extends('dashboard.main')
 @section('title','UKlise - Dashboard')
-@section('subTitle','Dashboard')
 @section('content')
 @section('subHeader')
+
 @foreach ($users as $user)
 <form action="/dashboard/{{$user->id}}/edit" method="get">
       <button type="submit" class="btn btn-primary">Update Profile | Password</button>

@@ -12,6 +12,7 @@
 <script defer src="/js/dashboard.js"></script>
 <script src="/js/bootstrap.js"></script>
 
+
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -40,16 +41,19 @@
 
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
   <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="/">
-    <img src="/assets/picture/Logo.png" alt="" width="10%" height="10%" style="text-align: center;" class="d-inline-block"> UKlise
+    <img src="/assets/picture/Logo.png" alt="" width="60%" height="60%" style="text-align: center;" class="d-inline-block">
   </a>
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <input class="form-control form-control-dark w-100" type="text" placeholder="Welcome Back - {{auth()->user()->name}}" aria-label="Search">
+  <input class="form-control form-control-dark w-100" type="text" placeholder="Search Here..." aria-label="Search" style="width: 100px; padding-left:2%">
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
       
-        <button class="nav-link px-3 bg-black border-0" type="button" data-bs-toggle="modal" data-bs-target="#logout">Logout</button>
+        <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#logout">
+          <span data-feather="power"></span>
+          Logout
+        </button>
     
     </div>
   </div>
@@ -73,11 +77,34 @@
               Your Template
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link {{Request::is('/dashboard/settings')?'active':''}}" href="/dashboard/settings">
+              <span data-feather="settings"></span>
+              Settings
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <h2 id="Greeting"></h2><br>
+          <script>
+            var myDate = new Date();
+            var hrs = myDate.getHours();
+          
+            var greet;
+          
+            if (hrs < 12)
+                greet = '<span data-feather="sunrise" style="width: 40px; height: 40px"></span> Good Morning';
+            else if (hrs >= 12 && hrs <= 17)
+                greet = '<span data-feather="sun" style="width: 40px; height: 40px"></span> Good Afternoon';
+            else if (hrs >= 17 && hrs <= 24)
+                greet = '<span data-feather="moon" style="width: 40px; height: 40px"></span> Good Evening';
+          
+            document.getElementById('Greeting').innerHTML =
+                greet + ' {{auth()->user()->name}} <br> ';
+          </script> 
           <h1 class="h2">@yield('subTitle') </h1>
           @yield('subHeader')
         </div>

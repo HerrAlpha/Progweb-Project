@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="/css/bootstrap-grid.css">
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/@yield('css')">
-    <link rel="shortcut icon" href="/assets/picture/Logo.png">
-    <link rel="apple-touch-icon" href="/assets/picture/Logo.png">
+    <link rel="shortcut icon" href="/assets/picture/Logo-nonText.png">
+    <link rel="apple-touch-icon" href="/assets/picture/Logo-nonText.png">
     <style>
 
     body{
@@ -63,8 +63,8 @@
     <nav class=" navbar navbar-expand-lg navbar-dark @yield('class-navbar')" style="padding:0.5%;">
         <div class="container-fluid">
           <a class="navbar-brand" id="1" href="/" style="color:#f2f2f7">
-          <img src="/assets/picture/Logo.png" alt="" width="4%" height="4%" style="text-align: center;" class="d-inline-block">
-          UKlise</a>
+          <img src="/assets/picture/Logo.png" alt="" width="20%" height="20%" style="text-align: center;" class="d-inline-block">
+          </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>

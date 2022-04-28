@@ -21,7 +21,7 @@
             <label for="category_id">Category</label>
             <select class="form-select" name="category_id">
                 <option selected></option>
-                @foreach ($categories as $category)
+                @foreach ($appCat as $category)
                     @if (old('category_id',$template->category->id) == $category->id)
                     <option value="{{$category->id}}" selected>{{$category->title}}</option>
                     @else
