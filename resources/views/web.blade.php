@@ -13,54 +13,23 @@
         </div>
   </div>
 <div class="container">
-<div class="row mt-5">
-    <div class="col-sm-2">
-        <div class="dropdown">
-            <button class="a-black w-100 btn btn-secondary text-white dropdown-toggle bg-primary" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-              Category
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li class="dropdown-item">Technology</li>
-              <li class="dropdown-item">Art & Design</li>
-              <li class="dropdown-item">Food & Restaurant</li>
-              <li class="dropdown-item">Education</li>
-              <li class="dropdown-item">Industrial</li>
-              <li class="dropdown-item">Fashion & Beauty</li>
-              <li class="dropdown-item">Sport</li>
-            </ul>
-          </div>
-    </div>
-    <div class="col-sm-2">
-        <div class="dropdown">
-            <button class="a-black w-100 btn btn-secondary dropdown-toggle text-white bg-primary" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-              Free
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li class="dropdown-item">Free</li>
-              <li class="dropdown-item">Pay</li>
-            </ul>
-          </div>
-    </div>
-    <div class="col-sm-8">
-         <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success bg-primary text-white" type="submit">Search</button>
-         </form>
-    </div>
-</div>
+
 <div class="container text-center mt-5">
 
     <h1 class="m-5">Website Template Category</h1>
     <div class="row owl-carousel owl-theme">
-        {{-- <div class="jcarousel"> --}}
         @for ($i=1;$i<count($names);$i++)
-        <div class="col-sm-2 ">
-            @component('layout.cardWeb',['img'=>'{{$imgs[$i]}}','width'=>'15','a'=>'{{$links[$i]}}'])
-           {{$names[$i]}}
-            @endcomponent
+        <div class="col-sm-2 mb-4">
+            <div class="card">
+                <a href="{{$links[$i]}}">
+                    <div class="card-body bg-light">
+                        <p class="card-text text-black">{{$names[$i]}}</p>
+                    </div>
+                      <img src="{{$imgs[$i]}}" class="card-img-bottom" height="100">
+                </a>
+            </div>
         </div>
         @endfor
-        {{-- </div> --}}
         <div class="row mt-5">
             <div class="col">
             <div class="owl-navigation">
@@ -92,6 +61,41 @@
             @endcomponent
             <a href="#" class="btn btn-primary  d-block">Go somewhere</a>
         </div>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-sm-2">
+            <div class="dropdown">
+                <button class="a-black w-100 btn btn-secondary text-white dropdown-toggle bg-primary" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  Category
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li class="dropdown-item">Technology</li>
+                  <li class="dropdown-item">Art & Design</li>
+                  <li class="dropdown-item">Food & Restaurant</li>
+                  <li class="dropdown-item">Education</li>
+                  <li class="dropdown-item">Industrial</li>
+                  <li class="dropdown-item">Fashion & Beauty</li>
+                  <li class="dropdown-item">Sport</li>
+                </ul>
+              </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="dropdown">
+                <button class="a-black w-100 btn btn-secondary dropdown-toggle text-white bg-primary" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  Free
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li class="dropdown-item">Free</li>
+                  <li class="dropdown-item">Pay</li>
+                </ul>
+              </div>
+        </div>
+        <div class="col-sm-8">
+             <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success bg-primary text-white" type="submit">Search</button>
+             </form>
         </div>
     </div>
     </div>
