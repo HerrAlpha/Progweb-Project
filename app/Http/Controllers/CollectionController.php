@@ -222,10 +222,23 @@ class CollectionController extends Controller
     }
     public function news(){
 
-        $url = 'https://newsapi.org/v2/everything?apikey=b051bfc4e04f4a8f82e2cdaa9dadc71b&language=en&title,description=template web, template for design website&pageSize=10&q=web template code design';
-        $news = file_get_contents($url);
-        $news = json_decode($news);
-        $news = $news->articles;
+        $url3 = 'https://newsapi.org/v2/everything?apikey=b051bfc4e04f4a8f82e2cdaa9dadc71b&language=en&title,description=template web, template for design website&pageSize=10&q=web template code design';
+        $news3 = file_get_contents($url3);
+        $news3 = json_decode($news3);
+        $news3 = $news3->articles;
+
+        $url1 ='https://newsapi.org/v2/everything?apikey=b051bfc4e04f4a8f82e2cdaa9dadc71b&language=en&pageSize=10&q=computer technology new';
+        $news1 = file_get_contents($url1);
+        $news1 = json_decode($news1);
+        $news1 = $news1->articles;
+
+        $url2 ='https://newsapi.org/v2/everything?apikey=b051bfc4e04f4a8f82e2cdaa9dadc71b&language=en&pageSize=10&q=automotive new eco';
+        $news2 = file_get_contents($url2);
+        $news2 =json_decode($news2);
+        $news2 = $news2->articles;
+
+        $news = collect([$news1,$news2,$news3]);
+
         return view('news',compact('news'));
     }
     public function error(){
