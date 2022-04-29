@@ -59,7 +59,7 @@
     </style>
 
 </head>
-<body>
+<body class="@yield('bg-body')">
     <nav class=" navbar navbar-expand-lg navbar-dark @yield('class-navbar')" style="padding:0.5%;">
         <div class="container-fluid">
           <a class="navbar-brand" id="1" href="/" style="color:#f2f2f7">

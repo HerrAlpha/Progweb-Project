@@ -221,7 +221,12 @@ class CollectionController extends Controller
         return view('about');
     }
     public function news(){
-        return view('news');
+
+        $url = 'https://newsapi.org/v2/everything?apikey=b051bfc4e04f4a8f82e2cdaa9dadc71b&language=en&title,description=template web, template for design website&pageSize=10&q=web template code design';
+        $news = file_get_contents($url);
+        $news = json_decode($news);
+        $news = $news->articles;
+        return view('news',compact('news'));
     }
     public function error(){
         return view('error');
