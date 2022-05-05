@@ -5,22 +5,39 @@
 @stop
 @foreach ($users as $user)
     <div class="row">
-        <div class="col-lg-4 ">
-        <img class='img-fluid border border-secondary border-5 rounded' src="/storage/{{$user->avatar}}">
+        <div class="col-md-3">
+            <div class="card" style="border-radius:100%; width: 150px; height: 150px; align-self:center">
+                <div class="card-body">
+                    <img src="{{$user->avatar}}" alt="">
+                </div>
+            </div>
         </div>
-        <div class="col-lg-8">
-            <div class=" mb-2 text-uppercase bg-black text-white text-center">Nama</div>
-            <div class=" mb-2 ">{{$user->name}}</div>
-            <div class=" mb-2 text-uppercase bg-black text-white text-center">Username</div>
-            <div class=" mb-2 ">{{$user->username}}</div>
-            <div class=" mb-2 text-uppercase bg-black text-white text-center">Email</div>
-            <div class=" mb-2 ">{{$user->email}}</div>
-            <div class=" mb-2 text-uppercase bg-black text-white text-center">Phone</div>
-            <div class=" mb-2 ">{{$user->phone}} </div>
-            <div class=" mb-2 text-uppercase bg-black text-white text-center">Address</div>
-            <div class=" mb-2 ">{{$user->address}}</div>
-            <div class=" mb-2 text-uppercase bg-black text-white text-center">About</div>
-            <div class=" mb-2 ">{{$user->about}}</div>
+        <div class="col-md-9" style="align-self:center">
+            <h4>{{$user->name}}</h4>
+            <h6>@ {{$user->username}}</h6>
+            <h6>{{$user->email}}</h6>
+            <h6>{{$user->about}}</h6>
+            <h6>More Detail</h6>
         </div>
-  @endforeach
-  @stop
+    </div>
+    @endforeach
+    <br><br>
+    <h3>Latest Upload</h3>
+    <br>
+    <div class="row g-3">
+         @foreach ($posts as $post){{-- MAKE SURE IT POST ARE DESCENDING BASED CREATED AT --}}
+        <div class="col-md-3">
+            <div class="card">
+                <img src="{{$post->thumbnail}}" alt="">
+                <div class="card-header">{{$post->title}}</div>
+                <div class="card-body">
+                    <p>{{$post->description}}</p>
+                    <p>{{$post->category}}</p>
+                    <p>{{$post->created_at}}</p>
+                </div>
+            </div>
+        </div>
+        @endforeach
+    </div>
+ @stop 
+

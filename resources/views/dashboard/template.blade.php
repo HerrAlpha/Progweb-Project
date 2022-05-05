@@ -110,6 +110,62 @@
                         @enderror
                     </div>
                     <div class="form-group">
+                        <label for="form">Compatibility</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Web Browser" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Web Browser
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="iOS" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              iOS
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Android" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Android
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Chrome OS" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Chrome OS
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="macOS" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              macOS
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Linux" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                             Linux
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Windows" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Windows
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="framework">Category</label>
+                        <select class="form-select" name="framework">
+                            <option selected>Choose the Framework</option>
+                            <option value="Flutter">Flutter</option>
+                            <option value="Laravel">Laravel</option>
+                        </select>
+                        @error('framework')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="form-group">
                         <label for="description">Description</label>
                         <textarea type="text" rows='6' cols="70" class="form-control @error('description') is-invalid @enderror" id="description" name="description" placeholder="Enter description">{{old('description')}}</textarea>
                         @error('description')

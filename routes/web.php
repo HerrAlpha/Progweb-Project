@@ -56,6 +56,8 @@ Route::get('/dashboard',[DashboardController::class,'index'])->middleware('auth'
 // })->name('dashboard.template')->middleware('auth');
 Route::resource('/dashboard/template',DashboardTemplateController::class)->middleware('auth');
 
+Route::get('/dashboard/settings',[DashboardController::class,'settings'])->middleware('auth');
+
 Route::group(['middleware'=>['guest']],function(){
 
     //============== REGISTER ==============//

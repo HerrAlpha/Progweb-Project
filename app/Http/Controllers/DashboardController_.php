@@ -10,4 +10,7 @@ class DashboardController extends Controller
     public function dash(User $user){
         return view('dashboard.index',compact('user'));
     }
+
+    
+
 }

@@ -4,6 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Models\Post;
+use App\Models\Category;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 
 class DashboardController extends Controller
 {
@@ -15,7 +20,16 @@ class DashboardController extends Controller
     public function index()
     {
         $users = User::where('id',auth()->user()->id)->get();
-        return view('dashboard.index',compact('users'));
+        $posts = Post::where('user_id',auth()->user()->id)->get();
+        return view('dashboard.index',compact([
+            'users',
+            'posts'
+        ]));
+    }
+
+    public function settings(){
+        $users = User::where('id',auth()->user()->id)->get();
+        return view('dashboard.settings',compact('users'));
     }
 
     /**
@@ -49,6 +63,8 @@ class DashboardController extends Controller
     {
         return $user;
     }
+
+    
 
     /**
      * Show the form for editing the specified resource.
@@ -84,4 +100,6 @@ class DashboardController extends Controller
     {
         //
     }
+
+   
 }
