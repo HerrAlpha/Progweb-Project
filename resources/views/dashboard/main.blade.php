@@ -105,6 +105,10 @@
           @yield('subHeader')
         </div>
         @yield('content')
+        <br>
+        <br>
+        <footer><p style="text-align: center;"> Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Uklise All Rights Reserved | Collaboration of Aurum Team and MAR Media Under MAR Media Company</p></footer>
+        
     </main>
   </div>
 </div>
