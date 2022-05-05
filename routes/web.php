@@ -74,3 +74,9 @@ Route::group(['middleware'=>['guest']],function(){
 
 //============== LOGOUT ==============//
 Route::post('/logout',[LogoutController::class,'logout']);
+
+
+//============== NEWS.COMPUTER ==============//
+Route::get('/news/computer',[CollectionController::class,'computer'])->name('computer');
+Route::get('/news/programmer',[CollectionController::class,'programmer'])->name('programmer');
+Route::get('/news/automotive',[CollectionController::class,'automotive'])->name('automotive');
