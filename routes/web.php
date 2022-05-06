@@ -7,6 +7,7 @@ use App\Http\Controllers\RegisController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DashboardTemplateController;
 use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\DownloadController;
 use App\Models\Post;
 use App\Models\Category;
 use App\Models\User;
@@ -24,7 +25,7 @@ use App\Models\User;
 
 Route::get('/',[CollectionController::class,'home'])->name('home');//->middleware('guest');
 Route::get('/templates', [CollectionController::class,'templates'])->name('template');//->middleware('guest');
-Route::get('/news', [CollectionController::class,'news'])->name('news')->middleware('guest');
+Route::get('/news', [CollectionController::class,'news'])->name('news');
 //============== WEB ==============//
 Route::get('/web', [CollectionController::class,'web'])->name('web');
 Route::view('/web/categories/all','all');
@@ -82,3 +83,7 @@ Route::post('/logout',[LogoutController::class,'logout']);
 Route::get('/news/computer',[CollectionController::class,'computer'])->name('computer');
 Route::get('/news/programmer',[CollectionController::class,'programmer'])->name('programmer');
 Route::get('/news/automotive',[CollectionController::class,'automotive'])->name('automotive');
+
+//============== DOWNLOAD ==============//
+
+Route::get('/download',[DownloadController::class,'index']);// "/download" diganti dengan "/{app / web}/{category}/{id}"
