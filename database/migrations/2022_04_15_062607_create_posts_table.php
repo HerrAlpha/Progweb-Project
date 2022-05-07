@@ -15,10 +15,16 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id('id');
+            $table->string('title');
             $table->foreignId('category_id');
             $table->foreignId('user_id');
-            $table->string('title');
-            $table->string('compatibility');
+            $table->string('web-browser')->nullable();
+            $table->string('ios')->nullable();
+            $table->string('android')->nullable();
+            $table->string('chrome-os')->nullable();
+            $table->string('mac-os')->nullable();
+            $table->string('linux')->nullable();
+            $table->string('windows')->nullable();
             $table->string('framework');
             $table->text('description');
             $table->string('file');

@@ -8,6 +8,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DashboardTemplateController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\DownloadController;
+use App\Http\Controllers\SettingController;
 use App\Models\Post;
 use App\Models\Category;
 use App\Models\User;
@@ -74,6 +75,9 @@ Route::group(['middleware'=>['guest']],function(){
     })->name('login');
 
 });
+
+//==============UPDATE PROFILE==========//
+Route::get('/dashboard/settings/update-profile',[SettingController::class,'index'])->middleware('auth');
 
 //============== LOGOUT ==============//
 Route::post('/logout',[LogoutController::class,'logout']);

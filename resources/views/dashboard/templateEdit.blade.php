@@ -20,13 +20,13 @@
             <label for="category_id">Category</label>
             <select class="form-select" name="category_id">
                 <option selected></option>
-                @foreach ($appCat as $category)
-                    @if (old('category_id') == $category->id)
-                    <option value="{{$category->id}}" selected>{{$category->title}}</option>
-                    @else
-                    <option value="{{$category->id}}">{{$category->title}}</option>
-                    @endif
-                @endforeach
+                    @foreach ($categories as $category)
+                        @if (old('category_id') == $category->id)
+                        <option value="{{$category->id}}" selected>{{$category->title}}</option>
+                        @else
+                        <option value="{{$category->id}}">{{$category->title}}</option>
+                        @endif
+                    @endforeach
             </select>
             @error('category_id')
                 <div class="invalid-feedback">{{ $message }}</div>

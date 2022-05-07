@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">    <meta name="description" content="">
     <title>@yield('title')</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
-    
+
     <!-- Bootstrap core CSS -->
 <link href="/css/dashboard.css" rel="stylesheet">
 <link rel="stylesheet" href="/css/bootstrap.css">
@@ -47,7 +47,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <input class="form-control form-control-dark w-100" type="text" placeholder="Search Here..." aria-label="Search" style="width: 100px; padding-left:2%">
-  
+
 </header>
 
 <div class="container-fluid">
@@ -74,7 +74,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" type="button" data-bs-toggle="modal" data-bs-target="#logout" style="color: rgb(255, 69, 58)">
+            <a class="nav-link " type="button" data-bs-toggle="modal" data-bs-target="#logout" style="color: rgb(255, 69, 58)">
               <span data-feather="power"></span>
               Logout
             </a>
@@ -88,19 +88,19 @@
           <script>
             var myDate = new Date();
             var hrs = myDate.getHours();
-          
+
             var greet;
-          
+
             if (hrs < 12 && hrs >=4)
                 greet = '<span data-feather="sunrise" style="width: 40px; height: 40px"></span> Good Morning';
             else if (hrs >= 12 && hrs <= 17)
                 greet = '<span data-feather="sun" style="width: 40px; height: 40px"></span> Good Afternoon';
           else if (hrs >= 17 && hrs <= 24 || hrs >= 0 && hrs < 4)
                 greet = '<span data-feather="moon" style="width: 40px; height: 40px"></span> Good Evening';
-          
+
             document.getElementById('Greeting').innerHTML =
                 greet + ' {{auth()->user()->name}} <br> ';
-          </script> 
+          </script>
           <h1 class="h2">@yield('subTitle') </h1>
           @yield('subHeader')
         </div>
@@ -108,7 +108,7 @@
         <br>
         <br>
         <footer><p style="text-align: center;"> Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Uklise All Rights Reserved | Collaboration of Aurum Team and MAR Media Under MAR Media Company</p></footer>
-        
+
     </main>
   </div>
 </div>

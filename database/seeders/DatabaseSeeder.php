@@ -19,23 +19,27 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
+        //----------------------------------SECTION USER--------------------------------------------
+
         User::create([
             'name'=> 'Aurum Team',
             'username' => 'adminadmin',
             'email' => 'aurumteam@gmail.com',
             'password' => bcrypt('password'),
             'phone' => '081233488755',
-            'address'=> 'Jalan buntu',
+            'address'=> 'Jalan buntu belok kiri sedikit',
             'city'=>'Malang',
-            'state'=>'hooh',
-            'zip'=>'124',
+            'state'=>'Indonesia',
+            'zip'=>'123456',
             'country'=>'Indonesia',
             'company'=> 'Universitas Negeri Malang',
-            'avatar'=> '',
-            'web'=>'',
+            'avatar'=> 'contoh.jpg',
+            'web'=>'1',
             'app'=>'',
             'about'=>'Warning: PowerShell detected that you might be using a screen reader and has disabled PSReadLine for compatibility purposes. If you want to re-enable it, run Import-Module PSReadLine'
         ]);
+
+        //--------------------------------SECTION CATEGORY---------------------------------
 
         Category::create([
             'title'=>'Sport',
@@ -72,85 +76,25 @@ class DatabaseSeeder extends Seeder
             'cover'=>'/assets/picture/app/category/transport.png'
         ]);
 
-        Post::create([
-            'title'=>'Sport Template Ronaldo',
-            'description'=>'Template ini mengandung bawang',
-            'category_id'=>2,
-            'user_id'=>1,
-            'file'=> 'urlFile',
-            'cover'=>'urlCover',
-            'price' => '2',
-        ]);
+        //-----------------------------SECTION POSTS-----------------------------------------------
 
         Post::create([
-            'title'=>'Healt Template Jantung',
-            'description'=>'Template ini mengandung Jantung',
-            'category_id'=>5,
-            'user_id'=>2,
-            'file'=> 'urlFile',
-            'cover'=>'urlCover',
-            'price' => '2',
-        ]);
-
-        Post::create([
-            'title'=>'Sport Template Ronaldo',
-            'description'=>'Template ini mengandung bawang',
-            'category_id'=>4,
-            'user_id'=>1,
-            'file'=> 'urlFile',
-            'cover'=>'urlCover',
-            'price' => '2',
-        ]);
-
-        Post::create([
-            'title'=>'Sport Template Ronaldo',
-            'description'=>'Template ini mengandung bawang',
-            'category_id'=>2,
-            'user_id'=>1,
-            'file'=> 'urlFile',
-            'cover'=>'urlCover',
-            'price' => '2',
-        ]);
-
-
-        Post::create([
-            'title'=>'Sport Template Ronaldo',
-            'description'=>'Template ini mengandung bawang',
-            'category_id'=>3,
-            'user_id'=>2,
-            'file'=> 'urlFile',
-            'cover'=>'urlCover',
-            'price' => '2',
-        ]);
-
-        Post::create([
-            'title'=>'Sport Template Ronaldo',
-            'description'=>'Template ini mengandung bawang',
+            'title'=>'Natural Vacation',
+            'description'=>'For who interest to make a website with theme Travel, we provide this for you',
             'category_id'=>7,
             'user_id'=>1,
-            'file'=> 'urlFile',
-            'cover'=>'urlCover',
+            'web-browser'=>1,
+            'ios'=>1,
+            'android'=>1,
+            'chrome-os'=>1,
+            'mac-os'=>'',
+            'linux'=>'',
+            'windows'=>'',
+            'framework'=>'laravel',
+            'file'=> 'contoh.jpg',
+            'cover'=>'contoh.jpg',
             'price' => '2',
         ]);
 
-        Post::create([
-            'title'=>'Sport Template Ronaldo',
-            'description'=>'Template ini mengandung bawang',
-            'category_id'=>1,
-            'user_id'=>1,
-            'file'=> 'urlFile',
-            'cover'=>'urlCover',
-            'price' => '2',
-        ]);
-
-        Post::create([
-            'title'=>'Sport Template Ronaldo',
-            'description'=>'Template ini mengandung bawang',
-            'category_id'=>1,
-            'user_id'=>1,
-            'file'=> 'urlFile',
-            'cover'=>'urlCover',
-            'price' => '2',
-        ]);
     }
 }

@@ -75,9 +75,9 @@
 <form action="/dashboard/template" method="post" enctype="multipart/form-data">
         @csrf
 <div class="modal fade" id="add" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    
+
     <div class="modal-dialog modal-dialog-scrollable">
-        
+
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="staticBackdropLabel">Post Template</h5>
@@ -112,54 +112,54 @@
                     <div class="form-group">
                         <label for="form">Compatibility</label>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="Web Browser" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
+                            <input class="form-check-input" type="checkbox" value="1" id="webBrowser" name="web-browser">
+                            <label class="form-check-label" for="webBrowser">
                               Web Browser
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="iOS" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
+                            <input class="form-check-input" type="checkbox" value="1" id="ios" name="ios">
+                            <label class="form-check-label" for="ios">
                               iOS
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="Android" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
+                            <input class="form-check-input" type="checkbox" value="1" id="android" name="android">
+                            <label class="form-check-label" for="android">
                               Android
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="Chrome OS" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
+                            <input class="form-check-input" type="checkbox" value="1" id="chromeOs" name="chrome-os">
+                            <label class="form-check-label" for="chromeOs">
                               Chrome OS
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="macOS" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
+                            <input class="form-check-input" type="checkbox" value="1" id="macOs" name="mac-os">
+                            <label class="form-check-label" for="macOs">
                               macOS
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="Linux" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
+                            <input class="form-check-input" type="checkbox" value="1" id="linux" name="linux">
+                            <label class="form-check-label" for="linux">
                              Linux
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="Windows" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
+                            <input class="form-check-input" type="checkbox" value="1" id="windows" name="windows">
+                            <label class="form-check-label" for="windows">
                               Windows
                             </label>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="framework">Category</label>
+                        <label for="framework">Framework</label>
                         <select class="form-select" name="framework">
                             <option selected>Choose the Framework</option>
-                            <option value="Flutter">Flutter</option>
-                            <option value="Laravel">Laravel</option>
+                            <option value="flutter">Flutter</option>
+                            <option value="laravel">Laravel</option>
                         </select>
                         @error('framework')
                             <div class="invalid-feedback">{{ $message }}</div>

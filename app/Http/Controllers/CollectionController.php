@@ -220,21 +220,21 @@ class CollectionController extends Controller
     public function about(){
         return view('about');
     }
-   
+
     public function news(){
 
-        $url1 ='https://newsapi.org/v2/everything?apikey=b051bfc4e04f4a8f82e2cdaa9dadc71b&language=en&pageSize=10&q=computer%technology%new';
+        $url1 ='https://newsapi.org/v2/everything?apikey=b051bfc4e04f4a8f82e2cdaa9dadc71b&language=en&pageSize=12&q=computer%technology%new';
         $newsA = file_get_contents($url1);
         $newsA = json_decode($newsA);
         $newsA = $newsA->articles;
 
-        $url2 ='https://newsapi.org/v2/everything?apikey=b051bfc4e04f4a8f82e2cdaa9dadc71b&language=en&pageSize=10&q=automotive%new%eco';
+        $url2 ='https://newsapi.org/v2/everything?apikey=b051bfc4e04f4a8f82e2cdaa9dadc71b&language=en&pageSize=12&q=automotive%new%eco';
         $newsB = file_get_contents($url2);
         $newsB =json_decode($newsB);
         $newsB = $newsB->articles;
 
 
-        $url3 = 'https://newsapi.org/v2/everything?apikey=b051bfc4e04f4a8f82e2cdaa9dadc71b&language=en&title,description=template%web,%template%for%design%website&pageSize=10&q=web%template%code%design';
+        $url3 = 'https://newsapi.org/v2/everything?apikey=b051bfc4e04f4a8f82e2cdaa9dadc71b&language=en&title,description=template%web,%template%for%design%website&pageSize=12&q=web%template%code%design';
         $newsC = file_get_contents($url3);
         $newsC = json_decode($newsC);
         $newsC = $newsC->articles;

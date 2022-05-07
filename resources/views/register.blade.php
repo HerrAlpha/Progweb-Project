@@ -100,11 +100,11 @@
                     </div>
                     <div class="form-group">
                         <label for="developer">What are you prefered on?</label><br>
-                        <input class="form-check-input" type="checkbox" value="Laravel" name="web" id="Laravel" @if(old('web')=='Laravel') {{'checked'}} @endif>
+                        <input class="form-check-input" type="checkbox" value="Laravel" name="web" id="Laravel" @if(old('web')=='laravel') {{'checked'}} @endif>
                         <label class="form-check-label" for="Laravel">
                            Laravel Framework
                         </label>
-                        <input class="form-check-input" type="checkbox" value="Flutter" name="app" id="Flutter" @if(old('app')=='Flutter') {{'checked'}} @endif>
+                        <input class="form-check-input" type="checkbox" value="Flutter" name="app" id="Flutter" @if(old('app')=='flutter') {{'checked'}} @endif>
                         <label class="form-check-label" for="Flutter">
                           Flutter Framework
                         </label>
