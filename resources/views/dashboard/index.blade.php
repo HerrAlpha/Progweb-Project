@@ -6,11 +6,7 @@
 @foreach ($users as $user)
     <div class="row">
         <div class="col-md-3">
-            <div class="card" style="border-radius:100%; width: 150px; height: 150px; align-self:center">
-                <div class="card-body">
-                    <img src="{{$user->avatar}}" alt="">
-                </div>
-            </div>
+            <img src="{{$user->avatar}}" alt="" style="border-radius:100%; width: 130px; height: 130px; padding:0.1%; align-self:center">
         </div>
         <div class="col-md-9" style="align-self:center">
             <h4>{{$user->name}}</h4>

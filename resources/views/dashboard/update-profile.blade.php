@@ -23,7 +23,7 @@
     </div>
     <div class="form-group">
         <label for="email">Email</label>
-        <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" placeholder="Enter email" value='{{$users->username}}'>
+        <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" placeholder="Enter email" value='{{$users->email}}'>
         @error('email')
             <div class="invalid-feedback">{{ $message }}</div>
         @enderror
