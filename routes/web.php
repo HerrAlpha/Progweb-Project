@@ -9,75 +9,54 @@ use App\Http\Controllers\DashboardTemplateController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\SettingController;
+use App\Http\Controllers\WebController;
 use App\Models\Post;
 use App\Models\Category;
 use App\Models\User;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Route::get('/',[CollectionController::class,'home'])->name('home');//->middleware('guest');
 Route::get('/templates', [CollectionController::class,'templates'])->name('template');//->middleware('guest');
 Route::get('/news', [CollectionController::class,'news'])->name('news');
+
 //============== WEB ==============//
 Route::get('/web', [CollectionController::class,'web'])->name('web');
-Route::view('/web/categories/all','all');
-Route::view('/web/categories/technology','technology');
-Route::view('/web/categories/business','business');
-Route::view('/web/categories/entertainment','entertainment');
-Route::view('/web/categories/health','health');
-Route::view('/web/categories/science','science');
-Route::view('/web/categories/sports','sports');
-Route::view('/web/categories/travel','travel');
-Route::view('/web/categories/gaming','gaming');
-Route::view('/web/categories/music','music');
-Route::view('/web/categories/finance','finance');
-Route::view('/web/categories/food','food');
+Route::get('/web/{post}',[WebController::class,'index']);
 
-//=====X====== WEB =======X========//
 
+//=========== APP===============//
 Route::get('/app',[CollectionController::class,'apps'])->name('app'); //->middleware('guest');
+
+//=========== ABOUT===============//
 Route::get('/about', [CollectionController::class,'about'])->name('about'); //->middleware('guest');
+
+//=========== ERROR===============//
 Route::fallback([CollectionController::class,'error']);
 
 //============== DASHBOARD==============//
-// Route::get('/dashboard/{user?}',[DashboardController::class,'dash'])->name('dashboard')->middleware('auth');
 Route::get('/dashboard',[DashboardController::class,'index'])->middleware('auth');
-// Route::resource('/dashboard',DashboardController::class)->middleware('auth');
-//============== DASHBOARD.TEMPLATE==============//
-// Route::get('/dashboard/template',function(){
-//     return view('dashboard.template');
-// })->name('dashboard.template')->middleware('auth');
 Route::resource('/dashboard/template',DashboardTemplateController::class)->middleware('auth');
-
 Route::get('/dashboard/settings',[DashboardController::class,'settings'])->middleware('auth');
-
 Route::group(['middleware'=>['guest']],function(){
 
-    //============== REGISTER ==============//
-    Route::get('/signup', function(){
-        return view('register');
-    })->name('signup');
-    Route::post('/signup', [RegisController::class,'signup'])->name('signup');
+ //============== REGISTER ==============//
+Route::get('/signup', function(){
+     return view('register');
+})->name('signup');
+Route::post('/signup', [RegisController::class,'signup'])->name('signup');
 
-    //============== LOGIN ==============//
-    Route::post('/login',[LoginController::class,'login']);
-    Route::get('/login',function(){
-        return view('login');
-    })->name('login');
+//============== LOGIN ==============//
+Route::post('/login',[LoginController::class,'login']);
+Route::get('/login',function(){
+    return view('login');
+})->name('login');
 
 });
 
 //==============UPDATE PROFILE==========//
-Route::get('/dashboard/settings/update-profile',[SettingController::class,'index'])->middleware('auth');
+Route::get('/dashboard/settings/update-profile/{update}/edit',[SettingController::class,'index'])->middleware('auth');
+Route::post('/dashboard/settings/update-profile',[SettingController::class,'update'])->middleware('auth');
+
 
 //============== LOGOUT ==============//
 Route::post('/logout',[LogoutController::class,'logout']);
@@ -89,5 +68,4 @@ Route::get('/news/programmer',[CollectionController::class,'programmer'])->name(
 Route::get('/news/automotive',[CollectionController::class,'automotive'])->name('automotive');
 
 //============== DOWNLOAD ==============//
-
 Route::get('/download',[DownloadController::class,'index']);// "/download" diganti dengan "/{app / web}/{category}/{id}"
