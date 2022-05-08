@@ -72,8 +72,28 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Category::create([
-            'title'=>'Transport',
-            'cover'=>'/assets/picture/app/category/transport.png'
+            'title'=>'Travel',
+            'cover'=>'/assets/picture/app/category/travel.png'
+        ]);
+
+        Category::create([
+            'title'=>'Food',
+            'cover'=>'/assets/picture/app/category/food.png'
+        ]);
+
+        Category::create([
+            'title'=>'Finance',
+            'cover'=>'/assets/picture/app/category/finance.png'
+        ]);
+
+        Category::create([
+            'title'=>'News',
+            'cover'=>'/assets/picture/app/category/news.png'
+        ]);
+
+        Category::create([
+            'title'=>'Music',
+            'cover'=>'/assets/picture/app/category/music.png'
         ]);
 
         //-----------------------------SECTION POSTS-----------------------------------------------
