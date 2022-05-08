@@ -21,7 +21,8 @@ Route::get('/news', [CollectionController::class,'news'])->name('news');
 
 //============== WEB ==============//
 Route::get('/web', [CollectionController::class,'web'])->name('web');
-Route::get('/web/{post}',[WebController::class,'index']);
+Route::get('/web/{web:title}',[WebController::class,'show'])->name('web.show');
+// Route::resource('/web',WebController::class);
 
 
 //=========== APP===============//
