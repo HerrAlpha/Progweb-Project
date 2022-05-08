@@ -38,20 +38,19 @@ Route::fallback([CollectionController::class,'error']);
 Route::get('/dashboard',[DashboardController::class,'index'])->middleware('auth');
 Route::resource('/dashboard/template',DashboardTemplateController::class)->middleware('auth');
 Route::get('/dashboard/settings',[DashboardController::class,'settings'])->middleware('auth');
-Route::group(['middleware'=>['guest']],function(){
 
+
+Route::group(['middleware'=>['guest']],function(){
  //============== REGISTER ==============//
 Route::get('/signup', function(){
      return view('register');
 })->name('signup');
 Route::post('/signup', [RegisController::class,'signup'])->name('signup');
-
 //============== LOGIN ==============//
 Route::post('/login',[LoginController::class,'login']);
 Route::get('/login',function(){
     return view('login');
 })->name('login');
-
 });
 
 //==============UPDATE PROFILE==========//
