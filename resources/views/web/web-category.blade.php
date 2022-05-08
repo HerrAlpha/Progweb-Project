@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,3 +17,13 @@
 @endforeach
 </body>
 </html>
+=======
+@extends('layout.master')
+@section('content')
+<div class="container">
+    @foreach ($categories as $category)
+    <title>{{$category->title}}</title>
+    @endforeach
+
+@stop
+>>>>>>> Stashed changes

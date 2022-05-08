@@ -23,9 +23,9 @@
         <div class="col-lg-3">
             <table>
                 <tr class="btn-primary d-inline-flex p-1 rounded">
-                    <td>Price</td>
                     <td></td>
-                    <td>{{$post->price}}$</td>
+                    <td></td>
+                    <td>US$ {{$post->price}}</td>
                 </tr>
                 <tr>
                     <td>Title</td>

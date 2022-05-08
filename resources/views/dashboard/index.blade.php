@@ -23,12 +23,12 @@
     <div class="row g-3">
          @foreach ($posts as $post){{-- MAKE SURE IT POST ARE DESCENDING BASED CREATED AT --}}
         <div class="col-md-3">
-            <div class="card">
-                <img src="{{$post->thumbnail}}" alt="">
+            <div class="card" style="height: 300px">
+                <img src="{{$post->cover}}" alt="">
                 <div class="card-header">{{$post->title}}</div>
                 <div class="card-body">
                     <p>{{$post->description}}</p>
-                    <p>{{$post->category}}</p>
+                    <p>{{$post->category->title}}</p>
                     <p>{{$post->created_at}}</p>
                 </div>
             </div>
