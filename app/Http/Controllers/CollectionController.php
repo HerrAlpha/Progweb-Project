@@ -53,10 +53,10 @@ class CollectionController extends Controller
 
         $categories06 =new \stdClass();
         $categories06->id = 6;
-        $categories06->name = 'Sports';
-        $categories06->slug = 'sports';
+        $categories06->name = 'Sport';
+        $categories06->slug = 'sport';
         $categories06->pictureurl = 'sport.png';
-        $categories06->link = 'web/sports';
+        $categories06->link = 'web/sport';
 
         $categories07 =new \stdClass();
         $categories07->id = 7;
