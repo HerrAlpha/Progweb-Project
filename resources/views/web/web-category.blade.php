@@ -1,29 +1,12 @@
-<<<<<<< Updated upstream
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/css/bootstrap.css">
-    <title></title>
-</head>
-<body class='bg-light   '>
+@extends('layout.master')
+@section('title', '{{$web->title}}')
+@section('class-navbar', 'bg-primary')
+@section('content')
 <h1 class="text-center my-5">{{$web->title}}</h1>
 <hr class="border-bottom border-5 border-dark">
 {{-- @dump($post) --}}
 @foreach ($post as $post)
+
     {{$post->title}}
 @endforeach
-</body>
-</html>
-=======
-@extends('layout.master')
-@section('content')
-<div class="container">
-    @foreach ($categories as $category)
-    <title>{{$category->title}}</title>
-    @endforeach
-
 @stop
->>>>>>> Stashed changes
