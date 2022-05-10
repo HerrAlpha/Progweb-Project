@@ -24,7 +24,7 @@
          @foreach ($posts as $post){{-- MAKE SURE IT POST ARE DESCENDING BASED CREATED AT --}}
         <div class="col-md-3">
             <div class="card" style="height: 300px">
-                <img src="{{$post->cover}}" alt="">
+                <img src="/storage/app/avatar/{{$post->cover}}" alt="">
                 <div class="card-header">{{$post->title}}</div>
                 <div class="card-body">
                     <p>{{$post->description}}</p>

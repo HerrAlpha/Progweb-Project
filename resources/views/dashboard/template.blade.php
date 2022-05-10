@@ -20,7 +20,7 @@
     <div class="row g-3">
     @foreach ($posts as $post)
         <div class="col-lg-12">
-            <div class="card" style="height: 180px; padding: 1%">
+            <div class="card" style="height: 220px; padding: 1%">
                 <div class="row g-3">
                     <div class="col-md-3">
                         <img src="" alt="COVER FROM TEMPLATE">
@@ -35,6 +35,7 @@
                             @endif
                         </h5>
                         <p>Description : {{$post->description}}</p>
+                        <p>Category : {{$post->category->title}}</p>
                         <p class="silent"> Post at {{$post->created_at}}</p>
                     </div>
                     <div class="col-md-2" style="align-items: center">
