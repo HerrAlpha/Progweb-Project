@@ -4,7 +4,7 @@
 @section('subHeader')
 <form action="/dashboard/template" method="post" enctype="multipart/form-data">
     @csrf
-    <button type="submit" class="btn btn-info">Post Template</button>
+    
 @stop
 @section('content')
 <div class="row">
@@ -63,6 +63,7 @@
         </div>
         <input type="hidden" name="user_id" value="{{auth()->user()->id}}">
     </div>
+    <button type="submit" class="btn btn-info">Post Template</button>
 </div>
 </form>
 @stop

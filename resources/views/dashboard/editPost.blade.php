@@ -5,7 +5,7 @@
 <form action="/dashboard/template/{{$template->id}}" method="post" enctype="multipart/form-data">
     @method('put')
     @csrf
-    <button type="submit" class="btn btn-info">Update Template</button>
+    
 @stop
 @section('content')
 <div class="row">
@@ -73,6 +73,10 @@
         </div>
         <input type="hidden" name="user_id" value="{{auth()->user()->id}}">
     </div>
-</div>
+</div><br>
+<button type="submit" class="btn btn-info" style="width:200px">
+    <span data-feather="arrow-up"></span>
+    Saved Changes
+</button>
 </form>
 @stop
