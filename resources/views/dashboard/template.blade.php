@@ -22,14 +22,14 @@
         <div class="col-lg-12">
             <div class="card" style="height: 220px; padding: 1%">
                 <div class="row g-3">
-                    <div class="col-md-3">
-                        <img src="" alt="COVER FROM TEMPLATE">
+                    <div class="col-md-3 col-lg-4">
+                        <img src="/storage/{{$post->cover}}" alt="COVER FROM TEMPLATE">
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-7 col-lg-6">
                         <h4>{{$post->title}}</h4>
                         <h5>
                             @if ($post->price == 0 || $post->price == "0")
-                            Free 
+                            Free
                             @else
                             ${{$post->price}}
                             @endif
@@ -38,7 +38,7 @@
                         <p>Category : {{$post->category->title}}</p>
                         <p class="silent"> Post at {{$post->created_at}}</p>
                     </div>
-                    <div class="col-md-2" style="align-items: center">
+                    <div class="col-md-2 col-lg-2" style="align-items: center">
                         <a href='/dashboard/template/{{$post->id}}/edit'  class="btn btn-info mt-1 mb-1 rounded">
                             <span data-feather="arrow-up"></span>
                             Update</a>
