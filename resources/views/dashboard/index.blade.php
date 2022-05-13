@@ -27,8 +27,8 @@
                 <img src="/storage/app/avatar/{{$post->cover}}" alt="">
                 <div class="card-header">{{$post->title}}</div>
                 <div class="card-body">
-                    <p>{{$post->description}}</p>
-                    <p>{{$post->category->title}}</p>
+                    <p>Description : {{$post->description}}</p>
+                    <p>Category : {{$post->category->title}}</p>
                     <p>{{$post->created_at}}</p>
                 </div>
             </div>
