@@ -10,7 +10,7 @@
         </div>
         <div class="col-md-9" >
             <h4>{{$user->name}}</h4>
-            <h6>@{{$user->username}}</h6>
+            <h6>@ {{$user->username}}</h6>
             <h6>{{$user->email}}</h6>
             <h6>{{$user->about}}</h6>
             <h6>More Detail</h6>
