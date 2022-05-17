@@ -127,6 +127,8 @@ _INTERVAL_VAL = setInterval(Type, 100);
     <br><br>
     
 </div>
+</div>
+
     
     <div class="card">
         <div class="card-body">
@@ -141,7 +143,7 @@ _INTERVAL_VAL = setInterval(Type, 100);
                     <div class="col-md" style="padding: 3%">
                         <div class="col-md" style="text-align: center;"><img src="/assets/picture/flutter.svg" alt="" width="47.5%" height="47.5%"></div><br>
                         <div class="col-md"><h5 style="text-align: center;">Flutter</h5></div>
-                        <div class="col-md"><p  style="text-align: center;">A framework that can create iOS, Android, Windows, macOS, and even Web applications.</p></div>
+                        <div class="col-md"><p  style="text-align: center;">A framework that can create iOS, Android, Windows, macOS, Linux, and even Web applications.</p></div>
                         <div class="col-md" style="text-align: center;"><a href="/app" ><button type="button" class="btn btn-primary" style="width: 160px; height: 50px;">Get app start</button></a></div>
                     </div>
                 </div>
