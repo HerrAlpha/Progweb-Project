@@ -59,7 +59,8 @@ class DashboardTemplateController extends Controller
             'windows'=>'',
             'framework'=>'required',
             'description'=> 'required|min:10',
-            'file'=>'required|file',
+            'github_url'=> 'min:5',
+            'file'=>'file',
             'cover'=>'file|image|max:2048',
             'price'=>'required'
         ]);
@@ -110,6 +111,7 @@ class DashboardTemplateController extends Controller
             'category_id'=> 'required',
             'user_id'=> 'required',
             'description'=> 'required|min:10',
+            'github_url'=> 'min:5',
             'file'=>'file',
             'cover'=>'file|image|max:2048',
             'price'=>'required'
