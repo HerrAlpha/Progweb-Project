@@ -53,10 +53,17 @@
             @error('cover')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
+        </div><br>
+        <div class="form-group">
+            <label for="urlGithub">Or you can deploy your exist GitHub or GitLab Repository Url here</label>
+            <input type="text" class="form-control @error('urlGithub') is-invalid @enderror" id="urlGithub" name="urlGithub" placeholder="Enter GitHub or GitLab url" value="{{old('urlGithub')}}">
+            @error('urlGithub')
+                <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
         </div>
         <div class="form-group">
             <label for="price">Price ( $ )</label>
-            <input type="number" class="form-control @error('price') is-invalid @enderror" id="price" name="price" value="{{old('price')}}">
+            <input type="number" class="form-control @error('price') is-invalid @enderror" id="price" name="price" value="0" readonly>
             @error('price')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror
