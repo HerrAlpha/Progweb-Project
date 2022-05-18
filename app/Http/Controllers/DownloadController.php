@@ -3,16 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Post;
 
 class DownloadController extends Controller
 {
-    public function index()
+    public function index(Post $download)
     {
-        return view('download.download');
+        // $download = 'storage/'+$download->file;
+        return response()->download('storage/'.$download->file);
     }
 
-    public function indexPage(id $id){
-        return view('download.download');
-    }
 }

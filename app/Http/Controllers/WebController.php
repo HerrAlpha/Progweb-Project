@@ -14,4 +14,8 @@ class WebController extends Controller
         $post = Post::all()->where('category_id',$post);
         return view('web.web-category',compact('web','post'));
     }
+
+    public function detail(Post $detail){
+        return view('web.web-show',compact('detail'));
+    }
 }

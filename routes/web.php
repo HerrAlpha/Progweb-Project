@@ -23,7 +23,7 @@ Route::get('/news', [CollectionController::class,'news'])->name('news');
 Route::get('/web', [CollectionController::class,'web'])->name('web');
 Route::get('/web/{web:title}',[WebController::class,'show'])->name('web.show');
 // Route::resource('/web',WebController::class);
-
+Route::get('/web/detail/{detail}',[WebController::class,'detail']);
 
 //=========== APP===============//
 Route::get('/app',[CollectionController::class,'apps'])->name('app'); //->middleware('guest');
@@ -68,4 +68,4 @@ Route::get('/news/programmer',[CollectionController::class,'programmer'])->name(
 Route::get('/news/automotive',[CollectionController::class,'automotive'])->name('automotive');
 
 //============== DOWNLOAD ==============//
-Route::get('/download',[DownloadController::class,'index']);// "/download" diganti dengan "/{app / web}/{category}/{id}"
+Route::get('/download/{download}',[DownloadController::class,'index']);// "/download" diganti dengan "/{app / web}/{category}/{id}"

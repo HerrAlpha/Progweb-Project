@@ -6,20 +6,20 @@
 <hr class="border-bottom border-5 border-dark"></hr>
 {{-- @dump($post) --}}
 <br>
-<h3 style="text-align: center">Latest Upload From {{$web->title}}</h3>
+{{-- <h3 style="text-align: center">Latest Upload From {{$web->title}}</h3> --}}
 
 <br>
 <div class="row g-3">
     @foreach ($post as $post)
-        <div class="col-md-3">
-            <div class="card" style="height: 300px">
-                <img src="{{asset('storage/'.$post->image)}}" class="card-img-top" style="width: auto; height:50px" alt="...">
+        <div class="col-md-3 ">
+            <div class="card bg-light" style="height: 350px">
+                <img src="/storage/{{$post->cover}}" class="card-img-top" style="width: auto; height:150px">
                 <div class="card-body">
                     <h5 class="card-title">{{$post->title}}</h5>
                     <p class="card-text">{{$post->description}}</p>
-                    {{-- <p class="card-text">By @ {{$user->username}} </p> --}}
-                    <p class="card-text">Published At {{$post->created_at}}</p>
-                    <a href="#" class="btn btn-primary">Read More</a>
+                    <p class="card-text border-bottom text-center bg-white">By @ {{$post->user->username}} </p>
+                    {{-- <p class="card-text">Published At {{$post->created_at}}</p> --}}
+                    <a href="/web/detail/{{$post->id}}" class="btn btn-primary mt-3 w-100">Read More</a>
                 </div>
             </div>
         </div>

@@ -118,11 +118,11 @@
       @yield('content')
 
   </div>
-    
 
 
 
-    <footer>
+
+    <footer class='mt-5'>
       <div class="card bg-primary" style="width:auto;height:auto;">
         <div class="col-md" style="padding: 3%;">
           <div class="row g-3">

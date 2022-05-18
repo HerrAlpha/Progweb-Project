@@ -28,7 +28,7 @@ return new class extends Migration
             $table->string('framework');
             $table->text('description');
             $table->string('file');
-            $table->char('github_url');
+            $table->string('github_url')->nullable();
             $table->string('cover');
             $table->string('price');
             $table->timestamps();
