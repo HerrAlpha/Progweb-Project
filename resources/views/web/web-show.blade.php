@@ -1,5 +1,5 @@
 @extends('layout.master')
-@section('title','NAMA FILE')
+@section('title','Detail')
 @section('class-navbar','bg-primary')
 <style>
     a{
@@ -10,7 +10,7 @@
 @section('content')
 <div class="container"><br><br>
     <div class="row g-3">
-        <div class="col-md-12"><h2>NAMA TEMPLATE</h2></div><br>
+        <div class="col-md-12"><h2>{{$detail->title}}</h2></div><br>
         <div class="col-md-12">
             <div class="row g-3">
                 <div class="col-md-6">
@@ -21,7 +21,7 @@
                     <p class="text-capitalize">Framework : {{$detail->framework}}</p>
                     <p>Publishers : <a href="#" style="text-decoration: none; color: rgb(10, 132, 255);">{{$detail->user->username}}</a></p>
                     <p>Created At : {{$detail->created_at}} </p>
-                    <a href="/download/{{$detail->id}}" class="btn btn-success">
+                    <a href="/download/{{$detail->id    }}" class="btn btn-success">
                         <span data-feather="download"></span>
                         Download Here
                     </a>
