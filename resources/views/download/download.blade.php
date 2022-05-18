@@ -21,7 +21,7 @@
                 <div class="col-md-6">
                     <p>Category : </p>
                     <p>Framework : </p>
-                    <p>Publishers : <a href="#">anonym</a></p>
+                    <p>Publishers : <a href="#" style="text-decoration: none; color: rgb(10, 132, 255);">anonym</a></p>
                     <p>Created At : </p>
                     <a href="#" class="btn btn-success">
                         <span data-feather="download"></span>

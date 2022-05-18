@@ -82,7 +82,7 @@ class DashboardTemplateController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**
