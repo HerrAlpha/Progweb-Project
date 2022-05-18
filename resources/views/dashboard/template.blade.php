@@ -23,7 +23,7 @@
             <div class="card" style="height: 220px; padding: 1%">
                 <div class="row g-3">
                     <div class="col-md-3 col-lg-4">
-                        <img src="/storage/{{$post->cover}}" alt="COVER FROM TEMPLATE">
+                            <img  src="/storage/{{$post->cover}}" alt="COVER FROM TEMPLATE" width="300" height='200' >
                     </div>
                     <div class="col-md-7 col-lg-6">
                         <h4>{{$post->title}}</h4>

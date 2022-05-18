@@ -6,7 +6,7 @@
 @foreach ($users as $user)
     <div class="row">
         <div class="col-md-3 d-flex align-items-center justify-content-center">
-            <img src="{{$user->avatar}}" alt="" style="border-radius:100%; width: 150px; height: 150px; padding:0.1%; align-self:center" class="start-50">
+            <img src="storage/{{$user->avatar}}" alt="" style="border-radius:100%; width: 150px; height: 150px; padding:0.1%; align-self:center" class="start-50">
         </div>
         <div class="col-md-9" >
             <h4>{{$user->name}}</h4>
