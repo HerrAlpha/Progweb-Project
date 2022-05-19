@@ -14,7 +14,7 @@
         <div class="col-md-12">
             <div class="row g-3">
                 <div class="col-md-6">
-                    <img src="/storage/{{$detail->cover}}" alt="GAMBAR" style="width: 400px; height:225px">
+                    <img src="/storage/{{$detail->cover}}" alt="GAMBAR" style="width: 320px; height:180px">
                 </div>
                 <div class="col-md-6">
                     <p>Category :  {{$detail->category->title}}</p>
