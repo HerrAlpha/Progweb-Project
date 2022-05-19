@@ -22,18 +22,90 @@ class DatabaseSeeder extends Seeder
         //----------------------------------SECTION USER--------------------------------------------
 
         User::create([
+            'name'=> 'Melissa J Tracy',
+            'username' => 'melissa',
+            'email' => 'melisT@gmail.com',
+            'password' => bcrypt('password'),
+            'phone' => '212-608-4689',
+            'address'=> '3701 Wurm Rd Wolverine, Michigan(MI), 49799',
+            'city'=>'Michigan',
+            'state'=>'Indonesia',
+            'zip'=>'47231',
+            'country'=>'Indiana',
+            'company'=> 'Road Runner Lawn Services',
+            'avatar'=> 'avatar/seed1.jpg',
+            'web'=>'1',
+            'app'=>'',
+            'about'=>'Pengen Nafas Manual'
+        ]);
+
+        User::create([
             'name'=> 'Aurum Team',
             'username' => 'adminadmin',
             'email' => 'aurumteam@gmail.com',
             'password' => bcrypt('password'),
-            'phone' => '081233488755',
-            'address'=> 'Jalan buntu belok kiri sedikit',
+            'phone' => '260-316-6573',
+            'address'=> 'Jalan Semarang 5 Malang Kec. Lowokwaru - Kota Malang - Prov. Jawa Timur',
             'city'=>'Malang',
             'state'=>'Indonesia',
-            'zip'=>'123456',
+            'zip'=>'65145',
             'country'=>'Indonesia',
             'company'=> 'Universitas Negeri Malang',
-            'avatar'=> 'contoh.jpg',
+            'avatar'=> 'avatar/seed2.jpg',
+            'web'=>'',
+            'app'=>'1',
+            'about'=>'Full SenyUM'
+        ]);
+
+        User::create([
+            'name'=> 'Carol K Rochelle',
+            'username' => 'carol',
+            'email' => 'carolRoc@gmail.com',
+            'password' => bcrypt('password'),
+            'phone' => '508-230-9846',
+            'address'=> '4281 Stadium Drive',
+            'city'=>'Easton',
+            'state'=>'Massachusetts',
+            'zip'=>'02334',
+            'country'=>'Massachusetts',
+            'company'=> 'VitaGrey',
+            'avatar'=> 'avatar/seed3.jpg',
+            'web'=>'1',
+            'app'=>'',
+            'about'=>'Warning: PowerShell detected that you might be using a screen reader and has disabled PSReadLine for compatibility purposes. If you want to re-enable it, run Import-Module PSReadLine'
+        ]);
+
+        User::create([
+            'name'=> 'Lauren R Williams',
+            'username' => 'lauren',
+            'email' => 'laurenrr@gmail.com',
+            'password' => bcrypt('password'),
+            'phone' => '270-828-9431',
+            'address'=> '1192 Crosswind Drive',
+            'city'=>'North Garrett',
+            'state'=>'Kentucky',
+            'zip'=>'123456',
+            'country'=>'Kentucky',
+            'company'=> 'Thorofare',
+            'avatar'=> 'avatar/seed4.jpg',
+            'web'=>'1',
+            'app'=>'',
+            'about'=>'Warning: PowerShell detected that you might be using a screen reader and has disabled PSReadLine for compatibility purposes. If you want to re-enable it, run Import-Module PSReadLine'
+        ]);
+
+        User::create([
+            'name'=> 'Thelma J Mendoza',
+            'username' => 'thelma',
+            'email' => 'thelmajme@gmail.com',
+            'password' => bcrypt('password'),
+            'phone' => '956-202-2896',
+            'address'=> '2183 Jerome Avenue',
+            'city'=>'Dallas',
+            'state'=>'Texas',
+            'zip'=>'75252',
+            'country'=>'Texas',
+            'company'=> 'Universitas Negeri Malang',
+            'avatar'=> 'avatar/seed5.jpg',
             'web'=>'1',
             'app'=>'',
             'about'=>'Warning: PowerShell detected that you might be using a screen reader and has disabled PSReadLine for compatibility purposes. If you want to re-enable it, run Import-Module PSReadLine'
@@ -111,8 +183,8 @@ class DatabaseSeeder extends Seeder
             'linux'=>'',
             'windows'=>'',
             'framework'=>'laravel',
-            'file'=> 'contoh.jpg',
-            'cover'=>'contoh.jpg',
+            'file'=> 'file/contoh.jpg',
+            'cover'=>'cover/contoh.jpg',
             'price' => '2',
         ]);
 
