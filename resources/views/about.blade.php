@@ -21,8 +21,8 @@
 <!-- tentang -->
 <div class="container-fluid pt-5 pb-5">
             <div class="container">
-              <h2 class="display-3 text-center" id="tentang">About</h2>
-              <p class="text-center">
+              <h2 class="display-3 text-center" id="tentang" style="color:#f2f2f7">About</h2>
+              <p class="text-center" style="color:#f2f2f7">
                 UKLISE  APPLICATION FOR LARAVEL AND FLUTTER TEMPLATE 
               </p>
               <div class="clearfix pt-5">
@@ -33,7 +33,7 @@
                   height="300"
                 />
                 <p>
-                <div class="col-md-6 text">
+                <div class="col-md-6 text" style="color:#f2f2f7">
                 Website adalah salah satu media yang paling sering diakses dan digunakan oleh masyarakat 
                 dalam mencari berbagai informasi dan juga sebagai sarana komunikasi. Penggunaan website ini 
                 sangat dibutuhkan di berbagai bidang, akan tetapi dalam pembuatan website memerlukan waktu yang 

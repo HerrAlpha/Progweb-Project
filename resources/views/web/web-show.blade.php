@@ -32,14 +32,14 @@
             <p>Or, you can use GitHub URL to fork it</p>
             {{-- setelah migrate ganti ini --}}
             {{-- <a href="{{$detail->github_url}}" class="btn btn-success mb-3"> --}}
-            <a href="#" class="btn btn-success mb-3">
+            <a href="{{$detail->github_url}}" class="btn btn-success mb-3">
                 <span data-feather="github"></span>
                 Fork Here
             </a>
             {{-- setelah migrate ganti ini --}}
             {{-- <a href="{{$detail->github_url}}" class="btn btn-success mb-3"> --}}
             <p>Or you can copy this GitHub Url</p>
-            <input class="form-control" type="text" value="URL Value" aria-label="readonly input example" readonly style="font-family: Consolas, monaco, monospace; width:auto;height:auto;">
+            <input class="form-control" type="text" value="{{$detail->github_url}}" aria-label="readonly input example" readonly style="font-family: Consolas, monaco, monospace; width:auto;height:auto;">
         </div>
         <div class="col-md-12">
             <div class="card">
@@ -116,7 +116,7 @@
                         @endif
                     </td>
                     <td>
-                        @if ($detail->macos == 1)
+                        @if ($detail->mac_os == 1)
                             Support
                         @else
                             Not Supported

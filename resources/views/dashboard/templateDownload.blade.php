@@ -103,7 +103,7 @@
                         @endif
                     </td>
                     <td>
-                        @if ($template->macos == 1)
+                        @if ($template->mac_os == 1)
                             Support
                         @else
                             Not Supported

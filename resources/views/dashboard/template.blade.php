@@ -103,7 +103,7 @@
                     <div class="form-group">
                         <label for="form">Compatibility</label>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="1" id="webBrowser" name="web-browser">
+                            <input class="form-check-input" type="checkbox" value="1" id="webBrowser" name="web_browser">
                             <label class="form-check-label" for="webBrowser">
                               Web Browser
                             </label>
@@ -121,13 +121,13 @@
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="1" id="chromeOs" name="chrome-os">
+                            <input class="form-check-input" type="checkbox" value="1" id="chromeOs" name="chrome_os">
                             <label class="form-check-label" for="chromeOs">
                               Chrome OS
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="1" id="macOs" name="mac-os">
+                            <input class="form-check-input" type="checkbox" value="1" id="macOs" name="mac_os">
                             <label class="form-check-label" for="macOs">
                               macOS
                             </label>
@@ -180,7 +180,7 @@
                     </div><br>
                     <div class="form-group">
                         <label for="urlGithub">Or you can deploy your exist GitHub or GitLab Repository Url here</label>
-                        <input type="text" class="form-control @error('urlGithub') is-invalid @enderror" id="urlGithub" name="urlGithub" placeholder="Enter GitHub or GitLab url" value="{{old('urlGithub')}}">
+                        <input type="text" class="form-control @error('urlGithub') is-invalid @enderror" id="urlGithub" name="github_url" placeholder="Enter GitHub or GitLab url" value="{{old('urlGithub')}}">
                         @error('urlGithub')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
