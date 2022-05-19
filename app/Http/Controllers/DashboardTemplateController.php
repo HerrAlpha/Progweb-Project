@@ -60,7 +60,7 @@ class DashboardTemplateController extends Controller
             'framework'=>'required',
             'description'=> 'required|min:10',
             'github_url'=> '',
-            'file'=>'file',
+            'file'=>'file|required',
             'cover'=>'file|image|max:2048',
             'price'=>'required'
         ]);
