@@ -88,7 +88,7 @@
                 </tr>
                 <tr class="text-center">
                     <td>
-                        @if ($detail->web_browser == 1)
+                        @if ($detail->web-browser == 1)
                             Support
                         @else
                             Not Supported
@@ -102,7 +102,7 @@
                         @endif
                     </td>
                     <td>
-                        @if ($detail->chrome_os == 1)
+                        @if ($detail->chrome-os == 1)
                             Support
                         @else
                             Not Supported
@@ -116,7 +116,7 @@
                         @endif
                     </td>
                     <td>
-                        @if ($detail->mac_os == 1)
+                        @if ($detail->mac-os == 1)
                             Support
                         @else
                             Not Supported
