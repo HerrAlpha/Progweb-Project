@@ -59,7 +59,7 @@ class DashboardTemplateController extends Controller
             'windows'=>'',
             'framework'=>'required',
             'description'=> 'required|min:10',
-            'github_url'=> 'min:5',
+            'github_url'=> '',
             'file'=>'file',
             'cover'=>'file|image|max:2048',
             'price'=>'required'
@@ -82,7 +82,7 @@ class DashboardTemplateController extends Controller
      */
     public function show($id)
     {
-        
+
     }
 
     /**
