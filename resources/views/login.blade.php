@@ -39,7 +39,14 @@
                         <label for="password">Password</label>
                         <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" name="password" placeholder="Enter password">
                     </div><br>
-                    <p>Doesn't have an account? You can <a href="/signup">Sign Up</a> first!</p>
+                    <div class="row">
+                        <div class="col-8">
+                            <p>Doesn't have an account? You can <a href="/signup">Sign Up</a> first!</p>
+                        </div>
+                        <div class="col-4">
+                            <a href="/forgotpass">Forgot password?</a>
+                        </div>
+                    </div>
                     <button type="submit" class="btn btn-primary">Sign In</button>
                 </form><br>
                 <p style="text-align: center">======== OR ========</p><br>

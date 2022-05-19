@@ -53,6 +53,10 @@ Route::get('/login',function(){
 })->name('login');
 });
 
+//==============FORGOT PASSWORD==========//
+Route::get('/forgotpass',[LoginController::class,'forgotpass']);
+Route::post('/forgotpass',[LoginController::class,'forgotpass2']);
+
 //==============UPDATE PROFILE==========//
 Route::get('/dashboard/settings/update-profile/{update}/edit',[SettingController::class,'index'])->middleware('auth');
 Route::post('/dashboard/settings/update-profile',[SettingController::class,'update'])->middleware('auth');

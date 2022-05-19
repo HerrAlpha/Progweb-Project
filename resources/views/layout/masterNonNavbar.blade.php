@@ -30,7 +30,7 @@
     <br>
     <br>
     <br>
-    <p style="text-align: center; color:rgb(242, 242, 247)"> Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Uklise All Rights Reserved | Collaboration of Aurum Team and MAR Media Under MAR Media Company</p>
+    <p class=" bottom-0 position-absolute" style="text-align: center; color:rgb(242, 242, 247)"> Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Uklise All Rights Reserved | Collaboration of Aurum Team and MAR Media Under MAR Media Company</p>
 
 </div>
 </body>

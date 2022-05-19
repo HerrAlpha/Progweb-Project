@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Password;
 
 class LoginController extends Controller
 {
@@ -27,6 +28,21 @@ class LoginController extends Controller
         }
 
         return back()->with('err','Username atau Password Salah');
+    }
+
+    public function forgotpass(){
+        return view('forgotpass');
+    }
+
+    public function forgotpass2(Request $request)
+    {
+        $request->validate(['email' => 'required|email']);
+
+        $status = Password::sendResetLink( $request->only('email') );
+
+    return $status === Password::RESET_LINK_SENT
+                ? back()->with(['status' => __($status)])
+                : back()->withErrors(['email' => __($status)]);
     }
 
 }
