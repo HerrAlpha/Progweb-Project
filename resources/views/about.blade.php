@@ -54,12 +54,14 @@
                 <div class="col-md-4 text-center tim">
                   <img src="{{ ('about.jpg') }}" class="rounded-circle mb-3">
                   <h6>Maria Gabyelent Gea</h6>
+                  <p>Co Founder of UKlise - Assistance</p>
                   <p>Mahasiswa Teknik Informatika</p>
 
                 </div>
                 <div class="col-md-4 text-center tim">
                   <img src="{{ ('about.jpg') }}" class="rounded-circle mb-3">
                   <h6>M.Baharuddin Yusuf</h6>
+                  <p>Founder of UKlise - Back End and DB Division</p>
                   <p>Mahasiswa Teknik Informatika</p>
                   <p>
                     
@@ -67,6 +69,7 @@
                 <div class="col-md-4 text-center tim">
                   <img src="{{ ('about.jpg') }}" class="rounded-circle mb-3">
                   <h6>Mohammad Agung Rizki</h6>
+                  <p>Founder of UKlise - Founder of MAR Media - Front End and DB Division</p>
                   <p>Mahasiswa Teknik Informatika</p>
                   <p>
                    
@@ -74,6 +77,7 @@
                 <div class="col-md-6 text-center tim">
                   <img src="{{ ('about.jpg') }}" class="rounded-circle mb-3">
                   <h6>Roudhotulloh Nazakhan</h6>
+                  <p>Co Founder of UKlise - Assistance</p>
                   <p>Mahasiswa Teknik Informatika</p>
                   <p>
                 
@@ -81,6 +85,7 @@
                 <div class="col-md-6 text-center tim">
                   <img src="{{ ('about.jpg') }}" class="rounded-circle mb-3">
                   <h6>Shohwatul Hana</h6>
+                  <p>Co Founder of UKlise - Assistance</p>
                   <p>Mahasiswa Teknik Informatika</p>
                   <p>
                     
