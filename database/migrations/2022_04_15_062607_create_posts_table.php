@@ -27,7 +27,7 @@ return new class extends Migration
             $table->string('windows')->nullable();
             $table->string('framework');
             $table->text('description');
-            $table->string('file')->nullable();
+            $table->string('file');
             $table->string('github_url')->nullable();
             $table->string('cover');
             $table->string('price');
