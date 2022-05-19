@@ -10,7 +10,7 @@
                 <h5>Change Password</h5>
             </div>
             <div class="card-body">
-                <form action="/dashboard/settings/privacy-and-security" method="POST">
+                <form action="/dashboard/settings/update-pass" method="POST">
                     @csrf
                     <div class="form-group">
                         <label for="password">Password</label>

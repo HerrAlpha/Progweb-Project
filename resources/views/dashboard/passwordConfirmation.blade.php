@@ -10,10 +10,10 @@
                 <h5>Password Confirmation</h5>
             </div>
             <div class="card-body">
-                <form action="/dashboard/settings/update-pass" method="POST">
+                <form action="/dashboard/settings/privacy-and-security" method="POST">
                     @csrf
                     <div class="form-group">
-                        <label for="password">New Password</label>
+                        <label for="password">Old Password</label>
                         <input type="password" name="password" id="password" class="form-control @error('password') is-invalid @enderror">
                     </div>
                     <div class="form-group mt-3">
