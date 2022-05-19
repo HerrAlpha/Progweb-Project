@@ -10,13 +10,13 @@
                 <h5>Password Confirmation</h5>
             </div>
             <div class="card-body">
-                <form action="{{route('password.confirm')}}" method="POST">
+                <form action="/dashboard/settings/update-pass" method="POST">
                     @csrf
                     <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" name="password" id="password" class="form-control">
+                        <label for="password">New Password</label>
+                        <input type="password" name="password" id="password" class="form-control @error('password') is-invalid @enderror">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mt-3">
                         <button type="submit" class="btn btn-success">
                             <span data-feather="check"></span>
                             Confirm

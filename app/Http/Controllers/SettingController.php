@@ -42,4 +42,28 @@ class SettingController extends Controller
         return redirect('/dashboard/settings');
     }
 
+    public function chgpass()
+    {
+        return view('dashboard.passwordChanging');
+    }
+
+    public function chgpass2(Request $request)
+    {
+        $data = $request->validate([
+            'password' => 'required | current_password:web',
+            'password_confirmation'=>'required | same:password'
+        ]);
+        return view('dashboard.passwordConfirmation');
+    }
+
+    public function chgpass3(Request $request)
+    {
+        $data = $request->validate([
+            'password'=>'required'
+        ]);
+        $data['password'] = bcrypt($data['password']);
+        User::where('id',auth()->user()->id)->update($data);
+        return redirect('/dashboard/settings')->with('success','Change password succesfully');
+    }
+
 }

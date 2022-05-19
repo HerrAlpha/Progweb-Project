@@ -10,17 +10,17 @@
                 <h5>Change Password</h5>
             </div>
             <div class="card-body">
-                <form action="{{route('password.change')}}" method="POST">
+                <form action="/dashboard/settings/privacy-and-security" method="POST">
                     @csrf
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" name="password" id="password" class="form-control">
+                        <input type="password" name="password" id="password" class="form-control @error('password') is-invalid @enderror">
                     </div>
                     <div class="form-group">
                         <label for="password_confirmation">Password Confirmation</label>
-                        <input type="password" name="password_confirmation" id="password_confirmation" class="form-control">
+                        <input type="password" name="password_confirmation" id="password_confirmation" class="form-control @error('password_confirmation') is-invalid @enderror">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mt-3">
                         <button type="submit" class="btn btn-success">
                             <span data-feather="check"></span>
                             Confirm

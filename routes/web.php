@@ -56,6 +56,11 @@ Route::get('/login',function(){
 //==============UPDATE PROFILE==========//
 Route::get('/dashboard/settings/update-profile/{update}/edit',[SettingController::class,'index'])->middleware('auth');
 Route::post('/dashboard/settings/update-profile',[SettingController::class,'update'])->middleware('auth');
+Route::get('/dashboard/settings/privacy-and-security',[SettingController::class,'chgpass'])->middleware('auth');
+Route::post('/dashboard/settings/privacy-and-security',[SettingController::class,'chgpass2'])->middleware('auth');
+
+//============== UPDATE PASSWORD ==============//
+Route::post('/dashboard/settings/update-pass',[SettingController::class,'chgpass3'])->middleware('auth');
 
 
 //============== LOGOUT ==============//
