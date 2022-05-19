@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>UKlise - @yield('title')</title>
     <script defer src="/js/bootstrap.bundle.js"></script>
-    <script defer src="/js/bootstrap.js"></script>
+    <script defer src="/js/bootstrap.min.js"></script>
     <script defer src="/js/@yield('js')"></script>
     <script defer src="/js/Jquery3.6.0.main.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jcarousel/0.3.9/jquery.jcarousel.min.js" integrity="sha512-5TU8T3STShZiLsdqDqiKnj0Z72ccPZpIDCuItxc2S7G3lyiwqiuLuDFVNsLQ7Hgu5f33DlZ2KAJspbn6NAXqnA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -60,15 +60,15 @@
 
 </head>
 <body class="@yield('bg-body')">
-    <nav class=" navbar navbar-expand-lg navbar-dark @yield('class-navbar')" style="padding:0.5%;">
+    <nav class=" navbar navbar-expand-lg navbar-dark @yield('class-navbar')">
         <div class="container-fluid">
-          <a class="navbar-brand" id="1" href="/" style="color:#f2f2f7">
-          <img src="/assets/picture/Logo.png" alt="" width="20%" height="20%" style="text-align: center;" class="d-inline-block">
+          <a class="navbar-brand" href="/">
+          <img src="/assets/picture/Logo.png" alt="" width="15%" height="15%" style="text-align: center;" class="d-inline-block align-text-top">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse  flex-row-reverse" id="navbarNav" style="text-align: right">
+          <div class="collapse navbar-collapse" id="navbarNav" style="text-align: right">
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" aria-current="page" href="/">Home</a>
@@ -112,6 +112,7 @@
             </ul>
           </div>
         </div>
+      </div>
     </nav>
   <div class="container">
 
