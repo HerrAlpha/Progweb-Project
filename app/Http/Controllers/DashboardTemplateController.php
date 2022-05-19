@@ -80,9 +80,9 @@ class DashboardTemplateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Post $template)
     {
-
+        return view('web.web-show-template',compact('template'));
     }
 
     /**
