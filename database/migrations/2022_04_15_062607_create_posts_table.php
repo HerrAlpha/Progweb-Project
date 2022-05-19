@@ -18,11 +18,11 @@ return new class extends Migration
             $table->string('title');
             $table->foreignId('category_id');
             $table->foreignId('user_id');
-            $table->string('web-browser')->nullable();
+            $table->string('web_browser')->nullable();
             $table->string('ios')->nullable();
             $table->string('android')->nullable();
-            $table->string('chrome-os')->nullable();
-            $table->string('mac-os')->nullable();
+            $table->string('chrome_os')->nullable();
+            $table->string('mac_os')->nullable();
             $table->string('linux')->nullable();
             $table->string('windows')->nullable();
             $table->string('framework');

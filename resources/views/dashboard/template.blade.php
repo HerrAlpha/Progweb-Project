@@ -103,7 +103,7 @@
                     <div class="form-group">
                         <label for="form">Compatibility</label>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="1" id="webBrowser" name="web-browser">
+                            <input class="form-check-input" type="checkbox" value="1" id="webBrowser" name="web_browser">
                             <label class="form-check-label" for="webBrowser">
                               Web Browser
                             </label>
@@ -121,13 +121,13 @@
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="1" id="chromeOs" name="chrome-os">
+                            <input class="form-check-input" type="checkbox" value="1" id="chromeOs" name="chrome_os">
                             <label class="form-check-label" for="chromeOs">
                               Chrome OS
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="1" id="macOs" name="mac-os">
+                            <input class="form-check-input" type="checkbox" value="1" id="macOs" name="mac_os">
                             <label class="form-check-label" for="macOs">
                               macOS
                             </label>
