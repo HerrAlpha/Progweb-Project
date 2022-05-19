@@ -187,7 +187,7 @@
                     </div>
                     <div class="form-group">
                         <label for="price">Price ( $ )</label>
-                        <input type="number" class="form-control @error('price') is-invalid @enderror" id="price" name="price" value="0" readonly>
+                        <input type="number" class="form-control @error('price') is-invalid @enderror" id="price" name="price" value="0">
                         @error('price')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
