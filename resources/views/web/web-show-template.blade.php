@@ -1,14 +1,16 @@
-@extends('layout.master')
+@extends('dashboard.main')
 @section('title','Detail')
-@section('class-navbar','bg-primary')
+@section('subTitle','Detail')
+@section('subHeader')
 <style>
     a{
         text-decoration: none;
         color: rgb(10, 132, 255);
     }
 </style>
+@stop
 @section('content')
-<div class="container"><br><br>
+<div class="container">
     <div class="row g-3">
         <div class="col-md-12"><h2>{{$template->title}}</h2></div><br>
         <div class="col-md-12">
