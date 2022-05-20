@@ -31,7 +31,16 @@
                 />
                 <p>
                 <div class="col-md-6 text" style="color:#f2f2f7">
-                
+                  Along with the times, technology is getting more advanced and faster.
+                   Moreover, the need for more and more apps and websites is fast.
+                  However, some of the developers can't do app and website development quickly,
+                   especially with diverse client requests.
+                   This is what inspired us to develop a site and application called UKlise.
+                   UKlise is a useful platform for developing developers to create ready-to-use app and site templates,
+                   and also helps other developers to complete their projects quickly and reduce the risk of errors by simply 
+                   changing the necessary elements. We currently provide templates for the Laravel and Flutter frameworks 
+                   which can support almost all existing platforms. Such as Android, Chrome OS, iOS, macOS, Linux, Windows 
+                   and Web Browser.
                 </p>
               </div>
             </div>

@@ -27,7 +27,7 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="/js/main.js"></script>
+  {{-- <script src="/js/main.js"></script> --}}
     <style>
 
     body{
@@ -70,7 +70,7 @@
 
 </head>
 <body class="@yield('bg-body')">
-    <nav class=" navbar navbar-expand-lg navbar-dark @yield('class-navbar')">
+    <nav class=" navbar navbar-expand-lg navbar-dark d-flex align-items-center justify-content-between @yield('class-navbar')">
         <div class="container-fluid">
           <a class="navbar-brand" href="/">
           <img src="/assets/picture/Logo-nonText.png" alt="" width="50px" height="50px" class="d-inline-block align-text-top">
@@ -85,12 +85,6 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link {{ Request::is('templates') ? 'active' : '' }}" href="{{route('template')}}">Templates</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link {{ Request::is('web') ? 'active' : '' }}" href="{{route('web')}}">Web</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link {{ Request::is('app') ? 'active' : '' }}" href="{{route('app')}}">Apps</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link {{ Request::is('news') ? 'active' : '' }}" href="{{route('news')}}">News</a>
