@@ -14,8 +14,20 @@
     <link rel="stylesheet" href="/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/@yield('css')">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="shortcut icon" href="/assets/picture/Logo-nonText.png">
     <link rel="apple-touch-icon" href="/assets/picture/Logo-nonText.png">
+    <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  {{-- <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> --}}
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="/js/main.js"></script>
     <style>
 
     body{
@@ -47,9 +59,7 @@
     .u:hover{
       color: rgb(209, 209, 214);
     }
-    a{
-      color:#f2f2f7;
-    }
+    
     nav{
       background-blur: blur(16px);
     }
@@ -63,7 +73,7 @@
     <nav class=" navbar navbar-expand-lg navbar-dark @yield('class-navbar')">
         <div class="container-fluid">
           <a class="navbar-brand" href="/">
-          <img src="/assets/picture/Logo.png" alt="" width="15%" height="15%" style="text-align: center;" class="d-inline-block align-text-top">
+          <img src="/assets/picture/Logo-nonText.png" alt="" width="50px" height="50px" class="d-inline-block align-text-top">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -126,65 +136,154 @@
 
   </div>
 
+  <footer id="footer" class="footer">
 
-
-
-    <footer class='mt-5'>
-      <div class="card bg-primary" style="width:auto;height:auto;">
-        <div class="col-md" style="padding: 3%;">
-          <div class="row g-3">
-            <div class="col-md-4">
-              <h3 class="w">UKlise</h3>
-              <p class="w">App and Web Templates<br>
-              Create by Aurum Team and Support from MAR Media<br>
-              Malang City, East Java, Indonesia
-              </p>
-
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-12 text-center">
+            <h4>Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
           </div>
+          <div class="col-lg-6">
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
-            <div class="col-md-4">
-              <div class="col-md-3">
-
-              </div>
-              <div class="col-md-6">
-                <p class="w">
-                  Pages <br>
-                  <a href="/" class="w u">Home</a><br>
-                   <a href="{{route('template')}}" class="w u">Templates</a><br>
-                   <a href="{{route('web')}}" class="w u">Web Templates</a><br>
-                   <a href="{{route('app')}}" class="w u">Apps Templates</a><br>
-                   <a href="{{route('about')}}" class="w u">About</a></p>
-              </div>
-              <div class="col-md-3">
-
-              </div>
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-5 col-md-12 footer-info">
+            <a href="/" class="logo d-flex align-items-center">
+              <img src="assets/picture/Logo-nonText.png" alt="">
+              <span>UKlise</span>
+            </a>
+            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+            <div class="social-links mt-3">
+              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
             </div>
-            <div class="col-md-4">
-              <div class="col-md-3">
-
-              </div>
-              <div class="col-md-6">
-                <p class="w">
-                  Others <br>
-                  <a href="#" class="w u">MAR Media</a><br>
-                   <a href="#" class="w u">Carrier</a><br>
-                   <a href="#" class="w u">Stakeholders</a><br>
-                   <a href="https://laravel.com/" class="w u">Laravel</a><br>
-                   <a href="https://flutter.dev/" class="w u">Flutter</a></p>
-
-              <div class="col-md-3">
-
-              </div>
-
           </div>
 
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="/">Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="{{route('template')}}">Template</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="{{route('news')}}">News</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="{{route('about')}}">About</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">MAR Media</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="https://flutter.dev">Flutter</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="https://laravel.dev">Laravel</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Web Template</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Mobile App Template</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Desktop App Template</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">App and Web Development</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+            <h4>Contact Us</h4>
+            <p>
+              Malang State University <br>
+              Semarang Street 5th, Malang<br>
+              Indonesia <br><br>
+              <strong>Phone:</strong> +62 896 5892 2021<br>
+              <strong>Email:</strong> ask@uklise.com<br>
+            </p>
+
+          </div>
 
         </div>
-    </div>
-    </footer>
-
       </div>
-  </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>UKlise</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
+        Designed by Aurum Team x MAR Media
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  
+   
 </body>
 
 </html>
+
+{{-- <footer>
+  <div class="card bg-primary" style="width:100%;height:auto;">
+    <div class="col-md" style="padding: 3%;">
+      <div class="row g-3">
+        <div class="col-md-4">
+          <h3 class="w">UKlise</h3>
+          <p class="w">App and Web Templates<br>
+          Create by Aurum Team and Support from MAR Media<br>
+          Malang City, East Java, Indonesia
+          </p>
+
+      </div>
+
+        <div class="col-md-4">
+          <div class="col-md-3">
+
+          </div>
+          <div class="col-md-6">
+            <p class="w">
+              Pages <br>
+              <a href="/" class="w u">Home</a><br>
+               <a href="{{route('template')}}" class="w u">Templates</a><br>
+               <a href="{{route('web')}}" class="w u">Web Templates</a><br>
+               <a href="{{route('app')}}" class="w u">Apps Templates</a><br>
+               <a href="{{route('about')}}" class="w u">About</a></p>
+          </div>
+          <div class="col-md-3">
+
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="col-md-3">
+
+          </div>
+          <div class="col-md-6">
+            <p class="w">
+              Others <br>
+              <a href="#" class="w u">MAR Media</a><br>
+               <a href="#" class="w u">Carrier</a><br>
+               <a href="#" class="w u">Stakeholders</a><br>
+               <a href="https://laravel.com/" class="w u">Laravel</a><br>
+               <a href="https://flutter.dev/" class="w u">Flutter</a></p>
+
+          <div class="col-md-3">
+
+          </div>
+
+      </div>
+
+
+    </div>
+</div>
+  </div>
+</div>
+</footer> --}}
