@@ -12,9 +12,9 @@
 </style>
 @section('content')
 
-<div class="container bg-dark white-text">
+<div class="container bg-dark white-text" style="padding-top:5%; padding-bottom:5%">
     <div class="row g-3" style="text-align: center">
-        <div class="col-md-12">
+        <div class="col-md-12" style="padding-top:5%; padding-bottom:10%">
             <div class="row g-3">
                 <div class="col-md-12">
                     <h3 data-aos="fade-up" data-aos-delay="200">Our Template are Compatible at this Platform</h3>
@@ -52,6 +52,10 @@
                 </div>
                 <div class="col-md-2"></div>
             </div>
+        </div>
+         {{-- Web Browser --}}
+        <div class="col-md-12">
+            
         </div>
     </div>
 </div>
