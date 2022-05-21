@@ -21,13 +21,22 @@
                     <p class="text-capitalize">Framework : {{$detail->framework}}</p>
                     <p>Publishers : <a href="#" style="text-decoration: none; color: rgb(10, 132, 255);">{{$detail->user->username}}</a></p>
                     <p>Created At : {{$detail->created_at}} </p>
+                    @if ($detail->price == 0)
                     <a href="/download/{{$detail->id    }}" class="btn btn-success">
                         <span data-feather="download"></span>
                         Download Here
                     </a>
+                    @else
+                    <a href="#" class="btn btn-success">
+                        <span data-feather="dollar-sign"></span>
+                        Buy ${{$detail->price}}
+                    </a>
+                    @endif
+                    
                 </div>
             </div>
         </div>
+        @if ($detail->price == 0)
         <div class="col-md-12">
             <p>Or, you can use GitHub URL to fork it</p>
             {{-- setelah migrate ganti ini --}}
@@ -41,6 +50,8 @@
             <p>Or you can copy this GitHub Url</p>
             <input class="form-control" type="text" value="{{$detail->github_url}}" aria-label="readonly input example" readonly style="font-family: Consolas, monaco, monospace; width:auto;height:auto;">
         </div>
+        @endif
+        
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
