@@ -56,6 +56,11 @@ Route::get('/login',function(){
 //==============FORGOT PASSWORD==========//
 Route::get('/forgotpass',[LoginController::class,'forgotpass']);
 Route::post('/forgotpass',[LoginController::class,'forgotpass2']);
+Route::get('/reset-password/{token}', function ($token) {
+    return view('resetpass', ['token' => $token]);
+})->middleware('guest');
+Route::post('/reset-password',[LoginController::class,'reset']);
+
 
 //==============UPDATE PROFILE==========//
 Route::get('/dashboard/settings/update-profile/{update}/edit',[SettingController::class,'index'])->middleware('auth');
