@@ -1,8 +1,5 @@
 @extends('layout.master')
 @section('title','About')
-@section('css','')
-@section('js','')
-@section('class-navbar','bg-primary')
 @section('content')
 
 <style>
@@ -19,8 +16,8 @@
 
 </style>
 <!-- tentang -->
-<div class="container-fluid pt-5 pb-5">
-            <div class="container">
+<div class="container-fluid ">
+  <div class="container">
               <h2 class="display-3 text-center" id="tentang" style="color:#f2f2f7">About</h2>
               <p class="text-center" style="color:#f2f2f7">
                 UKLISE  APPLICATION FOR LARAVEL AND FLUTTER TEMPLATE 
@@ -29,18 +26,21 @@
                 <img
                   src="/assets/picture/Logo-nonText.png"
                   class="col-md-5 float-md-end mb-4 crop-img"
-                  width="300"
-                  height="300"
+                  width="300px"
+                  height="300px"
                 />
                 <p>
                 <div class="col-md-6 text" style="color:#f2f2f7">
-                Website adalah salah satu media yang paling sering diakses dan digunakan oleh masyarakat 
-                dalam mencari berbagai informasi dan juga sebagai sarana komunikasi. Penggunaan website ini 
-                sangat dibutuhkan di berbagai bidang, akan tetapi dalam pembuatan website memerlukan waktu yang 
-                cukup lama, maka dari itu dibuatlah website yang menyediakan template app dan web sebagai solusi 
-                dari permasalahan tersebut. Dengan adanya template app dan web ini diharapkan dapat mempermudah 
-                para developer dalam membuat app dan web, serta tidak perlu lagi membuat segala sesuatunya 
-                dari awal, hanya perlu mengganti beberapa elemen sesuai keinginan. 
+                  Along with the times, technology is getting more advanced and faster.
+                   Moreover, the need for more and more apps and websites is fast.
+                  However, some of the developers can't do app and website development quickly,
+                   especially with diverse client requests.
+                   This is what inspired us to develop a site and application called UKlise.
+                   UKlise is a useful platform for developing developers to create ready-to-use app and site templates,
+                   and also helps other developers to complete their projects quickly and reduce the risk of errors by simply 
+                   changing the necessary elements. We currently provide templates for the Laravel and Flutter frameworks 
+                   which can support almost all existing platforms. Such as Android, Chrome OS, iOS, macOS, Linux, Windows 
+                   and Web Browser.
                 </p>
               </div>
             </div>

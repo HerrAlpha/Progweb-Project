@@ -48,7 +48,7 @@
         <div class="col-md-6">
             <h2 style="color: #f2f2f7"><div id="text"></div><div id="cursor"></div></h2>
             <h3 style="color: #f2f2f7">The First Indonesian Web and App Template Provider based from Framework</h3>
-            <a href="/templates"><button type="button" class="btn btn-primary start">Ready..Set..Go!!</button></a>
+            <a href="/templates"><button type="button" style="border-corner:50%" class="btn btn-primary start">Let's Explore...</button></a>
         </div>
         <script type="text/javascript">
             // List of sentences
@@ -196,13 +196,13 @@ _INTERVAL_VAL = setInterval(Type, 100);
         
             <div class="row g-3" style="text-align: center;">
                 <div class="col-md-6" style="align-self: center">
-                    <div class="card" style="height: 500px; padding:2%;">
+                    <div class="card" style="height: auto; padding:2%;">
                         <h4>It's clearly easy to learn and modify again and again and again - Anonym</h4>
                     </div>
                 </div>
         
                 <div class="col-md-6" style="align-self: center">
-                    <div class="card" style="height: 500px; padding:2%;">
+                    <div class="card" style="height: auto; padding:2%;">
                         <h4>It's more faster and efficient for time making than I made it from scratch - Anonym</h4>
                     </div>
                 </div>
@@ -210,6 +210,17 @@ _INTERVAL_VAL = setInterval(Type, 100);
           </div>
                 </div>
               </div>
+            <div class="row g-3" style="padding: 5%">
+                <div class="col-md-6" style="text-align: center">
+                    <img src="/assets/picture/phoneMockUp.png" alt="Phone MockUp" srcset="">
+                </div>
+                <div class="col-md-6" style="position: relative">
+                    <h3>So, when it comes up into app?</h3>
+                    <h4>Soon, our platform are available in Mobile and Desktop 
+                        which is our app will compatible at all platform. 
+                    Like iOS, Android, macOS, Chrome OS, Windows, and Linux. <a href="#">App Platform is Coming Soon.</a></h4>
+                </div>
+            </div>
            
       
         </div>
