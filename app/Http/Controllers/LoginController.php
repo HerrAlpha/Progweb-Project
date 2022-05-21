@@ -4,7 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Password;
+use Illuminate\Support\Str;
+use Illuminate\Auth\Events\PasswordReset;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Mail;
+use App\Models\User;
 
 class LoginController extends Controller
 {
@@ -15,34 +22,73 @@ class LoginController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function login(Request $request){
+    public function login(Request $request)
+    {
         $data = $request->validate([
-            'username' =>'required',
-            'password' =>'required'
+            'username' => 'required',
+            'password' => 'required'
         ]);
 
-        if(Auth::attempt($data)){
+        if (Auth::attempt($data)) {
             $request->session()->regenerate();
             // return redirect()->intended('/dashboard/' . auth()->user()->id);
             return redirect()->intended('/dashboard');
         }
 
-        return back()->with('err','Username atau Password Salah');
+        return back()->with('err', 'Username atau Password Salah');
     }
 
-    public function forgotpass(){
+    public function forgotpass()
+    {
         return view('forgotpass');
     }
 
     public function forgotpass2(Request $request)
     {
-        $request->validate(['email' => 'required|email']);
+        $request->validate([
+            'email' => 'required|email|exists:users',
+        ]);
 
-        $status = Password::sendResetLink( $request->only('email') );
+        $token = Str::random(64);
 
-    return $status === Password::RESET_LINK_SENT
-                ? back()->with(['status' => __($status)])
-                : back()->withErrors(['email' => __($status)]);
+        DB::table('password_resets')->insert([
+            'email' => $request->email,
+            'token' => $token,
+            'created_at' => Carbon::now()
+        ]);
+
+        Mail::send('mail.forgetpassword', ['token' => $token], function ($message) use ($request) {
+            $message->to($request->email);
+            $message->subject('Reset Password');
+        });
+
+        return back()->with('message', 'We have e-mailed your password reset link!');
     }
 
+    public function reset(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email|exists:users',
+            'password' => 'required|confirmed',
+            'password_confirmation' => 'required'
+        ]);
+
+        $updatePassword = DB::table('password_resets')
+            ->where([
+                'email' => $request->email,
+                'token' => $request->token
+            ])
+            ->first();
+
+        if (!$updatePassword) {
+            return back()->withInput()->with('error', 'Invalid token!');
+        }
+
+        $user = User::where('email', $request->email)
+            ->update(['password' => Hash::make($request->password)]);
+
+        DB::table('password_resets')->where(['email' => $request->email])->delete();
+
+        return redirect('/login')->with('success', 'Your password has been changed!');
+    }
 }

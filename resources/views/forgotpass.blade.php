@@ -16,17 +16,22 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Forgot Password</h5>
-                @if (session()->has('success'))
+                @if (session()->has('message'))
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    {{session('success')}}
+                    {{session('message')}}
                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                  </div>
+                @elseif (session()->has('email'))
+                 <div class="alert alert-success alert-dismissible fade show" role="alert">
+                     {{session('email')}}
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                  </div>
                 @endif
                 <form action="/forgotpass" method="post">
                     @csrf
                     <div class="form-group mb-3">
-                        <label for="username">Email</label>
-                        <input type="text" class="form-control @error('username') is-invalid @enderror" id="username" name="username" placeholder="Enter username">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control @error('email') is-invalid @enderror" id="email" name="email" placeholder="Enter email">
                     </div>
                     <button type="submit" class="btn btn-primary">Send me e-mail confirmation</button>
                 </form>
