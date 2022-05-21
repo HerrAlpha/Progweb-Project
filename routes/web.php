@@ -20,13 +20,24 @@ Route::get('/templates', [CollectionController::class,'templates'])->name('templ
 Route::get('/news', [CollectionController::class,'news'])->name('news');
 
 //============== WEB ==============//
-Route::get('/web', [CollectionController::class,'web'])->name('web');
-Route::get('/web/{web:title}',[WebController::class,'show'])->name('web.show');
-// Route::resource('/web',WebController::class);
-Route::get('/web/detail/{detail}',[WebController::class,'detail']);
+Route::get('/templates/web', [CollectionController::class,'web'])->name('web');
+Route::get('/templates/web/{web:title}',[WebController::class,'show'])->name('web.show');
+// Route::resource('/templates/web',WebController::class);
+Route::get('/templates/web/detail/{detail}',[WebController::class,'detail']);
 
 //=========== APP===============//
-Route::get('/app',[CollectionController::class,'apps'])->name('app'); //->middleware('guest');
+Route::get('/templates/mobile-app',[CollectionController::class,'mobileApp'])->name('mobileApp');
+Route::get('/templates/mobile-app/{mobileApp:title}',[CollectionController::class,'mobileAppShow'])->name('mobileApp.show');
+Route::get('/templates/mobile-app/detail/{detail}',[CollectionController::class,'mobileAppDetail']);
+
+Route::get('/templates/desktop-app',[CollectionController::class,'desktopApp'])->name('desktopApp');
+Route::get('/templates/desktop-app/{desktopApp:title}',[CollectionController::class,'desktopAppShow'])->name('desktopApp.show');
+Route::get('/templates/desktop-app/detail/{detail}',[CollectionController::class,'desktopAppDetail']);
+
+Route::get('/templates/hybrid',[CollectionController::class,'hybrid'])->name('hybrid');
+Route::get('/templates/hybrid/{hybrid:title}',[CollectionController::class,'hybridShow'])->name('hybrid.show');
+Route::get('/templates/hybrid/detail/{detail}',[CollectionController::class,'hybridDetail']);
+
 
 //=========== ABOUT===============//
 Route::get('/about', [CollectionController::class,'about'])->name('about'); //->middleware('guest');

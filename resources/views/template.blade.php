@@ -102,7 +102,7 @@
                         </div>
                         <div class="col-md-12">
                             <div class="row g-3">
-                                @for ($i = 0; $i < 10; $i++)
+                                @for ($i = 0; $i < 4; $i++)
                                     <div class="col-md-3">
                                         <div class="card">
                                             <div class="card-body">
@@ -116,7 +116,7 @@
                             </div>
                         </div>
                         <div class="col-md-12" style="text-align:center">
-                            <a href="#"class="btn btn-outline-info">Explore More</a>
+                            <a href="{{route('web')}}"class="btn btn-outline-info">Explore More</a>
                         </div>
                     </div>
                 </div>
@@ -130,11 +130,11 @@
                     <div class="row g-3">
                         <div class="col-md-12" >
                             <h3>Mobile App</h3>
-                            <p>Mobile App are Flagship Product at Software Development Area, because it's portable and easy-to-use. In this product will compatible in iOS, iPadOS, Android, and Android Tablet hybridly with single code base.</p>
+                            <p>It's favourite software platform that easy-to-use and it's on all mobile platforms.</p>
                         </div>
                         <div class="col-md-12">
                             <div class="row g-3">
-                                @for ($i = 0; $i < 10; $i++)
+                                @for ($i = 0; $i < 4; $i++)
                                     <div class="col-md-3">
                                         <div class="card">
                                             <div class="card-body">
@@ -148,7 +148,7 @@
                             </div>
                         </div>
                         <div class="col-md-12" style="text-align:center">
-                            <a href="#"class="btn btn-outline-info">Explore More</a>
+                            <a href="{{route('mobileApp')}}"class="btn btn-outline-info">Explore More</a>
                         </div>
                     </div>
                 </div>
@@ -166,7 +166,7 @@
                         </div>
                         <div class="col-md-12">
                             <div class="row g-3">
-                                @for ($i = 0; $i < 10; $i++)
+                                @for ($i = 0; $i < 4; $i++)
                                     <div class="col-md-3">
                                         <div class="card">
                                             <div class="card-body">
@@ -180,7 +180,7 @@
                             </div>
                         </div>
                         <div class="col-md-12" style="text-align:center">
-                            <a href="#"class="btn btn-outline-info">Explore More</a>
+                            <a href="{{route('desktopApp')}}"class="btn btn-outline-info">Explore More</a>
                         </div>
                     </div>
                 </div>
@@ -198,7 +198,7 @@
                         </div>
                         <div class="col-md-12">
                             <div class="row g-3">
-                                @for ($i = 0; $i < 10; $i++)
+                                @for ($i = 0; $i < 4; $i++)
                                     <div class="col-md-3">
                                         <div class="card">
                                             <div class="card-body">
@@ -212,7 +212,7 @@
                             </div>
                         </div>
                         <div class="col-md-12" style="text-align:center">
-                            <a href="#"class="btn btn-outline-info">Explore More</a>
+                            <a href="{{route('hybrid')}}"class="btn btn-outline-info">Explore More</a>
                         </div>
                     </div>
                 </div>

@@ -23,15 +23,13 @@
                     <p class="text-capitalize">Framework : {{$template->framework}}</p>
                     <p>Publishers : <a href="#" style="text-decoration: none; color: rgb(10, 132, 255);">{{$template->user->username}}</a></p>
                     <p>Created At : {{$template->created_at}} </p>
-                    <a href="/download/{{$template->id    }}" class="btn btn-success">
-                        <span data-feather="download"></span>
-                        Download Here
-                    </a>
+                    
                 </div>
             </div>
         </div>
+        @if ($template->price == 0)
         <div class="col-md-12">
-            <p>Or, you can use GitHub URL to fork it</p>
+            <p>Your GitHub Repository Url</p>
             {{-- setelah migrate ganti ini --}}
             {{-- <a href="{{$template->github_url}}" class="btn btn-success mb-3"> --}}
             <a href="{{$template->github_url}}" class="btn btn-success mb-3">
@@ -43,6 +41,7 @@
             <p>Or you can copy this GitHub Url</p>
             <input class="form-control" type="text" value="{{$template->github_url}}" aria-label="readonly input example" readonly style="font-family: Consolas, monaco, monospace; width:auto;height:auto;">
         </div>
+        @endif
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
@@ -141,6 +140,28 @@
                 </tr>
             </table>
         </div>
+        <div class="col-md-12">
+            <div class="row g-3">
+                <div class="col-sm-1" style="padding-right: 5%">
+                    <a href='/dashboard/template/{{$template->id}}/edit'  class="btn btn-info mt-1 mb-1 rounded">
+                        <span data-feather="arrow-up"></span>
+                        Update</a>
+                </div>
+                <div class="col-md-1">
+                    <form action="/dashboard/template/{{$template->id}}" method="post">
+                        @method('delete')
+                        @csrf
+                        <button class="btn btn-danger mt-1 mb-1 rounded"onclick="return confirm('Yakin Banget??')">
+                            <span data-feather="trash"></span>
+                            Delete</button>
+                    </form>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>  
+</div>
         <br>
         <br>
         {{-- <div class="col-md-12">

@@ -179,6 +179,7 @@
               Indonesia <br><br>
               <strong>Phone:</strong> +62 896 5892 2021<br>
               <strong>Email:</strong> ask@uklise.com<br>
+              <strong>Instagram:</strong> @uklise_id<br>
             </p>
 
           </div>

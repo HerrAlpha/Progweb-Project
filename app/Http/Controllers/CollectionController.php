@@ -105,7 +105,7 @@ class CollectionController extends Controller
         $names = $categorieses->pluck('name');
         $links = $categorieses->pluck('link');
         $imgs = $categorieses->pluck('pictureurl');
-        return view('web',['names'=>$names,'links'=>$links,'imgs'=>$imgs]);
+        return view('template.web',['names'=>$names,'links'=>$links,'imgs'=>$imgs]);
     }
     public function appCategories(){
         $categories00 =new \stdClass();
@@ -214,9 +214,21 @@ class CollectionController extends Controller
         return view('template');
     }
 
-    public function apps(){
-        return view('app');
+    public function mobileApp(){
+        return view('template.mobileApp');
     }
+
+    public function desktopApp(){
+        return view('template.desktopApp');
+    }
+
+    public function hybrid(){
+        return view('template.hybrid');
+    }
+
+    // public function apps(){ DISCONTINUE
+    //     return view('app');
+    // }
     public function about(){
         return view('about');
     }
