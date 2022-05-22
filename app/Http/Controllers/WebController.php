@@ -11,7 +11,7 @@ class WebController extends Controller
 {
     public function show(Category $web){
         $post = $web->id;
-        $post = Post::all()->where('category_id', $post)->where('web_browser', 1);
+        $post = Post::all()->where('category_id', $post)->where('ompatibility', 'Web Browser');
         return view('web.web-category',compact('web','post'));
     }
 

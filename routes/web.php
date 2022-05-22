@@ -10,6 +10,9 @@ use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\WebController;
+use App\Http\Controllers\mobileAppController;
+use App\Http\Controllers\desktopAppController;
+use App\Http\Controllers\hybridController;
 use App\Models\Post;
 use App\Models\Category;
 use App\Models\User;
@@ -27,16 +30,16 @@ Route::get('/templates/web/detail/{detail}',[WebController::class,'detail']);
 
 //=========== APP===============//
 Route::get('/templates/mobile-app',[CollectionController::class,'mobileApp'])->name('mobileApp');
-Route::get('/templates/mobile-app/{mobileApp:title}',[CollectionController::class,'mobileAppShow'])->name('mobileApp.show');
-Route::get('/templates/mobile-app/detail/{detail}',[CollectionController::class,'mobileAppDetail']);
+Route::get('/templates/mobile-app/{mobileApp:title}',[mobileAppController::class,'show'])->name('mobileApp.show');
+Route::get('/templates/mobile-app/detail/{detail}',[mobileAppController::class,'detail']);
 
 Route::get('/templates/desktop-app',[CollectionController::class,'desktopApp'])->name('desktopApp');
-Route::get('/templates/desktop-app/{desktopApp:title}',[CollectionController::class,'desktopAppShow'])->name('desktopApp.show');
-Route::get('/templates/desktop-app/detail/{detail}',[CollectionController::class,'desktopAppDetail']);
+Route::get('/templates/desktop-app/{desktopApp:title}',[desktopAppController::class,'show'])->name('desktopApp.show');
+Route::get('/templates/desktop-app/detail/{detail}',[desktopAppController::class,'detail']);
 
 Route::get('/templates/hybrid',[CollectionController::class,'hybrid'])->name('hybrid');
-Route::get('/templates/hybrid/{hybrid:title}',[CollectionController::class,'hybridShow'])->name('hybrid.show');
-Route::get('/templates/hybrid/detail/{detail}',[CollectionController::class,'hybridDetail']);
+Route::get('/templates/hybrid/{hybrid:title}',[hybridController::class,'show'])->name('hybrid.show');
+Route::get('/templates/hybrid/detail/{detail}',[hybridController::class,'detail']);
 
 
 //=========== ABOUT===============//

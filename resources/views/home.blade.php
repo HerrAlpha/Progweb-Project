@@ -44,9 +44,9 @@
 
 @section('content') 
 <div  style="padding: 3%;">
-    <div class="row g-3">
+    <div class="row g-3" style="position:static;">
         <div class="col-md-6">
-            <h2 style="color: #f2f2f7"><div id="text"></div><div id="cursor"></div></h2>
+            <h2 style="color: #f2f2f7" style="position:static;"><div id="text"></div><div id="cursor"></div></h2>
             <h3 style="color: #f2f2f7">The First Indonesian Web and App Template Provider based from Framework</h3>
             <a href="/templates"><button type="button" style="border-corner:50%" class="btn btn-primary start">Let's Explore...</button></a>
         </div>

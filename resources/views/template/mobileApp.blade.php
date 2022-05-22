@@ -15,6 +15,22 @@
         {{-- CATEGORY --}}
         <div class="col-md-12" style="padding-top: 5%; padding-bottom:5%;">
             <h3 style="text-align: center; color:#f2f2f7">Category</h3>
+            <br>
+            <div class="row g-3">
+                @for ($i=1;$i<count($names);$i++)
+                <div class="col-sm-2 mb-4">
+                    <div class="card">
+                        <a href="{{$links[$i]}}">
+                            <div class="card-body bg-light">
+                                <p class="card-text text-black">{{$names[$i]}}</p>
+                            </div>
+                              <img src="{{$imgs[$i]}}" class="card-img-bottom" height="100">
+                        </a>
+                    </div>
+                </div>
+                @endfor
+            </div>
+            
         </div>
         {{-- TOP 4 FREE CONTENT --}}
         <div class="col-md-12" style="padding-top: 5%; padding-bottom:5%;">

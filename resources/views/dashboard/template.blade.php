@@ -78,16 +78,16 @@
             <div class="row">
                 <div class="col-lg-8">
                     <div class="form-group">
-                        <label for="title">Title</label>
+                        <label for="title">Title*</label>
                         <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title" placeholder="Enter title" value="{{old('title')}}">
                         @error('title')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="category_id">Category</label>
+                        <label for="category_id">Category*</label>
                         <select class="form-select" name="category_id">
-                            <option selected></option>
+                            <option selected>Choose your template category</option>
                             @foreach ($categories as $category)
                                 @if (old('category_id') == $category->id)
                                 <option value="{{$category->id}}" selected>{{$category->title}}</option>
@@ -101,52 +101,20 @@
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="form">Compatibility</label>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="1" id="webBrowser" name="web_browser">
-                            <label class="form-check-label" for="webBrowser">
-                              Web Browser
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="1" id="ios" name="ios">
-                            <label class="form-check-label" for="ios">
-                              iOS
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="1" id="android" name="android">
-                            <label class="form-check-label" for="android">
-                              Android
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="1" id="chromeOs" name="chrome_os">
-                            <label class="form-check-label" for="chromeOs">
-                              Chrome OS
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="1" id="macOs" name="mac_os">
-                            <label class="form-check-label" for="macOs">
-                              macOS
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="1" id="linux" name="linux">
-                            <label class="form-check-label" for="linux">
-                             Linux
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="1" id="windows" name="windows">
-                            <label class="form-check-label" for="windows">
-                              Windows
-                            </label>
-                        </div>
+                        <label for="form">Compatibility*</label>
+                        <select name="compatibility" id="form" class="form-select">
+                            <option selected>Choose the Compatibility</option>
+                            <option value="Web Browser">Web Browser</option>
+                            <option value="Mobile App">Mobile App</option>
+                            <option value="Desktop App">Desktop App</option>
+                            <option value="Hybrid">Hybrid</option>
+                        </select>
+                        @error('compatibility')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="form-group">
-                        <label for="framework">Framework</label>
+                        <label for="framework">Framework*</label>
                         <select class="form-select" name="framework">
                             <option selected>Choose the Framework</option>
                             <option value="flutter">Flutter</option>
@@ -157,21 +125,21 @@
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="description">Description</label>
+                        <label for="description">Description*</label>
                         <textarea type="text" rows='6' cols="70" class="form-control @error('description') is-invalid @enderror" id="description" name="description" placeholder="Enter description">{{old('description')}}</textarea>
                         @error('description')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="price">Upload File Template</label>
+                        <label for="price">Upload File Template*</label>
                         <input type="file" class="form-control @error('file') is-invalid @enderror" id="file" name="file">
                         @error('file')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="cover">Front Cover</label>
+                        <label for="cover">Front Cover*</label>
                         <img class='prev-img-cover img-fluid col-lg-2'><img>
                         <input type="file" class="form-control @error('cover') is-invalid @enderror" id="cover" name="cover" onchange='prevImg()'>
                         @error('cover')
@@ -184,9 +152,34 @@
                         @error('urlGithub')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
-                    </div>
+                    </div><br>
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              Read this before you deploy!
+                            </button>
+                          </h2>
+                          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              <strong>Before you upload your template, you must agree with this rules</strong><br>
+                              <p>1. Your project must be Laravel or Flutter, not else!</p>
+                              <p>2. If you set to pay mode, you no need to deploy your GitHub Url for forking into GitHub Desktop</p>
+                              <p>3. Your template when you set it into pay mode, must be final version. Except while your template still on revision, you can set it into free mode.</p>
+                              <p>4. When you choose to upload through GitHub, you could copy it. You can upload your documentation on file upload to avoid red validation.</p>
+                              <p>5. Your project shouldn't contain some racism, sexuallity, et cetera. Especially for especially insults to minorities.</p>
+                              <p>6. Please obey all Moralism Rule.</p>
+                              <p>7. When you upload it, it means you agree with our rules</p>
+                              <br><br>
+                              Peace Greeting
+                              <br><br>
+                              UKlise
+                            </div>
+                          </div>
+                        </div>
+                    </div><br>
                     <div class="form-group">
-                        <label for="price">Price ( $ )</label>
+                        <label for="price">Price ( $ )*</label>
                         <input type="number" class="form-control @error('price') is-invalid @enderror" id="price" name="price" value="0">
                         @error('price')
                             <div class="invalid-feedback">{{ $message }}</div>
@@ -196,8 +189,8 @@
                 </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Discard</button>
-          <button type="submit" class="btn btn-primary">Post</button>
+          <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Discard</button>
+          <button type="submit" class="btn btn-success">Post</button>
         </div>
       </div>
     </div>

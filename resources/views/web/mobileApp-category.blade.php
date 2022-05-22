@@ -1,8 +1,8 @@
 @extends('layout.master')
-@section('title', 'Web - Category')
+@section('title', 'Mobile App - Category')
 @section('class-navbar', 'bg-primary')
 @section('content')
-<h1 class="text-center my-5">{{$web->title}}</h1>
+<h1 class="text-center my-5">{{$mobileApp->title}}</h1>
 <hr class="border-bottom border-5 border-dark"></hr>
 {{-- @dump($post) --}}
 <br>
@@ -19,7 +19,7 @@
                     <p class="card-text">{{$post->description}}</p>
                     <p class="card-text border-bottom text-center bg-white">By @ {{$post->user->username}} </p>
                     {{-- <p class="card-text">Published At {{$post->created_at}}</p> --}}
-                    <a href="/templates/web/detail/{{$post->id}}" class="btn btn-primary mt-3 w-100">Read More</a>
+                    <a href="/templates/mobile-app/detail/{{$post->id}}" class="btn btn-primary mt-3 w-100">Read More</a>
                 </div>
             </div>
         </div>
