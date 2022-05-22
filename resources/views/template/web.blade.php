@@ -21,15 +21,15 @@
                     <div class="card">
                         <a href="{{$links[$i]}}">
                             <div class="card-body bg-light">
-                                <p class="card-text text-black">{{$names[$i]}}</p>
+                                <p class="card-text text-black text-center">{{$names[$i]}}</p>
                             </div>
-                              <img src="{{$imgs[$i]}}" class="card-img-bottom" height="100">
+                              <img src="/storage/categoryimg/{{$imgs[$i]}}" class="card-img-bottom" height="100">
                         </a>
                     </div>
                 </div>
                 @endfor
             </div>
-            
+
         </div>
         {{-- TOP 4 FREE CONTENT --}}
         <div class="col-md-12" style="padding-top: 5%; padding-bottom:5%;">
