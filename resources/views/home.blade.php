@@ -1,19 +1,10 @@
 
 @extends('layout.master')
+
 @section('title','Home')
 
 
  <style type="text/css">
-        body {
-  background-image: url("/assets/picture/bg1.jpg");
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
 
 #text {
 	display: inline-block;
@@ -41,7 +32,7 @@
 }
 
     </style>
-
+@section('bg-body', 'bg-dark')
 @section('content') 
 <div  style="padding: 3%;">
     <div class="row g-3" style="position:static;">

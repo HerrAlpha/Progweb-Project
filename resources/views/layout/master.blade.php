@@ -32,7 +32,7 @@
   <script src="/js/main.js"></script>
     <style>
 
-    body{
+    body, a, button{
         font-family: -apple-system, BlinkMacSystemFont, sans-serif;
         font-weight: semibold;
     }
@@ -72,7 +72,7 @@
 
 </head>
 <body class="@yield('bg-body')">
-    <nav class=" navbar navbar-expand-lg navbar-dark d-flex align-items-center justify-content-between @yield('class-navbar')">
+    <nav class=" navbar navbar-expand-lg navbar-dark d-flex align-items-center justify-content-between @yield('class-navbar')" style="width: 100%">
         <div class="container-fluid">
           <a class="navbar-brand" href="/">
           <img src="/assets/picture/Logo-nonText.png" alt="" width="50px" height="50px" class="d-inline-block align-text-top">
@@ -134,7 +134,7 @@
 
   </div>
 
-  <footer id="footer" class="footer">
+  <footer id="footer" class="footer" style="width: 100%">
     <div class="footer-top">
       <div class="container">
         <div class="row gy-4">
