@@ -16,11 +16,6 @@
     body{
         font-family: -apple-system, BlinkMacSystemFont, sans-serif;
         font-weight: semibold;
-        background-image: url(/assets/picture/reg-bg.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
     }</style>
 </head>
 <body>

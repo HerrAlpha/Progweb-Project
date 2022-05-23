@@ -163,31 +163,47 @@ _INTERVAL_VAL = setInterval(Type, 100);
             <br><br>
             <div class="col-md" style="text-align: center;"><h3>Advantages of using templates</h3></div><br>
             <div class="row g-3" style="text-align: center;">
-                <div class="col-md-6" style="align-self: center">
-                    <div class="card" style="height: 210px; padding:2%;">
-                        <h1>60%</h1>
+                <div class="col-md-6" style="text-align: center">
+                    <div class="card" style="height: auto; padding:2%;">
+                        <div class="rt-container">
+                            <div class="radialProgressBar progress-60">
+                              <div class="overlay">60%</div>
+                            </div>
+                        </div><br><br>
                         <h4>Time efficient for develop</h4>
                     </div>
                 </div>
         
-                <div class="col-md-6" style="align-self: center">
-                    <div class="card" style="height: 210px; padding:2%;">
-                        <h1>70%</h1>
+                <div class="col-md-6" style="text-align: center">
+                    <div class="card" style="height: auto; padding:2%;">
+                        <div class="rt-container">
+                            <div class="radialProgressBar progress-70">
+                              <div class="overlay">70%</div>
+                            </div>
+                        </div><br><br>
                         <h4>Faster to develop instead create from blank pages</h4>
                     </div>
                 </div>
             </div><br>
             <div class="row g-3" style="text-align: center;">
-                <div class="col-md-6" style="align-self: center">
-                    <div class="card" style="height: 210px; padding:2%;">
-                        <h1>90%</h1>
+                <div class="col-md-6" style="text-align: center">
+                    <div class="card" style="height: auto; padding:2%;">
+                        <div class="rt-container">
+                            <div class="radialProgressBar progress-90">
+                              <div class="overlay">90%</div>
+                            </div>
+                        </div><br><br>
                         <h4>Developers Satisfying</h4>
                     </div>
                 </div>
         
-                <div class="col-md-6" style="align-self: center">
-                    <div class="card" style="height: 210px; padding:2%;">
-                        <h1>100%</h1>
+                <div class="col-md-6" style="text-align: center">
+                    <div class="card" style="height: auto; padding:2%;">
+                        <div class="rt-container">
+                            <div class="radialProgressBar progress-100">
+                              <div class="overlay">100%</div>
+                            </div>
+                        </div><br><br>
                         <h4>Reusable</h4>
                     </div>
                 </div>

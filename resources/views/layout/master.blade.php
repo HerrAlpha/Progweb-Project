@@ -25,6 +25,8 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/demo.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gaya.css" />
 
   <!-- Template Main JS File -->
   <script src="/js/main.js"></script>
