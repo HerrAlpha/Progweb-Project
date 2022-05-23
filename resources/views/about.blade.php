@@ -52,14 +52,14 @@
 
               <div class="row pt-2 gx-4 gy-4">
                 <div class="col-md-4 text-center tim">
-                  <img src="{{ ('about.jpg') }}" class="rounded-circle mb-3">
+                  <img src="/assets/picture/gaby.jpg" class="rounded-circle mb-3" style="width: 300px; height: 300px">
                   <h6>Maria Gabyelent Gea</h6>
                   <p>Co Founder of UKlise - Assistance</p>
                   <p>Mahasiswa Teknik Informatika</p>
 
                 </div>
                 <div class="col-md-4 text-center tim">
-                  <img src="{{ ('about.jpg') }}" class="rounded-circle mb-3">
+                  <img src="/assets/picture/bayu.jpg" class="rounded-circle mb-3" style="width: 300px; height: 300px">
                   <h6>M.Baharuddin Yusuf</h6>
                   <p>Founder of UKlise - Back End and DB Division</p>
                   <p>Mahasiswa Teknik Informatika</p>
@@ -67,7 +67,7 @@
                     
                 </div>
                 <div class="col-md-4 text-center tim">
-                  <img src="{{ ('about.jpg') }}" class="rounded-circle mb-3">
+                  <img src="/assets/picture/agung.jpg" class="rounded-circle mb-3" style="width: 300px; height: 300px">
                   <h6>Mohammad Agung Rizki</h6>
                   <p>Founder of UKlise - Founder of MAR Media - Front End and DB Division</p>
                   <p>Mahasiswa Teknik Informatika</p>
@@ -75,7 +75,7 @@
                    
                 </div>
                 <div class="col-md-6 text-center tim">
-                  <img src="{{ ('about.jpg') }}" class="rounded-circle mb-3">
+                  <img src="/assets/picture/naza.jpg" class="rounded-circle mb-3" style="width: 300px; height: 300px">
                   <h6>Roudhotulloh Nazakhan</h6>
                   <p>Co Founder of UKlise - Assistance</p>
                   <p>Mahasiswa Teknik Informatika</p>
@@ -83,7 +83,7 @@
                 
                 </div>
                 <div class="col-md-6 text-center tim">
-                  <img src="{{ ('about.jpg') }}" class="rounded-circle mb-3">
+                  <img src="/assets/picture/hana.jpg" class="rounded-circle mb-3" style="width: 300px; height: 300px">
                   <h6>Shohwatul Hana</h6>
                   <p>Co Founder of UKlise - Assistance</p>
                   <p>Mahasiswa Teknik Informatika</p>
