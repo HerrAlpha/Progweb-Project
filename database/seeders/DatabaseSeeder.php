@@ -7,7 +7,6 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\User;
 use App\Models\Post;
-use App\Models\Admin;
 
 class DatabaseSeeder extends Seeder
 {
@@ -134,11 +133,6 @@ class DatabaseSeeder extends Seeder
             'web' => '1',
             'app' => '',
             'about' => 'Warning: PowerShell detected that you might be using a screen reader and has disabled PSReadLine for compatibility purposes. If you want to re-enable it, run Import-Module PSReadLine'
-        ]);
-        Admin::create([
-            'username' => 'admin',
-            'password' => bcrypt('admin'),
-            'authorization_code' => bcrypt('991283'),
         ]);
 
         //--------------------------------SECTION CATEGORY---------------------------------
