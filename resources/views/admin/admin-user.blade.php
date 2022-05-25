@@ -29,7 +29,7 @@
             <td>{{$pt->name}}</td>
             <td>{{$pt->username}}</td>
             <td>{{$pt->address}}</td>
-            <td>{{$pt->zip_code}}</td>
+            <td>{{$pt->zip}}</td>
             <td>{{$pt->city}}</td>
             <td>{{$pt->state}}</td>
             <td>{{$pt->country}}</td>
@@ -48,7 +48,7 @@
                 @endif
             </td>
             <td><img src="/storage/app/{{$pt->avatar}}" alt="" style="width: 48px; height: 27px"></td>
-            <td>{{$pt->description}}</td>
+            <td>{{$pt->about}}</td>
             <td>{{$pt->created_at}}</td>
             
             <td>
