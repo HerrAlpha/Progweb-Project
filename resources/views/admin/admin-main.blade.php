@@ -30,10 +30,10 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{{route('userAdmin')}}">User</a>
+                <a class="nav-link {{ Request::is('userAdmin') ? 'active' : '' }}" aria-current="page" href="{{route('userAdmin')}}">User</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{route('postAdmin')}}">Post</a>
+                <a class="nav-link {{ Request::is('postAdmin') ? 'active' : '' }}" href="{{route('postAdmin')}}">Post</a>
               </li>
             </ul>
           </div>
