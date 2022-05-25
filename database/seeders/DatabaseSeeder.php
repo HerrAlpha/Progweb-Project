@@ -7,6 +7,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\User;
 use App\Models\Post;
+use App\Models\Admin;
 
 class DatabaseSeeder extends Seeder
 {
@@ -134,6 +135,20 @@ class DatabaseSeeder extends Seeder
             'app' => '',
             'about' => 'Warning: PowerShell detected that you might be using a screen reader and has disabled PSReadLine for compatibility purposes. If you want to re-enable it, run Import-Module PSReadLine'
         ]);
+
+        // ----------------------------------SECTION ADMIN--------------------------------------------
+        // Admin::create([
+        //     'username' => 'admin',
+        //     'password' => bcrypt('GTX 1080 Ti'),
+        //     'authorization_code' => bcrypt('mv230jqwdj92wkd012em193je'),
+        // ]);
+        // Admin::create([
+        //     'username' => 'admin2',
+        //     'password' => bcrypt('GTX 1080 Ti'),
+        //     'authorization_code' => bcrypt('jjjf924f2edm12emffn3109e1'),
+        // ]);
+        
+
 
         //--------------------------------SECTION CATEGORY---------------------------------
 

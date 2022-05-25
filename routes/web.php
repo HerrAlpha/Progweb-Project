@@ -16,6 +16,8 @@ use App\Http\Controllers\hybridController;
 use App\Models\Post;
 use App\Models\Category;
 use App\Models\User;
+use App\Models\Admin;
+use App\Http\Controllers\AdminController;
 
 
 Route::get('/',[CollectionController::class,'home'])->name('home');//->middleware('guest');
@@ -41,6 +43,10 @@ Route::get('/templates/hybrid',[CollectionController::class,'hybrid'])->name('hy
 Route::get('/templates/hybrid/{hybrid:title}',[hybridController::class,'show'])->name('hybrid.show');
 Route::get('/templates/hybrid/detail/{detail}',[hybridController::class,'detail']);
 
+//============== ADMIN ==============//
+Route::get('/admin-authentication',[AdminController::class,'authAdmin'])->name('admin');
+Route::get('/admin-post',[AdminController::class,'postAdmin'])->name('postAdmin');
+Route::get('/admin-user',[AdminController::class,'userAdmin'])->name('userAdmin');
 
 //=========== ABOUT===============//
 Route::get('/about', [CollectionController::class,'about'])->name('about'); //->middleware('guest');
