@@ -3,20 +3,12 @@
 @section('content')
 
 <style>
-    body{
-        background-image: url("/assets/picture/tempbg.jpg");
-        background-repeat: no-repeat;
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-
-    }
-
+  .container{
+    color: #f2f2f7;
+  }
 </style>
 <!-- tentang -->
-<div class="container-fluid ">
+@section('bg-body', 'bg-dark')
   <div class="container">
               <h2 class="display-3 text-center" id="tentang" style="color:#f2f2f7">About</h2>
               <p class="text-center" style="color:#f2f2f7">
@@ -46,7 +38,7 @@
             </div>
           </div>
           <!-- tim -->
-          <div class="container-fluid pt-5 pb-5 bg-light">
+          <div class="pt-5 pb-5 bg-dark">
             <div class="container text-center">
               <h3 class="display-3" id="staff">Our Team</h3>
 
@@ -93,5 +85,10 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 @stop

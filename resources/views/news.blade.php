@@ -15,7 +15,7 @@
                     <h6>{{$newsC->title}}</h6>
                 </div>
                 <div class="card-body">
-                    <button type="button" data-bs-toggle="modal" class="btn btn-primary" data-bs-target='#newsC'>More Detail</button>
+                  <a href="{{$newsC->url}}" class="btn btn-outline-primary">Read More</a>
                 </div>
         </div>
     </div>
@@ -54,7 +54,7 @@
                     <h6>{{$newsA->title}}</h6>
                 </div>
                 <div class="card-body">
-                    <button type="button" data-bs-toggle="modal" class="btn btn-primary" data-bs-target='#newsA'>More Detail</button>
+                  <a href="{{$newsA->url}}" class="btn btn-outline-primary">Read More</a>
                 </div>
         </div>
     </div>
@@ -94,7 +94,7 @@
                     <h6>{{$newsB->title}}</h6>
                 </div>
                 <div class="card-body">
-                    <button type="button" data-bs-toggle="modal" class="btn btn-primary" data-bs-target='#newsB'>More Detail</button>
+                  <a href="{{$newsB->url}}" class="btn btn-outline-primary">Read More</a>
                 </div>
         </div>
     </div>

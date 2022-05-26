@@ -112,7 +112,7 @@ function Delete() {
 _INTERVAL_VAL = setInterval(Type, 100);
         </script>
         <div class="col-md-6" style="text-align: center;">
-           
+           <img src="/assets/picture/Logo-nonText.png" style="width: 300px; height: 300px" alt="">
         </div>
     </div>
     <br><br>

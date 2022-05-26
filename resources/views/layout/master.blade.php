@@ -140,7 +140,7 @@
         <div class="row gy-4">
           <div class="col-lg-5 col-md-12 footer-info">
             <a href="/" class="logo d-flex align-items-center">
-              <img src="assets/picture/Logo-nonText.png" alt="">
+              <img src="/assets/picture/Logo-nonText.png" alt="">
               <span>UKlise</span>
             </a>
             <p>Platform for Laravel and Flutter Templates.</p>
