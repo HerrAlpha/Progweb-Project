@@ -293,6 +293,18 @@ class DatabaseSeeder extends Seeder
             'cover' => 'cover/contoh.jpg',
             'price' => '0',
         ]);
+        Post::create([
+            'title' => 'Flutter WidgetKit',
+            'description' => 'Flutter WidgetKit is a tool for front end developer at flutter to make object with out make a skeleton first. So that people can make it easier with fill the object or widget parameter.',
+            'category_id' => 2,
+            'user_id' => 7,
+            'framework' => 'Flutter',
+            'compatibility' => 'Hybrid',
+            'file' => 'file/Flutter WidgetKit.zip',
+            'cover' => 'cover/Flutter WidgetKit.png',
+            'github_url' => 'https://github.com/HerrAlpha/Flutter-WidgetKit.git',
+            'price' => '0',
+        ]);
 
         
         

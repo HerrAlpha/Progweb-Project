@@ -28,7 +28,7 @@
             <td>{{$pt->Category->title}}</td>
             <td>{{$pt->compatibility}}</td>
             <td>{{$pt->framework}}</td>
-            <td><a href="/storage/app/{{$pt->file}}">File here</a></td>
+            <td><a href="/download/{{$pt->id    }}">File here</a></td>
             <td><img src="/storage/app/{{$pt->cover}}" alt="" style="width: 48px; height: 27px"></td>
             <td>{{$pt->User->username}}</td>
             <td>{{$pt->created_at}}</td>

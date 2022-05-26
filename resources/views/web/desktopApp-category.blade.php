@@ -12,7 +12,7 @@
 <div class="row g-3">
     @foreach ($post as $post)
         <div class="col-md-3 ">
-            <div class="card bg-light" style="height: 350px">
+            <div class="card bg-light" style="height: 450px">
                 <img src="/storage/{{$post->cover}}" class="card-img-top" style="width: auto; height:150px">
                 <div class="card-body">
                     <h5 class="card-title">{{$post->title}}</h5>
