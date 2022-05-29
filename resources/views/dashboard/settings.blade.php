@@ -50,28 +50,16 @@
                     <div class="col-md-3">
                         <div class="card" style="width:70px;height:70px; border-radius: 25%">
                             <div class="card-body">
-                                <span data-feather="shield" style="padding: 1%; width:35px;height:35px"></span>
+                                <span data-feather="key" style="padding: 1%; width:35px;height:35px"></span>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-9" style="align-self:center"><h5>Privacy and Security</h5></div>
+                    <div class="col-md-9" style="align-self:center"><h5>Change Password</h5></div>
                 </div>
             </a></div>
 
 
-            <div class="col-md-4" style="padding:1%"><a href="/dashboard/settings/personalization">
-                <div class="row g-3">
-                    <div class="col-md-3">
-                        <div class="card" style="width:70px;height:70px; border-radius: 25%">
-                            <div class="card-body">
-                                <span data-feather="settings" style="padding: 1%; width:35px;height:35px"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-9" style="align-self:center"><h5>Personalization</h5></div>
-                </div>
-           </a> </div>
-
+            
 
             <div class="col-md-4" style="padding:1%">
                 <a href="/dashboard/settings/information-center">

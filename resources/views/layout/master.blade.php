@@ -33,11 +33,11 @@
     <style>
 
     body, a, button{
-        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
         font-weight: semibold;
     }
     #1{
-        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
         font-weight: bold;
     }
     .nav-link, .navbar-brand{

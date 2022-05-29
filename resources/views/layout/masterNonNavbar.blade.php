@@ -14,7 +14,7 @@
 
     <style>
     body{
-        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
         font-weight: semibold;
     }</style>
 </head>
