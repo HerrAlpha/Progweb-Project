@@ -9,6 +9,7 @@
     <script defer src="/js/bootstrap.min.js"></script>
     <script defer src="/js/@yield('js')"></script>
     <script defer src="/js/Jquery3.6.0.main.js"></script>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jcarousel/0.3.9/jquery.jcarousel.min.js" integrity="sha512-5TU8T3STShZiLsdqDqiKnj0Z72ccPZpIDCuItxc2S7G3lyiwqiuLuDFVNsLQ7Hgu5f33DlZ2KAJspbn6NAXqnA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/bootstrap-grid.min.css">
@@ -80,26 +81,36 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav" style="text-align: right">
+          <div class="collapse navbar-collapse  justify-content-end" id="navbarNav" style="text-align: center">
             <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" aria-current="page" href="/">Home</a>
+              <li class="nav-item" ><div class="nav-tengah collapse navbar-collapse justify-content-center">
+                <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link {{ Request::is('templates') ? 'active' : '' }}" href="{{route('template')}}">Templates</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link {{ Request::is('news') ? 'active' : '' }}" href="{{route('news')}}">News</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link {{ Request::is('about') ? 'active' : '' }}" href="{{route('about')}}">About</a>
+                </li></ul>
+              </div>
               </li>
-              <li class="nav-item">
-                <a class="nav-link {{ Request::is('templates') ? 'active' : '' }}" href="{{route('template')}}">Templates</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link {{ Request::is('news') ? 'active' : '' }}" href="{{route('news')}}">News</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link {{ Request::is('about') ? 'active' : '' }}" href="{{route('about')}}">About</a>
-              </li>
+              <li class="nav-item" ><div class="nav-akhir collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav">
               @auth
               {{-- <div class="dropstart"> --}}
-                <li class="right">
+                <li class="nav-item justify-content-end" >
                     <div class="dropdown">
                       @foreach ($users as $user)
-                        <h6 style="color: #f2f2f7" style="align-self: center"> <img src="storage/{{$user->avatar}}" alt="" style="width: 35px; height: 35px; border-radius: 100%"> {{$user->name}}</h6>
+                        <h6 style="color: #f2f2f7" style="align-self: center"> 
+                          <img src="storage/{{$user->avatar}}" alt="" style="width: 35px; height: 35px; border-radius: 100%"> 
+                          {{$user->username}}
+                          <span data-feather="arrow-down"></span>
+                        </h6>
                       @endforeach
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                             <li><a class="dropdown-item" href="/dashboard">Dashboard</a></li>
@@ -115,11 +126,16 @@
                     </div>
                 </li>
               @else
-              <li class="nav-item">
+              <li class="nav-item justify-content-end">
                 <a class="btn btn-outline-info btn-md border-0 px-2 mx-3" href="{{route('login')}}" style="color:#f2f2f7" role="button">Login</a>
             </li>
               @endauth
-              <li class="nav-item"></li>
+              <li class="nav-item justify-content-end"></li>
+              <li class="nav-item justify-content-end">
+                
+              </li></ul>
+              </div></li>
+              
             </ul>
           </div>
         </div>

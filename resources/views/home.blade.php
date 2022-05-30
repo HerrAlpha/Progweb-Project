@@ -36,15 +36,26 @@
 @section('content') 
 <div  style="padding: 3%;">
     <div class="row g-3" style="position:static;">
-        <div class="col-md-6">
-            <h2 style="color: #f2f2f7" style="position:static;"><div id="text"></div><div id="cursor"></div></h2>
+        <div class="col-md-8" style="align-self: center">
+            <h2 style="color: #f2f2f7" style="position:static;">{ <div id="text"></div><div id="cursor"></div> };</h2>
             <h3 style="color: #f2f2f7">The First Indonesian Web and App Template Provider based from Framework</h3>
+            <h3 id="datetime" style="color: #f2f2f7"></h3>
+                <script>
+                  function refreshTime() {
+                  const timeDisplay = document.getElementById("datetime");
+                  const dateString = new Date().toLocaleTimeString();
+                  const tglString = new Date().toDateString();
+                  const formattedString = dateString.replace(", ", " - ");
+                  timeDisplay.textContent = tglString + " " + formattedString;
+                }
+                setInterval(refreshTime, 1000);
+                </script>
             <a href="/templates"><button type="button" style="border-corner:50%" class="btn btn-primary start">Let's Explore...</button></a>
         </div>
         <script type="text/javascript">
             // List of sentences
 var _CONTENT = [ 
-	"Uklise","Good Night Developers","Gutten Nacht Entwickler","Bonne Nuit Développeurs","Доброй Hочи Pазработчики","Selamat Malam Para Pengembang", "Sugeng Dalu Para Pengembang", "Wilujeng Wengi Pamekar"
+	"Uklise","Good Night Developers","Gutten Nacht Entwickler","Bonne Nuit Développeurs","Доброй Hочи Pазработчики","Selamat Malam Para Pengembang", "꧋ꦱꦸꦒꦺꦁꦣꦭꦸꦥꦫꦥꦔꦺꦩ꧀ꦧꦁ", "Wilujeng Wengi Pamekar", "Rahajeng Peteng Para Pengembang"
 ];
 
 // Current sentence being processed
@@ -111,7 +122,7 @@ function Delete() {
 // Start the typing effect on load
 _INTERVAL_VAL = setInterval(Type, 100);
         </script>
-        <div class="col-md-6" style="text-align: center;">
+        <div class="col-md-4" style="text-align: center;">
            <img src="/assets/picture/Logo-nonText.png" style="width: 300px; height: 300px" alt="">
         </div>
     </div>
