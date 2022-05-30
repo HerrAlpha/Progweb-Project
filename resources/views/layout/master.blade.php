@@ -96,14 +96,11 @@
               </li>
               @auth
               {{-- <div class="dropstart"> --}}
-                <li>
+                <li class="right">
                     <div class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filter-circle" viewBox="0 0 16 16">
-                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                                <path d="M7 11.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5z"/>
-                              </svg>  Menu
-                        </button>
+                      @foreach ($users as $user)
+                        <h6 style="color: #f2f2f7" style="align-self: center"> <img src="storage/{{$user->avatar}}" alt="" style="width: 35px; height: 35px; border-radius: 100%"> {{$user->name}}</h6>
+                      @endforeach
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                             <li><a class="dropdown-item" href="/dashboard">Dashboard</a></li>
                                  <hr>
@@ -175,7 +172,7 @@
             </ul>
           </div>
 
-          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <div class="col-lg-3 col-md-12 footer-contact text-centertext-md-start" style="color: black">
             <h4>Contact Us</h4>
             <p>
               Malang State University <br>
@@ -183,7 +180,7 @@
               Indonesia <br><br>
               <strong>Phone:</strong> +62 896 5892 2021<br>
               <strong>Email:</strong> ask@uklise.com<br>
-              <strong>Instagram:</strong>@uklise_id<br>
+              <strong>Instagram:</strong><a href="https://www.instagram.com/uklise/">@uklise</a><br>
             </p>
 
           </div>

@@ -32,10 +32,10 @@ class LoginController extends Controller
         if (Auth::attempt($data)) {
             $request->session()->regenerate();
             // return redirect()->intended('/dashboard/' . auth()->user()->id);
-            return redirect()->intended('/dashboard');
+            return redirect()->intended('/');
         }
 
-        return back()->with('err', 'Username atau Password Salah');
+        return back()->with('err', 'Your username or password or both are incorrect');
     }
 
     public function forgotpass()

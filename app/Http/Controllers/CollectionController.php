@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Post;
+use App\Models\Category;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 
 class CollectionController extends Controller
 {
@@ -207,9 +211,7 @@ class CollectionController extends Controller
         return view('app',['namesApp'=>$namesApp,'linksApp'=>$linksApp,'imgsApp'=>$imgsApp]);
     }
 
-    public function home(){
-        return view('home');
-    }
+    
     public function templates(){
         return view('template');
     }
@@ -509,6 +511,15 @@ class CollectionController extends Controller
         $links = $categorieses->pluck('link');
         $imgs = $categorieses->pluck('pictureurl');
         return view('template.hybrid',['names'=>$names,'links'=>$links,'imgs'=>$imgs]);
+    }
+
+    public function home(){
+       if (Auth::check()){
+        $users = User::where('id',auth()->user()->id)->get();
+        return view('home',['users'=>$users]);
+         }else{
+              return view('home');
+            }
     }
 
     // public function apps(){

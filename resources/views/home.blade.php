@@ -221,7 +221,7 @@ _INTERVAL_VAL = setInterval(Type, 100);
                 <div class="col-md-6" style="text-align: center">
                     <img src="/assets/picture/phoneMockUp.png" alt="Phone MockUp" srcset="">
                 </div>
-                <div class="col-md-6" style="position: relative">
+                <div class="col-md-6" style="position: relative; align-self:center">
                     <h3>So, when it comes up into app?</h3>
                     <h4>Soon, our platform are available in Mobile and Desktop 
                         which is our app will compatible at all platform. 
