@@ -117,13 +117,11 @@
                             <li><a href="#" class="dropdown-item">Favourite</a></li>
                             <li><a href="#" class="dropdown-item">Saved</a></li>
                             <li><a href="#" class="dropdown-item">Library</a></li>
-                                 <hr>
                              <li>
-                                 <form action="/logout" method="post">
-                                    @csrf
-                                     {{-- <button class="dropdown-item" type="submit">Logout</button> --}}
-                                     <input type="submit" value="Logout" class="dropdown-item">
-                                </form>
+                              <a class="nav-link " type="button" data-bs-toggle="modal" data-bs-target="#logout" style="color: rgb(255, 69, 58)">
+                                <span data-feather="power"></span>
+                                Logout
+                              </a>
                              </li>
                         </ul>
                     </div>
@@ -227,58 +225,25 @@
 
 </html>
 
-{{-- <footer>
-  <div class="card bg-primary" style="width:100%;height:auto;">
-    <div class="col-md" style="padding: 3%;">
-      <div class="row g-3">
-        <div class="col-md-4">
-          <h3 class="w">UKlise</h3>
-          <p class="w">App and Web Templates<br>
-          Create by Aurum Team and Support from MAR Media<br>
-          Malang City, East Java, Indonesia
-          </p>
 
-      </div>
-
-        <div class="col-md-4">
-          <div class="col-md-3">
-
-          </div>
-          <div class="col-md-6">
-            <p class="w">
-              Pages <br>
-              <a href="/" class="w u">Home</a><br>
-               <a href="{{route('template')}}" class="w u">Templates</a><br>
-               <a href="{{route('web')}}" class="w u">Web Templates</a><br>
-               <a href="{{route('app')}}" class="w u">Apps Templates</a><br>
-               <a href="{{route('about')}}" class="w u">About</a></p>
-          </div>
-          <div class="col-md-3">
-
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="col-md-3">
-
-          </div>
-          <div class="col-md-6">
-            <p class="w">
-              Others <br>
-              <a href="#" class="w u">MAR Media</a><br>
-               <a href="#" class="w u">Carrier</a><br>
-               <a href="#" class="w u">Stakeholders</a><br>
-               <a href="https://laravel.com/" class="w u">Laravel</a><br>
-               <a href="https://flutter.dev/" class="w u">Flutter</a></p>
-
-          <div class="col-md-3">
-
-          </div>
-
-      </div>
-
-
-    </div>
+<form action="/logout" method="post">
+  @csrf
+<!-- Modal -->
+<div class="modal fade" id="logout" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+  <h5 class="modal-title" id="staticBackdropLabel">Logout Confirmation</h5>
+  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 </div>
-  </div>
+<div class="modal-body">
+  Are you sure to logout?
 </div>
-</footer> --}}
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Abort</button>
+  <button type="submit" class="btn btn-danger">Confirm</button>
+</div>
+</div>
+</div>
+</div>
+</form>
