@@ -19,18 +19,18 @@
     <link rel="shortcut icon" href="/assets/picture/Logo-nonText.png">
     <link rel="apple-touch-icon" href="/assets/picture/Logo-nonText.png">
     <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  {{-- <script src="assets/vendor/purecounter/purecounter.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  {{-- <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> --}}
+   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script> --}}
   <link rel="stylesheet" type="text/css" href="/css/demo.css" />
   <link rel="stylesheet" type="text/css" href="/css/gaya.css" />
 
   <!-- Template Main JS File -->
-  <script src="/js/main.js"></script>
+
     <style>
 
     body, a, button{
@@ -72,8 +72,8 @@
     </style>
 
 </head>
-<body class="@yield('bg-body')">
-    <nav class=" navbar navbar-expand-lg navbar-dark d-flex align-items-center justify-content-between @yield('class-navbar')" style="width: 100%">
+<body class="@yield('bg-body')" style="width: 100%">
+    <nav class=" navbar navbar-expand-lg navbar-dark d-flex align-items-center justify-content-between @yield('class-navbar')" style="width:95%">
         <div class="container-fluid">
           <a class="navbar-brand" href="/">
           <img src="/assets/picture/Logo-nonText.png" alt="" width="50px" height="50px" class="d-inline-block align-text-top">
@@ -114,6 +114,9 @@
                       @endforeach
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                             <li><a class="dropdown-item" href="/dashboard">Dashboard</a></li>
+                            <li><a href="#" class="dropdown-item">Favourite</a></li>
+                            <li><a href="#" class="dropdown-item">Saved</a></li>
+                            <li><a href="#" class="dropdown-item">Library</a></li>
                                  <hr>
                              <li>
                                  <form action="/logout" method="post">
@@ -130,10 +133,7 @@
                 <a class="btn btn-outline-info btn-md border-0 px-2 mx-3" href="{{route('login')}}" style="color:#f2f2f7" role="button">Login</a>
             </li>
               @endauth
-              <li class="nav-item justify-content-end"></li>
-              <li class="nav-item justify-content-end">
-                
-              </li></ul>
+              </ul>
               </div></li>
               
             </ul>
@@ -196,7 +196,7 @@
               Indonesia <br><br>
               <strong>Phone:</strong> +62 896 5892 2021<br>
               <strong>Email:</strong> ask@uklise.com<br>
-              <strong>Instagram:</strong><a href="https://www.instagram.com/uklise/">@uklise</a><br>
+              <strong>Instagram:</strong><a href="https://www.instagram.com/uklise/" target="_blank">@uklise</a><br>
             </p>
 
           </div>

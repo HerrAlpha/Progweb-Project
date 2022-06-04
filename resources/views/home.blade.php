@@ -46,7 +46,7 @@
                   const dateString = new Date().toLocaleTimeString();
                   const tglString = new Date().toDateString();
                   const formattedString = dateString.replace(", ", " - ");
-                  timeDisplay.textContent = tglString + " " + formattedString;
+                  timeDisplay.textContent = tglString + " - " + formattedString;
                 }
                 setInterval(refreshTime, 1000);
                 </script>
@@ -55,7 +55,7 @@
         <script type="text/javascript">
             // List of sentences
 var _CONTENT = [ 
-	"Uklise","Good Night Developers","Gutten Nacht Entwickler","Bonne Nuit Développeurs","Доброй Hочи Pазработчики","Selamat Malam Para Pengembang", "꧋ꦱꦸꦒꦺꦁꦣꦭꦸꦥꦫꦥꦔꦺꦩ꧀ꦧꦁ", "Wilujeng Wengi Pamekar", "Rahajeng Peteng Para Pengembang"
+	"Uklise","Good Night Developers","Gutten Nacht Entwickler","Bonne Nuit Développeurs","Доброй Hочи Pазработчики","Selamat Malam Para Pengembang", "꧋ꦱꦸꦒꦺꦁꦣꦭꦸꦥꦫꦥꦔꦺꦩ꧀ꦧꦁ", "Wilujeng Wengi Pamekar", "Rahajeng Wengi Para Pengembang"
 ];
 
 // Current sentence being processed
@@ -130,14 +130,10 @@ _INTERVAL_VAL = setInterval(Type, 100);
     
 </div>
 </div>
-
-    
-    <div class="card">
-        <div class="card-body">
             <div class="container">
           
                 <div style="padding-top: 6%; padding-left: 3% padding-right: 3%">
-                    <div class="col-md" style="text-align: center;"><h3>In Here We Provide...</h3></div><br>
+                    <div class="col-md" style="text-align: center; color:#f2f2f7"><h3>Our Two Strength</h3></div><br>
             <div class="row g-3" style="align-self: center">
                 
                 <div class="col-md-6" style="align-self: center">
@@ -163,7 +159,7 @@ _INTERVAL_VAL = setInterval(Type, 100);
                 </div>
             </div>
             <br><br>
-            <div class="col-md" style="text-align: center;"><h3>Advantages of using templates</h3></div><br>
+            <div class="col-md" style="text-align: center;color:#f2f2f7"><h3>Advantages of using templates</h3></div><br>
             <div class="row g-3" style="text-align: center;">
                 <div class="col-md-6" style="text-align: center">
                     <div class="card" style="height: auto; padding:2%;">
@@ -210,7 +206,7 @@ _INTERVAL_VAL = setInterval(Type, 100);
                     </div>
                 </div>
             </div><br><br>
-            <div class="col-md" style="text-align: center;"><h3>What developers said ??</h3></div><br>
+            <div class="col-md" style="text-align: center;color:#f2f2f7"><h3>What developers said ??</h3></div><br>
         
             <div class="row g-3" style="text-align: center;">
                 <div class="col-md-6" style="align-self: center">
@@ -232,17 +228,17 @@ _INTERVAL_VAL = setInterval(Type, 100);
                 <div class="col-md-6" style="text-align: center">
                     <img src="/assets/picture/phoneMockUp.png" alt="Phone MockUp" srcset="">
                 </div>
-                <div class="col-md-6" style="position: relative; align-self:center">
+                <div class="col-md-6" style="position: relative; align-self:center;color:#f2f2f7">
                     <h3>So, when it comes up into app?</h3>
                     <h4>Soon, our platform are available in Mobile and Desktop 
                         which is our app will compatible at all platform. 
                     Like iOS, Android, macOS, Chrome OS, Windows, and Linux. <a href="#">App Platform is Coming Soon.</a></h4>
                 </div>
             </div>
-           
-      
         </div>
-      </div>
+    </div>
+</div>
+
 
       
     

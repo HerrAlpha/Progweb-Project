@@ -1,7 +1,7 @@
-@extends('layout.master')
+@extends('layout.master-layout')
 @section('title', 'Web - Category')
-@section('class-navbar', 'bg-primary')
 @section('content')
+
 <h1 class="text-center my-5">{{$web->title}}</h1>
 <hr class="border-bottom border-5 border-dark"></hr>
 {{-- @dump($post) --}}

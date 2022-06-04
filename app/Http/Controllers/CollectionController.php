@@ -211,9 +211,13 @@ class CollectionController extends Controller
         return view('app',['namesApp'=>$namesApp,'linksApp'=>$linksApp,'imgsApp'=>$imgsApp]);
     }
 
-    
     public function templates(){
-        return view('template');
+        if (Auth::check()){
+            $users = User::where('id',auth()->user()->id)->get();
+            return view('template',['users'=>$users]);
+             }else{
+                  return view('template');
+                }
     }
     public function mobileApp(){
         $categories00 =new \stdClass();
@@ -526,12 +530,18 @@ class CollectionController extends Controller
     //     return view('app');
     // }
     public function about(){
-        return view('about');
+        if (Auth::check()){
+            $users = User::where('id',auth()->user()->id)->get();
+            return view('about',['users'=>$users]);
+             }else{
+                  return view('about');
+                }
     }
 
     public function news(){
-
-        $url1 ='https://newsapi.org/v2/everything?apikey=b051bfc4e04f4a8f82e2cdaa9dadc71b&language=en&pageSize=12&q=computer%technology%new';
+        if (Auth::check()){
+            $users = User::where('id',auth()->user()->id)->get();
+            $url1 ='https://newsapi.org/v2/everything?apikey=b051bfc4e04f4a8f82e2cdaa9dadc71b&language=en&pageSize=12&q=computer%technology%new';
         $newsA = file_get_contents($url1);
         $newsA = json_decode($newsA);
         $newsA = $newsA->articles;
@@ -548,7 +558,28 @@ class CollectionController extends Controller
         $newsC = $newsC->articles;
 
 
-        return view('news',['newsC'=>$newsC,'newsB'=>$newsB,'newsA'=>$newsA]);
+        return view('news',['newsC'=>$newsC,'newsB'=>$newsB,'newsA'=>$newsA, 'users'=>$users]);
+            
+             }else{
+                $url1 ='https://newsapi.org/v2/everything?apikey=b051bfc4e04f4a8f82e2cdaa9dadc71b&language=en&pageSize=12&q=computer%technology%new';
+                $newsA = file_get_contents($url1);
+                $newsA = json_decode($newsA);
+                $newsA = $newsA->articles;
+        
+                $url2 ='https://newsapi.org/v2/everything?apikey=b051bfc4e04f4a8f82e2cdaa9dadc71b&language=en&pageSize=12&q=automotive%new%eco';
+                $newsB = file_get_contents($url2);
+                $newsB =json_decode($newsB);
+                $newsB = $newsB->articles;
+        
+        
+                $url3 = 'https://newsapi.org/v2/everything?apikey=b051bfc4e04f4a8f82e2cdaa9dadc71b&language=en&title,description=template%web,%template%for%design%website&pageSize=12&q=web%template%code%design';
+                $newsC = file_get_contents($url3);
+                $newsC = json_decode($newsC);
+                $newsC = $newsC->articles;
+        
+        
+                return view('news',['newsC'=>$newsC,'newsB'=>$newsB,'newsA'=>$newsA]);
+                }
     }
     public function error(){
         return view('error');

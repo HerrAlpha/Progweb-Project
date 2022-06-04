@@ -1,6 +1,5 @@
-@extends('layout.master')
+@extends('layout.master-layout')
 @section('title','{{$detail->title}}')
-@section('class-navbar','bg-primary')
 <style>
     a{
         text-decoration: none;

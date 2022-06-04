@@ -1,8 +1,6 @@
-@extends('layout.master')
+@extends('layout.master-layout')
 @section('title','Web Browser Template')
 @section('content')
-@section('bg-body','bg-dark')
-<div class="container bg-dark" style="padding-top:10%;padding-bottom:10%">
     <div class="row g-3">
         {{-- LANDING PAGE --}}
         <div class="col-md-12" style="text-align: center; padding-top:5%;padding-bottom:5%;color:#f2f2f7">
@@ -40,5 +38,4 @@
             <h3 style="text-align: center; color:#f2f2f7">Top 4 Paid Content</h3>
         </div>
     </div>
-</div>
 @stop
